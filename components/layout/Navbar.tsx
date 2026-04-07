@@ -26,11 +26,10 @@ const serviceCategories = [
         href: '/services',
         links: [
             { name: 'Web Development', href: '/services/web-development' },
+            { name: 'App Development', href: '/services/app-development' },
+            { name: 'Automation', href: '/services/automation' },
             { name: 'WordPress', href: '/services/wordpress' },
-            { name: 'PHP', href: '/services/php' },
-            { name: 'CMS', href: '/services/cms' },
             { name: 'Shopify', href: '/services/shopify' },
-            { name: 'Magento', href: '/services/magento' },
             { name: 'Asp .Net', href: '/services/asp-net' },
         ]
     },
@@ -248,7 +247,9 @@ export default function Navbar() {
                                 >
                                     {link.hasDropdown ? (
                                         <div className="space-y-4">
-                                            <p className={`text-sm font-black uppercase tracking-widest text-slate-400 mb-2`}>{link.name}</p>
+                                            <p className={`text-sm font-black uppercase tracking-widest text-slate-400 mb-2`}>
+                                                <Link href={link.href} onClick={() => setMobileOpen(false)} className="hover:text-primary transition-colors">{link.name}</Link>
+                                            </p>
                                             <div className="grid grid-cols-2 gap-x-4 gap-y-2 pl-4">
                                                 {serviceCategories.map(cat => (
                                                     <div key={cat.title} className="space-y-2">

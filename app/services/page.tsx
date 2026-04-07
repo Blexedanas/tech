@@ -75,11 +75,10 @@ const serviceCategories = [
         description: 'Robust, scalable, and high-performance software built for the modern digital era.',
         services: [
             { name: 'Web Development', icon: Laptop },
+            { name: 'App Development', icon: Smartphone },
+            { name: 'Automation', icon: Zap },
             { name: 'WordPress', icon: Globe2 },
-            { name: 'PHP', icon: Code },
-            { name: 'CMS', icon: Layout },
             { name: 'Shopify', icon: ShoppingCart },
-            { name: 'Magento', icon: Database },
             { name: 'Asp .Net', icon: Layers }
         ]
     }
@@ -118,7 +117,7 @@ export default function ServicesPage() {
                     <div className="flex flex-col lg:flex-row gap-12 items-start">
                         
                         {/* Featured Card (Left) */}
-                        <div className="w-full lg:w-[45%] sticky top-32">
+                        <div className="w-full lg:w-[45%] lg:sticky lg:top-32 relative z-10 h-fit mb-12 lg:mb-0">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={activeService.id}
@@ -151,7 +150,7 @@ export default function ServicesPage() {
                                             ))}
                                         </div>
 
-                                        <h2 className="font-display font-black text-5xl md:text-6xl text-slate-900 mb-6 text-center tracking-tighter uppercase whitespace-nowrap">
+                                        <h2 className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-slate-900 mb-6 text-center tracking-tighter uppercase break-words leading-tight">
                                             {activeService.title}
                                         </h2>
                                         <p className="text-slate-600 text-center font-medium leading-relaxed max-w-md mx-auto mb-10 opacity-80">

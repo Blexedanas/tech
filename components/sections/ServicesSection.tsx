@@ -3,23 +3,22 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
-import { Code2, Smartphone, Globe, Layers, PenTool, Bot, ArrowRight, CheckCircle2, Zap, ShoppingCart } from 'lucide-react'
+import { Globe, Smartphone, Zap, Bot, Layers, ArrowRight, CheckCircle2 } from 'lucide-react'
 import Image from 'next/image'
-import ServiceOrb from '@/components/ui/ServiceOrb'
 
 const services = [
     {
-        id: 'web',
+        id: 'web-development',
         title: 'Website Development',
         desc: 'High-converting, responsive websites engineered with modern frameworks and SEO best practices.',
         icon: Globe,
         orbType: 'web' as const,
-        features: ['1–3 Pages (Basic)', 'Next.js / React', 'WhatsApp Integration', 'Speed Optimization'],
+        features: ['Full-Stack Development', 'Next.js / React', 'Speed Optimization', 'SEO Integration'],
         image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop',
         iconImage: 'https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=500&auto=format&fit=crop'
     },
     {
-        id: 'app',
+        id: 'app-development',
         title: 'Mobile App Development',
         desc: 'Native and cross-platform mobile applications tailored for iOS and Android ecosystems.',
         icon: Smartphone,
@@ -29,7 +28,17 @@ const services = [
         iconImage: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=500&auto=format&fit=crop'
     },
     {
-        id: 'marketing',
+        id: 'automation',
+        title: 'Business Automation',
+        desc: 'Streamline your workflows with intelligent AI-driven automation and custom software integrations.',
+        icon: Zap,
+        orbType: 'ai' as const,
+        features: ['AI Integration', 'Workflow Logic', 'API Connections', 'Efficiency Audits'],
+        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2670&auto=format&fit=crop',
+        iconImage: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=500&auto=format&fit=crop'
+    },
+    {
+        id: 'seo-services',
         title: 'Digital Marketing',
         desc: 'Boost your brand awareness and sales with data-driven social media and search campaigns.',
         icon: Bot,
@@ -37,16 +46,6 @@ const services = [
         features: ['Social Media Growth', 'SEO Strategy', 'Content Marketing', 'Ad Campaigns'],
         image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop',
         iconImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=500&auto=format&fit=crop'
-    },
-    {
-        id: 'amc',
-        title: 'Maintenance (AMC)',
-        desc: 'Reliable security updates, performance monitoring, and priority support for your peace of mind.',
-        icon: Layers,
-        orbType: 'cloud' as const,
-        features: ['Security Updates', 'Monthly Backups', 'Performance Monitoring', 'Priority Support'],
-        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc48?q=80&w=2670&auto=format&fit=crop',
-        iconImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500&auto=format&fit=crop'
     },
 ]
 
@@ -71,7 +70,7 @@ function ServicesShowcase() {
         }, UPDATE_MS)
 
         return () => clearInterval(timer)
-    }, [isPaused, active])
+    }, [isPaused, active, services.length])
 
     const handleManualSelect = (index: number) => {
         setActive(index)
@@ -121,7 +120,7 @@ function ServicesShowcase() {
                                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover/icon:opacity-100 transition-opacity" />
                             </div>
 
-                            <h3 className="font-display font-bold text-3xl md:text-4xl text-slate-900 mb-4">
+                            <h3 className="font-display font-bold text-3xl md:text-4xl text-slate-900 mb-4 tracking-tight">
                                 {featured.title}
                             </h3>
                             <p className="text-slate-600 text-base md:text-lg mb-10 leading-relaxed max-w-md font-medium">
@@ -177,7 +176,7 @@ function ServicesShowcase() {
                         </div>
 
                         <div className="relative z-10 flex items-start gap-4">
-                            <div className={`mt-1 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors overflow-hidden relative ${active === i ? 'bg-primary/10' : 'bg-slate-50'}`}>
+                            <div className={`mt-1 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-all overflow-hidden relative ${active === i ? 'bg-primary/10' : 'bg-slate-50'}`}>
                                 <Image
                                     src={s.iconImage}
                                     alt={s.title}
