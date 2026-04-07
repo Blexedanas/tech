@@ -20,9 +20,6 @@ const footerLinks = {
 }
 
 const socials = [
-    { icon: Twitter, href: 'https://twitter.com/vibetechnexus', label: 'Twitter' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/vibe-tech-2752373b2/', label: 'LinkedIn' },
-    { icon: Github, href: 'https://github.com/vibetechnexus', label: 'GitHub' },
     { icon: Instagram, href: 'https://www.instagram.com/zerixa.tech/', label: 'Instagram' },
 ]
 
