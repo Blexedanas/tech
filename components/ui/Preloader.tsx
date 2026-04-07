@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Zap } from 'lucide-react'
 
 export default function Preloader() {
     const [isLoading, setIsLoading] = useState(true)
@@ -10,71 +11,102 @@ export default function Preloader() {
         // Prevent scrolling while loading
         document.body.style.overflow = 'hidden'
 
-        // Ensure minimum display time for the premium effect
-        const timer = setTimeout(() => {
+        // Total loading time: 2.2s
+        const DURATION = 2200
+
+        const closeTimer = setTimeout(() => {
             setIsLoading(false)
             document.body.style.overflow = ''
             window.scrollTo(0, 0)
-        }, 2200)
+        }, DURATION)
 
         return () => {
-            clearTimeout(timer)
+            clearTimeout(closeTimer)
             document.body.style.overflow = ''
         }
     }, [])
+
+    // We will render 14 data blocks
+    const blocks = Array.from({ length: 14 })
 
     return (
         <AnimatePresence>
             {isLoading && (
                 <motion.div
                     initial={{ opacity: 1 }}
-                    exit={{ opacity: 0, y: '-100%' }}
-                    transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-                    className="fixed inset-0 z-[99999] bg-navy flex flex-col items-center justify-center overflow-hidden"
+                    exit={{ opacity: 0, y: '100%' }} // Drop down like a terminal screen dismissing
+                    transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
+                    className="fixed inset-0 z-[99999] bg-[#0A0F1A] flex flex-col items-center justify-center overflow-hidden font-mono"
                 >
-                    {/* Background Noise */}
-                    <div className="absolute inset-0 opacity-20 pointer-events-none noisemix mix-blend-overlay" />
+                    {/* Background Noise & Fine Grid */}
+                    <div className="absolute inset-0 opacity-[0.15] pointer-events-none noisemix mix-blend-overlay" />
+                    <div className="absolute inset-0 grid-pattern opacity-[0.05]" />
 
-                    {/* Glowing Core */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/20 rounded-full blur-[100px] pointer-events-none" />
-
-                    {/* Logo/Text Container */}
-                    <div className="relative z-10 flex flex-col items-center">
+                    <div className="relative z-10 flex flex-col items-center w-full px-6">
+                        
+                        {/* Status Output Header (Hacker aesthetic) */}
                         <motion.div
-                            initial={{ scale: 0.8, opacity: 0, filter: 'blur(10px)' }}
-                            animate={{ scale: 1, opacity: 1, filter: 'blur(0px)' }}
-                            transition={{ duration: 1, ease: "easeOut" }}
-                            className="font-display font-extrabold text-5xl md:text-7xl tracking-tighter text-slate-900 mb-8 flex items-center gap-1"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: [0, 1, 0.5, 1] }}
+                            transition={{ duration: 0.3, delay: 0.1 }}
+                            className="flex items-center gap-2 text-blue-400 text-[10px] md:text-xs font-bold tracking-widest mb-12"
+                        >
+                            <Zap className="w-4 h-4 fill-blue-400" />
+                            <span>SYS_BOOT_SEQ: SECURE</span>
+                        </motion.div>
+
+                        {/* Logo */}
+                        <motion.div
+                            initial={{ filter: 'blur(10px)', opacity: 0, scale: 0.95 }}
+                            animate={{ filter: 'blur(0px)', opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                            className="font-display font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-white mb-12 flex items-center gap-1"
                         >
                             Zerixa<span className="text-primary"> Tech</span>
                         </motion.div>
 
-                        {/* Progress Bar Container */}
-                        <div className="w-48 md:w-64 h-[2px] bg-slate-200 rounded-full overflow-hidden relative">
-                            <motion.div
-                                className="absolute top-0 left-0 h-full bg-primary"
-                                initial={{ width: "0%" }}
-                                animate={{ width: "100%" }}
-                                transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
-                            />
+                        {/* Cascading Data Blocks */}
+                        <div className="flex gap-1.5 md:gap-2 mb-12 flex-wrap justify-center max-w-[80vw]">
+                            {blocks.map((_, i) => (
+                                <div key={i} className="w-5 h-8 md:w-6 md:h-10 border border-white/10 bg-white/5 relative overflow-hidden">
+                                    <motion.div
+                                        className="absolute inset-0 bg-primary/80 shadow-[0_0_20px_var(--primary)]"
+                                        initial={{ opacity: 0, scaleY: 0 }}
+                                        animate={{ opacity: [0, 1, 1, 0.2], scaleY: [0, 1, 1, 1] }}
+                                        transition={{ 
+                                            duration: 1.5, 
+                                            times: [0, 0.1, 0.8, 1], 
+                                            delay: i * 0.08, 
+                                            ease: "linear"
+                                        }}
+                                        style={{ transformOrigin: "bottom" }}
+                                    />
+                                </div>
+                            ))}
                         </div>
 
                         {/* Loading Text */}
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 0.5, duration: 0.5 }}
-                            className="text-slate-400 text-xs font-mono font-medium tracking-[0.2em] mt-6"
+                            transition={{ delay: 0.8, duration: 0.5 }}
+                            className="text-slate-500 text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase"
                         >
-                            INITIALIZING DIGITAL EXPERIENCE
+                            ARCHITECTING THE FUTURE <motion.span animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 0.8 }}>_</motion.span>
                         </motion.div>
                     </div>
 
-                    {/* Corner accents for tech feel */}
-                    <div className="absolute top-8 left-8 w-4 h-4 border-t-2 border-l-2 border-slate-200" />
-                    <div className="absolute top-8 right-8 w-4 h-4 border-t-2 border-r-2 border-slate-200" />
-                    <div className="absolute bottom-8 left-8 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
-                    <div className="absolute bottom-8 right-8 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
+                    {/* Hacker side metrics */}
+                    <div className="absolute left-6 bottom-6 flex flex-col gap-1.5 text-[10px] text-white/30 tracking-widest uppercase">
+                        <p>CPU_LOAD: <span className="text-primary/70">42%</span></p>
+                        <p>MEM_ALLOC: <span className="text-primary/70">OK</span></p>
+                        <p>NET_LATENCY: <span className="text-primary/70">3ms</span></p>
+                    </div>
+                    
+                    <div className="absolute right-6 top-6 text-right flex flex-col gap-1.5 text-[10px] text-white/30 tracking-widest uppercase">
+                        <p>SERVER: <span className="text-white/70">US-EAST-1</span></p>
+                        <p>NODE: <span className="text-white/70">V8.4.1</span></p>
+                    </div>
                 </motion.div>
             )}
         </AnimatePresence>
