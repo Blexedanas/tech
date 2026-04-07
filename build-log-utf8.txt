@@ -1,0 +1,79 @@
+﻿
+> vibetech-3d@0.1.0 build
+> next build
+
+  Γû▓ Next.js 14.2.5
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+node.exe : Failed to 
+compile.
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Users\shaik\AppData
+\Roaming\ ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Failed to com   
+ pile.:String) [],     
+RemoteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+
+./app/about/page.tsx
+Module not found: 
+Can't resolve '@/compon
+ents/ui/Magnetic'
+
+https://nextjs.org/docs
+/messages/module-not-fo
+und
+
+./app/contact/page.tsx
+Module not found: 
+Can't resolve '@/compon
+ents/ui/Magnetic'
+
+https://nextjs.org/docs
+/messages/module-not-fo
+und
+
+./app/contact/page.tsx
+Module not found: 
+Can't resolve '@/compon
+ents/ui/ParticleBackgro
+und'
+
+https://nextjs.org/docs
+/messages/module-not-fo
+und
+
+./app/portfolio/page.ts
+x
+Module not found: 
+Can't resolve '@/compon
+ents/ui/Magnetic'
+
+https://nextjs.org/docs
+/messages/module-not-fo
+und
+
+./app/services/page.tsx
+Module not found: 
+Can't resolve '@/compon
+ents/ui/Magnetic'
+
+https://nextjs.org/docs
+/messages/module-not-fo
+und
+
+
+> Build failed because 
+of webpack errors
