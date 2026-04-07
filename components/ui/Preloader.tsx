@@ -70,7 +70,7 @@ export default function Preloader() {
                             {blocks.map((_, i) => (
                                 <div key={i} className="w-5 h-8 md:w-6 md:h-10 border border-slate-300 bg-slate-100 relative overflow-hidden rounded-sm shadow-sm">
                                     <motion.div
-                                        className="absolute inset-0 bg-primary/90 shadow-[0_0_20px_var(--primary)]"
+                                        className="absolute inset-0 bg-slate-900 shadow-sm"
                                         initial={{ opacity: 0, scaleY: 0 }}
                                         animate={{ opacity: [0, 1, 1, 0], scaleY: [0, 1, 1, 1] }}
                                         transition={{ 
