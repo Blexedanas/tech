@@ -7,10 +7,10 @@ import Image from 'next/image'
 
 const founders = [
     {
-        name: "Zarina R Shaikh",
+        name: "Zarin R Shaikh",
         role: "Founder & CEO",
         image: "/Zarina.png", 
-        bio: "Strategic visionary leading ZERIXA TECH's mission. Zarina drives the core business strategy to redefine how brands interact with technology.",
+        bio: "Strategic visionary leading ZERIXA TECH's mission. Zarin drives the core business strategy to redefine how brands interact with technology.",
         linkedin: "https://www.linkedin.com/",
         github: "https://github.com/",
         portfolio: "",

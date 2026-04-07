@@ -23,7 +23,7 @@ const socials = [
     { icon: Twitter, href: 'https://twitter.com/vibetechnexus', label: 'Twitter' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/vibe-tech-2752373b2/', label: 'LinkedIn' },
     { icon: Github, href: 'https://github.com/vibetechnexus', label: 'GitHub' },
-    { icon: Instagram, href: 'https://www.instagram.com/vibetechnexus?igsh=Nng3aDY1NjNsb2pp', label: 'Instagram' },
+    { icon: Instagram, href: 'https://www.instagram.com/zerixa.tech/', label: 'Instagram' },
 ]
 
 export default function Footer() {

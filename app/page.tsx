@@ -355,7 +355,7 @@ export default function Home() {
                         }}
                     />
                     <div className="absolute inset-0 grid-pattern opacity-10" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/80 to-white" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#FAFAFA]/90 to-[#FAFAFA]" />
                 </div>
 
                 <div className="container-custom relative z-10 grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-80px)] py-12">
@@ -558,11 +558,11 @@ export default function Home() {
             </section>
 
             {/* ═══════════════════ TECH MARQUEE ═══════════════════ */}
-            <div className="py-12 bg-white relative z-10 overflow-hidden perspective-2000">
-                <div className="tilt-3d py-10 border-y border-black/5 bg-slate-50 relative scale-110">
+            <div className="py-12 bg-[#FAFAFA] relative z-10 overflow-hidden perspective-2000">
+                <div className="tilt-3d py-10 border-y border-black/5 bg-[#F4F4F5] relative scale-110">
                     {/* Edge Fades */}
-                    <div className="absolute inset-y-0 left-0 w-64 bg-gradient-to-r from-white via-white/80 to-transparent z-20 pointer-events-none" />
-                    <div className="absolute inset-y-0 right-0 w-64 bg-gradient-to-l from-white via-white/80 to-transparent z-20 pointer-events-none" />
+                    <div className="absolute inset-y-0 left-0 w-64 bg-gradient-to-r from-[#F4F4F5] via-[#F4F4F5]/80 to-transparent z-20 pointer-events-none" />
+                    <div className="absolute inset-y-0 right-0 w-64 bg-gradient-to-l from-[#F4F4F5] via-[#F4F4F5]/80 to-transparent z-20 pointer-events-none" />
 
                     {/* Row 1: Leftward */}
                     <div className="flex animate-marquee whitespace-nowrap mb-8 pb-4">

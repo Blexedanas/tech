@@ -15,7 +15,7 @@ const values = [
 ]
 
 const team = [
-    { name: 'Zarina R Shaikh', role: 'Founder & CEO', image: '/Zarina.png', color: 'hsl(20, 70%, 55%)', social: {} },
+    { name: 'Zarin R Shaikh', role: 'Founder & CEO', image: '/Zarina.png', color: 'hsl(20, 70%, 55%)', social: {} },
     { name: 'Anas Shaikh', role: 'CTO & Tech Head', image: '/Anas.jpeg', color: 'hsl(260, 70%, 65%)', social: { github: 'https://github.com/Blexedanas', portfolio: 'https://anasportfoliio.web.app/', linkedin: 'https://www.linkedin.com/in/anas-shaikh-a0ba1a2b1/' } },
     { name: 'Dipen Vishwakarma', role: 'Full Stack Developer', image: '/Dipen.png', color: 'hsl(180, 70%, 45%)', social: { github: 'https://github.com/vishwakarmadipen85', portfolio: 'https://dipenvishportfolio.netlify.app/', linkedin: 'https://www.linkedin.com/in/dipen-vishwakarma-976705303/' } },
     { name: 'Shaikh Amaan', role: 'UI/UX Head', image: '/Amaan.png', color: 'hsl(200, 70%, 55%)', social: {} },

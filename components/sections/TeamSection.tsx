@@ -10,7 +10,7 @@ const team = [
     { name: 'Rishi', role: 'Senior App / Backend Dev', image: '', social: { linkedin: '#', github: '#' } },
     { name: 'Ankit Shah', role: 'Project Manager', image: '/Ankit.png', social: { linkedin: '#', twitter: '#' } },
     { name: 'Sohail Shaikh', role: 'Digital Marketing Head', image: '/Sohail.png', social: { linkedin: '#', twitter: '#' } },
-    { name: 'Zarina R Shaikh', role: 'Team Member', image: '/Zarina.png', social: { linkedin: '#' } },
+    { name: 'Zarin R Shaikh', role: 'Team Member', image: '/Zarina.png', social: { linkedin: '#' } },
 ]
 
 export default function TeamSection() {
