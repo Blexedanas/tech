@@ -40,7 +40,7 @@ const team: TeamMember[] = [
     { name: 'Ibrahim Shaikh', role: 'Professional Photographer', desc: 'An experienced photographer who has worked on numerous films, advertisements, and web series, bringing high-quality visual storytelling to every project.', image: '', color: 'hsl(220, 70%, 40%)', social: {} },
     { name: 'Amman Shaikh', role: 'Head of UI/UX Design', desc: 'Designs intuitive and visually engaging user experiences, enhancing customer interaction and brand identity.', image: '/Amaan.png', color: 'hsl(200, 70%, 55%)', objectPosition: 'object-top', social: {} },
     { name: 'CA Ravi Vishwakarma', role: 'Head of Accounts & Finance', desc: 'Manages financial planning, accounting, and ensures smooth financial operations.', image: '', color: 'hsl(45, 80%, 50%)', social: {} },
-    { name: 'Adv. Vikram Kapoor', role: 'Head Legal Advisor', desc: 'Provides expert legal guidance, ensuring compliance, contracts, and business protection.', image: '/Vikramkapoor.jpeg', color: 'hsl(150, 60%, 50%)', social: {} },
+    { name: 'Adv. Vikram Kapoor', role: 'Head Legal Advisor', desc: 'Provides expert legal guidance, ensuring compliance, contracts, and business protection.', image: '/Vikramkapoor.jpeg', color: 'hsl(150, 60%, 50%)', objectPosition: 'object-top', social: {} },
 ]
 
 
