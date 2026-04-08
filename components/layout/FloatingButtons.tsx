@@ -18,7 +18,7 @@ export default function FloatingButtons() {
         <div className="fixed bottom-6 right-8 md:right-10 z-[60] flex flex-col gap-3 items-end">
             {/* Phone */}
             <a
-                href="tel:+919924360745"
+                href="tel:+918079767676"
                 aria-label="Call us"
                 className="w-12 h-12 rounded-full bg-[#0070f3] flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300"
                 style={{ boxShadow: '0 4px 20px rgba(0,112,243,0.4)' }}
@@ -28,7 +28,7 @@ export default function FloatingButtons() {
 
             {/* WhatsApp */}
             <a
-                href="https://wa.me/919924360745"
+                href="https://wa.me/918079767676"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"

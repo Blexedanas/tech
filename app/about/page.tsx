@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight, Target, Heart, Lightbulb, Shield, Award, Users, TrendingUp, CheckCircle, Github, Globe, Linkedin } from 'lucide-react'
+import { ArrowRight, Target, Heart, Lightbulb, Shield, Award, Users, TrendingUp, CheckCircle, Github, Globe, Linkedin, Instagram, Twitter } from 'lucide-react'
 import Magnetic from '@/components/ui/Magnetic'
 import { motion } from 'framer-motion'
 import React, { useState, useEffect } from 'react'
@@ -25,22 +25,23 @@ type TeamMember = {
         linkedin?: string;
         portfolio?: string;
         twitter?: string;
+        instagram?: string;
     };
     objectPosition?: string;
 };
 
 const team: TeamMember[] = [
-    { name: 'Zarin R Shaikh', role: 'Founder & CEO', desc: 'Visionary leader of Zerixa Tech, driving innovation and business growth with a focus on delivering smart digital solutions and client success.', image: '/Zarin.jpeg', color: 'hsl(20, 70%, 55%)', social: {} },
-    { name: 'Azim Sayyed', role: 'Co-Founder', desc: 'Co-founder of Zerixa Tech, contributing to business development, strategic planning, and operational excellence.', image: '/Azim.jpeg', color: 'hsl(210, 70%, 50%)', social: {} },
-    { name: 'Anas Shaikh', role: 'Chief Technology Officer (CTO)', desc: 'Drives the technology vision of Zerixa Tech, building scalable digital solutions and leading innovation across all products.', image: '/Anas.jpeg', color: 'hsl(260, 70%, 65%)', objectPosition: 'object-top', social: {} },
-    { name: 'Dipen Vishwakarama', role: 'Full Stack Developer', desc: 'Responsible for end-to-end web development, creating responsive, efficient, and user-friendly digital platforms.', image: '/Dipen.jpeg', color: 'hsl(180, 70%, 45%)', objectPosition: 'object-top', social: {} },
-    { name: 'Satyam Wada', role: 'Head of Social Media Marketing', desc: 'Leads social media strategies and campaigns to boost brand presence and engagement. Awarded "Miss Cultural India World".', image: '/satyamwada.png', color: 'hsl(330, 70%, 65%)', social: {} },
-    { name: 'Suzzane', role: 'Head of Social Media Operations', desc: 'Manages platforms like Reels, Facebook, and content strategy to boost engagement and reach. Recognized as a Strong Contestant on Splitsvilla 2026.', image: '', color: 'hsl(10, 70%, 60%)', social: {} },
-    { name: 'Sohail Shaikh', role: 'Head of SEO', desc: 'Expert in search engine optimization, driving organic growth and improving website rankings.', image: '/Sohail.png', color: 'hsl(280, 70%, 60%)', objectPosition: 'object-top', social: {} },
-    { name: 'Ibrahim Shaikh', role: 'Professional Photographer', desc: 'An experienced photographer who has worked on numerous films, advertisements, and web series, bringing high-quality visual storytelling to every project.', image: '', color: 'hsl(220, 70%, 40%)', social: {} },
-    { name: 'Amman Shaikh', role: 'Head of UI/UX Design', desc: 'Designs intuitive and visually engaging user experiences, enhancing customer interaction and brand identity.', image: '/Amaan.png', color: 'hsl(200, 70%, 55%)', objectPosition: 'object-top', social: {} },
-    { name: 'CA Ravi Vishwakarma', role: 'Head of Accounts & Finance', desc: 'Manages financial planning, accounting, and ensures smooth financial operations.', image: '', color: 'hsl(45, 80%, 50%)', social: {} },
-    { name: 'Adv. Vikram Kapoor', role: 'Head Legal Advisor', desc: 'Provides expert legal guidance, ensuring compliance, contracts, and business protection.', image: '/Vikramkapoor.jpeg', color: 'hsl(150, 60%, 50%)', objectPosition: 'object-top', social: {} },
+    { name: 'Zarin R Shaikh', role: 'Founder & CEO', desc: 'Visionary leader of Zerixa Tech, driving innovation and business growth with a focus on delivering smart digital solutions and client success.', image: '/Zarin.jpeg', color: 'hsl(20, 70%, 55%)', social: { linkedin: 'https://www.linkedin.com/feed/', instagram: 'https://www.instagram.com/sayyed.zarin/', twitter: 'https://x.com/' } },
+    { name: 'Azim Sayyed', role: 'Co-Founder', desc: 'Co-founder of Zerixa Tech, contributing to business development, strategic planning, and operational excellence.', image: '/Azim.jpeg', color: 'hsl(210, 70%, 50%)', social: { instagram: 'https://www.instagram.com/zerixa.tech/' } },
+    { name: 'Anas Shaikh', role: 'Chief Technology Officer (CTO)', desc: 'Drives the technology vision of Zerixa Tech, building scalable digital solutions and leading innovation across all products.', image: '/Anas.jpeg', color: 'hsl(260, 70%, 65%)', objectPosition: 'object-top', social: { linkedin: 'https://www.linkedin.com/in/anas-shaikh-a0ba1a2b1/', portfolio: 'https://anasportfoliio.web.app/', github: 'https://github.com/Blexedanas' } },
+    { name: 'Dipen Vishwakarama', role: 'Full Stack Developer', desc: 'Responsible for end-to-end web development, creating responsive, efficient, and user-friendly digital platforms.', image: '/Dipen.jpeg', color: 'hsl(180, 70%, 45%)', objectPosition: 'object-top', social: { linkedin: 'https://www.linkedin.com/in/dipen-vishwakarma-976705303/', github: 'https://github.com/vishwakarmadipen85', portfolio: 'https://dipenvishportfolio.netlify.app/' } },
+    { name: 'Satyam Wada', role: 'Head of Social Media Marketing', desc: 'Leads social media strategies and campaigns to boost brand presence and engagement. Awarded "Miss Cultural India World".', image: '/satyamwada.png', color: 'hsl(330, 70%, 65%)', social: { instagram: 'https://www.instagram.com/satyamvadasingh/' } },
+    { name: 'Suzzane', role: 'Head of Social Media Operations', desc: 'Manages platforms like Reels, Facebook, and content strategy to boost engagement and reach. Recognized as a Strong Contestant on Splitsvilla 2026.', image: '', color: 'hsl(10, 70%, 60%)', social: { instagram: 'https://www.instagram.com/zerixa.tech/' } },
+    { name: 'Sohail Shaikh', role: 'Head of SEO', desc: 'Expert in search engine optimization, driving organic growth and improving website rankings.', image: '/Sohail.png', color: 'hsl(280, 70%, 60%)', objectPosition: 'object-top', social: { instagram: 'https://www.instagram.com/zerixa.tech/' } },
+    { name: 'Ibrahim Shaikh', role: 'Professional Photographer', desc: 'An experienced photographer who has worked on numerous films, advertisements, and web series, bringing high-quality visual storytelling to every project.', image: '', color: 'hsl(220, 70%, 40%)', social: { instagram: 'https://www.instagram.com/zerixa.tech/' } },
+    { name: 'Amman Shaikh', role: 'Head of UI/UX Design', desc: 'Designs intuitive and visually engaging user experiences, enhancing customer interaction and brand identity.', image: '/Amaan.png', color: 'hsl(200, 70%, 55%)', objectPosition: 'object-top', social: { linkedin: 'https://www.linkedin.com/in/amaan-shaikh-781358326/', github: 'https://github.com/amaanshaiikh', instagram: 'https://www.instagram.com/amaan.__24/' } },
+    { name: 'CA Ravi Vishwakarma', role: 'Head of Accounts & Finance', desc: 'Manages financial planning, accounting, and ensures smooth financial operations.', image: '', color: 'hsl(45, 80%, 50%)', social: { instagram: 'https://www.instagram.com/zerixa.tech/' } },
+    { name: 'Adv. Vikram Kapoor', role: 'Head Legal Advisor', desc: 'Provides expert legal guidance, ensuring compliance, contracts, and business protection.', image: '/Vikramkapoor.jpeg', color: 'hsl(150, 60%, 50%)', objectPosition: 'object-top', social: { instagram: 'https://www.instagram.com/zerixa.tech/' } },
 ]
 
 
@@ -271,6 +272,16 @@ export default function AboutPage() {
                                             {member.social.linkedin && (
                                                 <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-colors">
                                                     <Linkedin className="w-4 h-4" />
+                                                </a>
+                                            )}
+                                            {member.social.twitter && (
+                                                <a href={member.social.twitter} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-colors">
+                                                    <Twitter className="w-4 h-4" />
+                                                </a>
+                                            )}
+                                            {member.social.instagram && (
+                                                <a href={member.social.instagram} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-colors">
+                                                    <Instagram className="w-4 h-4" />
                                                 </a>
                                             )}
                                         </div>

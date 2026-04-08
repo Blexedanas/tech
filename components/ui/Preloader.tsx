@@ -44,16 +44,7 @@ export default function Preloader() {
 
                     <div className="relative z-10 flex flex-col items-center w-full px-6">
                         
-                        {/* Status Output Header (Hacker aesthetic) */}
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: [0, 1, 0.5, 1] }}
-                            transition={{ duration: 0.3, delay: 0.1 }}
-                            className="flex items-center gap-2 text-blue-400 text-[10px] md:text-xs font-bold tracking-widest mb-12"
-                        >
-                            <Zap className="w-4 h-4 fill-blue-400" />
-                            <span>SYS_BOOT_SEQ: SECURE</span>
-                        </motion.div>
+
 
                         {/* Logo */}
                         <motion.div
@@ -96,17 +87,7 @@ export default function Preloader() {
                         </motion.div>
                     </div>
 
-                    {/* Hacker side metrics */}
-                    <div className="absolute left-6 bottom-6 flex flex-col gap-1.5 text-[10px] text-white/30 tracking-widest uppercase">
-                        <p>CPU_LOAD: <span className="text-primary/70">42%</span></p>
-                        <p>MEM_ALLOC: <span className="text-primary/70">OK</span></p>
-                        <p>NET_LATENCY: <span className="text-primary/70">3ms</span></p>
-                    </div>
-                    
-                    <div className="absolute right-6 top-6 text-right flex flex-col gap-1.5 text-[10px] text-white/30 tracking-widest uppercase">
-                        <p>SERVER: <span className="text-white/70">US-EAST-1</span></p>
-                        <p>NODE: <span className="text-white/70">V8.4.1</span></p>
-                    </div>
+
                 </motion.div>
             )}
         </AnimatePresence>

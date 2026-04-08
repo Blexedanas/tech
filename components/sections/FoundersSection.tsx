@@ -11,7 +11,7 @@ const founders = [
         role: "Founder & CEO",
         image: "/Zarin.jpeg", 
         bio: "Strategic visionary leading ZERIXA TECH's mission. Zarin drives the core business strategy to redefine how brands interact with technology.",
-        linkedin: "https://www.linkedin.com/",
+        linkedin: "https://www.linkedin.com/feed/",
         github: "https://github.com/",
         portfolio: "",
         skills: ["Strategy", "Operations", "Leadership"],
@@ -104,11 +104,11 @@ export default function FoundersSection() {
                                     </a>
                                     {founder.name === "Zarin R Shaikh" ? (
                                         <>
-                                            <a href="#" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-all flex items-center gap-2 font-black uppercase tracking-widest text-[10px]">
+                                            <a href="https://www.instagram.com/sayyed.zarin/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-all flex items-center gap-2 font-black uppercase tracking-widest text-[10px]">
                                                 <Instagram className="w-4 h-4" />
                                                 Instagram
                                             </a>
-                                            <a href="#" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-all flex items-center gap-2 font-black uppercase tracking-widest text-[10px]">
+                                            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-all flex items-center gap-2 font-black uppercase tracking-widest text-[10px]">
                                                 <Twitter className="w-4 h-4" />
                                                 X
                                             </a>
