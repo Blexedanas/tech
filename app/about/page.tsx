@@ -26,20 +26,21 @@ type TeamMember = {
         portfolio?: string;
         twitter?: string;
     };
+    objectPosition?: string;
 };
 
 const team: TeamMember[] = [
-    { name: 'Zarin Shaikh', role: 'Founder & CEO', desc: 'Visionary leader of Zerixa Tech, driving innovation and business growth with a focus on delivering smart digital solutions and client success.', image: '/Zarina.png', color: 'hsl(20, 70%, 55%)', social: {} },
-    { name: 'Azim Sayyed', role: 'Co-Founder', desc: 'Co-founder of Zerixa Tech, contributing to business development, strategic planning, and operational excellence.', image: '', color: 'hsl(210, 70%, 50%)', social: {} },
-    { name: 'Anas Shaikh', role: 'Chief Technology Officer (CTO)', desc: 'Leads all technical operations, ensuring high-quality development, performance, and scalable digital solutions.', image: '/Anas.jpeg', color: 'hsl(260, 70%, 65%)', social: {} },
-    { name: 'Dipen', role: 'Full Stack Developer', desc: 'Responsible for end-to-end web development, creating responsive, efficient, and user-friendly digital platforms.', image: '/Dipen.png', color: 'hsl(180, 70%, 45%)', social: {} },
-    { name: 'Amman Shaikh', role: 'Head of UI/UX Design', desc: 'Designs intuitive and visually engaging user experiences, enhancing customer interaction and brand identity.', image: '/Amaan.png', color: 'hsl(200, 70%, 55%)', social: {} },
-    { name: 'Sohail Shaikh', role: 'Head of SEO', desc: 'Expert in search engine optimization, driving organic growth and improving website rankings.', image: '/Sohail.png', color: 'hsl(280, 70%, 60%)', social: {} },
+    { name: 'Zarin R Shaikh', role: 'Founder & CEO', desc: 'Visionary leader of Zerixa Tech, driving innovation and business growth with a focus on delivering smart digital solutions and client success.', image: '/Zarin.jpeg', color: 'hsl(20, 70%, 55%)', social: {} },
+    { name: 'Azim Sayyed', role: 'Co-Founder', desc: 'Co-founder of Zerixa Tech, contributing to business development, strategic planning, and operational excellence.', image: '/Azim.jpeg', color: 'hsl(210, 70%, 50%)', social: {} },
+    { name: 'Anas Shaikh', role: 'Chief Technology Officer (CTO)', desc: 'Drives the technology vision of Zerixa Tech, building scalable digital solutions and leading innovation across all products.', image: '/Anas.jpeg', color: 'hsl(260, 70%, 65%)', objectPosition: 'object-top', social: {} },
+    { name: 'Dipen Vishwakarama', role: 'Full Stack Developer', desc: 'Responsible for end-to-end web development, creating responsive, efficient, and user-friendly digital platforms.', image: '/Dipen.jpeg', color: 'hsl(180, 70%, 45%)', objectPosition: 'object-top', social: {} },
     { name: 'Satyam Wada', role: 'Head of Social Media Marketing', desc: 'Leads social media strategies and campaigns to boost brand presence and engagement. Awarded "Miss Cultural India World".', image: '', color: 'hsl(330, 70%, 65%)', social: {} },
-    { name: 'Adv. Vikram Kapoor', role: 'Head Legal Advisor', desc: 'Provides expert legal guidance, ensuring compliance, contracts, and business protection.', image: '', color: 'hsl(150, 60%, 50%)', social: {} },
-    { name: 'CA Ravi Vishwakarma', role: 'Head of Accounts & Finance', desc: 'Manages financial planning, accounting, and ensures smooth financial operations.', image: '', color: 'hsl(45, 80%, 50%)', social: {} },
-    { name: 'Sujzzan', role: 'Head of Social Media Operations', desc: 'Manages platforms like Reels, Facebook, and content strategy to boost engagement and reach. Recognized as a Strong Contestant on Splitsvilla 2026.', image: '', color: 'hsl(10, 70%, 60%)', social: {} },
+    { name: 'Suzzane', role: 'Head of Social Media Operations', desc: 'Manages platforms like Reels, Facebook, and content strategy to boost engagement and reach. Recognized as a Strong Contestant on Splitsvilla 2026.', image: '', color: 'hsl(10, 70%, 60%)', social: {} },
+    { name: 'Sohail Shaikh', role: 'Head of SEO', desc: 'Expert in search engine optimization, driving organic growth and improving website rankings.', image: '/Sohail.png', color: 'hsl(280, 70%, 60%)', objectPosition: 'object-top', social: {} },
     { name: 'Ibrahim Shaikh', role: 'Professional Photographer', desc: 'An experienced photographer who has worked on numerous films, advertisements, and web series, bringing high-quality visual storytelling to every project.', image: '', color: 'hsl(220, 70%, 40%)', social: {} },
+    { name: 'Amman Shaikh', role: 'Head of UI/UX Design', desc: 'Designs intuitive and visually engaging user experiences, enhancing customer interaction and brand identity.', image: '/Amaan.png', color: 'hsl(200, 70%, 55%)', objectPosition: 'object-top', social: {} },
+    { name: 'CA Ravi Vishwakarma', role: 'Head of Accounts & Finance', desc: 'Manages financial planning, accounting, and ensures smooth financial operations.', image: '', color: 'hsl(45, 80%, 50%)', social: {} },
+    { name: 'Adv. Vikram Kapoor', role: 'Head Legal Advisor', desc: 'Provides expert legal guidance, ensuring compliance, contracts, and business protection.', image: '', color: 'hsl(150, 60%, 50%)', social: {} },
 ]
 
 
@@ -242,7 +243,7 @@ export default function AboutPage() {
                                         {/* @ts-ignore */}
                                         {member.image ? (
                                             /* @ts-ignore */
-                                            <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500" />
+                                            <img src={member.image} alt={member.name} className={`w-full h-full object-cover ${member.objectPosition || 'object-center'} transition-all duration-500`} />
                                         ) : (
                                             member.name[0]
                                         )}

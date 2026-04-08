@@ -14,20 +14,21 @@ type TeamMember = {
         portfolio?: string;
         twitter?: string;
     };
+    objectPosition?: string;
 };
 
 const team: TeamMember[] = [
-    { name: 'Zarin Shaikh', role: 'Founder & CEO', desc: 'Visionary leader of Zerixa Tech, driving innovation and business growth with a focus on delivering smart digital solutions and client success.', image: '/Zarina.png', social: {} },
-    { name: 'Azim Sayyed', role: 'Co-Founder', desc: 'Co-founder of Zerixa Tech, contributing to business development, strategic planning, and operational excellence.', image: 'https://i.pravatar.cc/300?u=Azim', social: {} },
-    { name: 'Anas Shaikh', role: 'Chief Technology Officer (CTO)', desc: 'Leads all technical operations, ensuring high-quality development, performance, and scalable digital solutions.', image: '/Anas.jpeg', social: { github: 'https://github.com/Blexedanas', portfolio: 'https://anasportfoliio.web.app/', linkedin: 'https://www.linkedin.com/in/anas-shaikh-a0ba1a2b1/' } },
-    { name: 'Dipen', role: 'Full Stack Developer', desc: 'Responsible for end-to-end web development, creating responsive, efficient, and user-friendly digital platforms.', image: '/Dipen.png', social: { github: 'https://github.com/vishwakarmadipen85', portfolio: 'https://dipenvishportfolio.netlify.app/', linkedin: 'https://www.linkedin.com/in/dipen-vishwakarma-976705303/' } },
-    { name: 'Amman Shaikh', role: 'Head of UI/UX Design', desc: 'Designs intuitive and visually engaging user experiences, enhancing customer interaction and brand identity.', image: '/Amaan.png', social: {} },
-    { name: 'Sohail Shaikh', role: 'Head of SEO', desc: 'Expert in search engine optimization, driving organic growth and improving website rankings.', image: '/Sohail.png', social: {} },
+    { name: 'Zarin R Shaikh', role: 'Founder & CEO', desc: 'Visionary leader of Zerixa Tech, driving innovation and business growth with a focus on delivering smart digital solutions and client success.', image: '/Zarin.jpeg', social: {} },
+    { name: 'Azim Sayyed', role: 'Co-Founder', desc: 'Co-founder of Zerixa Tech, contributing to business development, strategic planning, and operational excellence.', image: '/Azim.jpeg', social: {} },
+    { name: 'Anas Shaikh', role: 'Chief Technology Officer (CTO)', desc: 'Drives the technology vision of Zerixa Tech, building scalable digital solutions and leading innovation across all products.', image: '/Anas.jpeg', objectPosition: 'object-top', social: { github: 'https://github.com/Blexedanas', portfolio: 'https://anasportfoliio.web.app/', linkedin: 'https://www.linkedin.com/in/anas-shaikh-a0ba1a2b1/' } },
+    { name: 'Dipen Vishwakarama', role: 'Full Stack Developer', desc: 'Responsible for end-to-end web development, creating responsive, efficient, and user-friendly digital platforms.', image: '/Dipen.jpeg', objectPosition: 'object-top', social: { github: 'https://github.com/vishwakarmadipen85', portfolio: 'https://dipenvishportfolio.netlify.app/', linkedin: 'https://www.linkedin.com/in/dipen-vishwakarma-976705303/' } },
     { name: 'Satyam Wada', role: 'Head of Social Media Marketing', desc: 'Leads social media strategies and campaigns to boost brand presence and engagement. Awarded "Miss Cultural India World".', image: 'https://i.pravatar.cc/300?u=Satyam', social: {} },
-    { name: 'Adv. Vikram Kapoor', role: 'Head Legal Advisor', desc: 'Provides expert legal guidance, ensuring compliance, contracts, and business protection.', image: 'https://i.pravatar.cc/300?u=Vikram', social: {} },
-    { name: 'CA Ravi Vishwakarma', role: 'Head of Accounts & Finance', desc: 'Manages financial planning, accounting, and ensures smooth financial operations.', image: 'https://i.pravatar.cc/300?u=Ravi', social: {} },
-    { name: 'Sujzzan', role: 'Head of Social Media Operations', desc: 'Manages platforms like Reels, Facebook, and content strategy to boost engagement and reach. Recognized as a Strong Contestant on Splitsvilla 2026.', image: 'https://i.pravatar.cc/300?u=Sujzzan', social: {} },
+    { name: 'Suzzane', role: 'Head of Social Media Operations', desc: 'Manages platforms like Reels, Facebook, and content strategy to boost engagement and reach. Recognized as a Strong Contestant on Splitsvilla 2026.', image: 'https://i.pravatar.cc/300?u=Sujzzan', social: {} },
+    { name: 'Sohail Shaikh', role: 'Head of SEO', desc: 'Expert in search engine optimization, driving organic growth and improving website rankings.', image: '/Sohail.png', objectPosition: 'object-top', social: {} },
     { name: 'Ibrahim Shaikh', role: 'Professional Photographer', desc: 'An experienced photographer who has worked on numerous films, advertisements, and web series, bringing high-quality visual storytelling to every project.', image: 'https://i.pravatar.cc/300?u=Ibrahim', social: {} },
+    { name: 'Amman Shaikh', role: 'Head of UI/UX Design', desc: 'Designs intuitive and visually engaging user experiences, enhancing customer interaction and brand identity.', image: '/Amaan.png', objectPosition: 'object-top', social: {} },
+    { name: 'CA Ravi Vishwakarma', role: 'Head of Accounts & Finance', desc: 'Manages financial planning, accounting, and ensures smooth financial operations.', image: 'https://i.pravatar.cc/300?u=Ravi', social: {} },
+    { name: 'Adv. Vikram Kapoor', role: 'Head Legal Advisor', desc: 'Provides expert legal guidance, ensuring compliance, contracts, and business protection.', image: 'https://i.pravatar.cc/300?u=Vikram', social: {} },
 ]
 
 export default function TeamSection() {
@@ -58,7 +59,7 @@ export default function TeamSection() {
                                     src={member.image}
                                     alt={member.name}
                                     fill
-                                    className="object-cover object-top absolute inset-0 z-10 filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                                    className={`object-cover ${member.objectPosition || 'object-center'} absolute inset-0 z-10 filter group-hover:scale-105 transition-all duration-700`}
                                 />
                                 {/* Bottom Gradient Overlay */}
                                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-white via-white/80 to-transparent z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
