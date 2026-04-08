@@ -132,10 +132,13 @@ const stats = [
 ]
 
 const faqs = [
+    { q: 'What digital marketing services do you offer?', a: 'We offer comprehensive strategies including SEO, social media management, targeted ad campaigns, and deep data analytics to maximize your reach and conversion rates.' },
+    { q: 'Do you build mobile apps for both iOS and Android?', a: 'Yes, we develop high-performance, cross-platform native applications using modern frameworks, ensuring a flawless user experience across all devices.' },
+    { q: 'How can business automation help my company?', a: 'Automation streamlines repetitive tasks, integrates your internal software tools (like CRM and billing), and reduces human error, saving you hundreds of operational hours every month.' },
     { q: 'How long does a typical project take?', a: 'Standard website projects usually take 4-6 weeks, while complex AI solutions or custom app development can range from 8-12 weeks depending on scope.' },
-    { q: 'Do you offer post-launch support?', a: 'Absolutely. We provide comprehensive maintenance packages including security updates, performance monitoring, and content updates.' },
-    { q: 'Can you integrate AI into my existing site?', a: 'Yes. We specialize in building AI layers (chatbots, recommendation engines, automation) that sit perfectly atop your current infrastructure.' },
-    { q: 'How do you handle project security?', a: 'We follow enterprise-grade security protocols, including encrypted data storage, secure API authentications, and regular vulnerability audits.' },
+    { q: 'Do you offer post-launch support?', a: 'Absolutely. We provide comprehensive maintenance packages including security updates, performance monitoring, and targeted growth updates.' },
+    { q: 'Can you integrate AI into my existing infrastructure?', a: 'Yes. We specialize in building AI layers (chatbots, recommendation engines, smart automations) that sit perfectly atop your current digital ecosystem.' },
+    { q: 'How do you handle project data security?', a: 'We follow enterprise-grade security protocols, including encrypted data storage, secure API authentications, and regular vulnerability audits.' },
 ]
 
 const expandedTestimonials = [
