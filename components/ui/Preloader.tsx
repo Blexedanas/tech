@@ -66,9 +66,9 @@ export default function Preloader() {
                         </motion.div>
 
                         {/* Cascading Data Blocks */}
-                        <div className="flex gap-1.5 md:gap-2 mb-12 flex-wrap justify-center max-w-[80vw]">
+                        <div className="flex gap-1 md:gap-2 mb-12 flex-nowrap justify-center w-full px-4">
                             {blocks.map((_, i) => (
-                                <div key={i} className="w-5 h-8 md:w-6 md:h-10 border border-white/10 bg-white/5 relative overflow-hidden">
+                                <div key={i} className={`w-4 h-6 md:w-6 md:h-10 border border-white/10 bg-white/5 relative overflow-hidden shrink-0 ${i >= 10 ? 'hidden md:block' : ''}`}>
                                     <motion.div
                                         className="absolute inset-0 bg-primary/80 shadow-[0_0_20px_var(--primary)]"
                                         initial={{ opacity: 0, scaleY: 0 }}
