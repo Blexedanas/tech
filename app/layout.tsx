@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import SmoothScrollProvider from '@/components/providers/SmoothScrollProvider'
-import CustomCursor from '@/components/ui/CustomCursor'
 import NoiseOverlay from '@/components/ui/NoiseOverlay'
 import Preloader from '@/components/ui/Preloader'
 
@@ -61,7 +60,6 @@ export default function RootLayout({
                 <ScrollRevealTracker />
                 <SmoothScrollProvider>  
                     <NoiseOverlay />
-                    <CustomCursor />
                     <Navbar />
                     <FloatingButtons />
                     <main>{children}</main>

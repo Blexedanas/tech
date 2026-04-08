@@ -122,7 +122,7 @@ export default function Footer() {
                 {/* Bottom bar */}
                 <div className="h-px bg-slate-200 my-10" />
                 <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 text-sm text-slate-500">
-                    <span>© 2026 Zerixa Tech. All rights reserved. <br className="block sm:hidden" />Made with ❤️ by <a href="https://anasportfoliio.web.app" target="_blank" rel="noopener noreferrer" className="font-bold text-slate-800 hover:text-primary transition-colors underline decoration-primary/30 underline-offset-2 whitespace-nowrap">Shaikh Anas</a></span>
+                    <span>© 2026 Zerixa Tech. All rights reserved. <br className="block sm:hidden" />Made with ❤️ by <a href="https://zerixatech.com" target="_blank" rel="noopener noreferrer" className="font-bold text-slate-800 hover:text-primary transition-colors underline decoration-primary/30 underline-offset-2 whitespace-nowrap">Zerixa Tech</a></span>
                     <div className="flex gap-6">
                         <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
                         <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
