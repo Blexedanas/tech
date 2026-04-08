@@ -3,7 +3,20 @@
 import Image from 'next/image'
 import { Linkedin, Twitter, Github, Globe } from 'lucide-react'
 
-const team = [
+type TeamMember = {
+    name: string;
+    role: string;
+    desc: string;
+    image: string;
+    social: {
+        github?: string;
+        linkedin?: string;
+        portfolio?: string;
+        twitter?: string;
+    };
+};
+
+const team: TeamMember[] = [
     { name: 'Zarin Shaikh', role: 'Founder & CEO', desc: 'Visionary leader of Zerixa Tech, driving innovation and business growth with a focus on delivering smart digital solutions and client success.', image: '/Zarina.png', social: {} },
     { name: 'Azim Sayyed', role: 'Co-Founder', desc: 'Co-founder of Zerixa Tech, contributing to business development, strategic planning, and operational excellence.', image: 'https://i.pravatar.cc/300?u=Azim', social: {} },
     { name: 'Anas Shaikh', role: 'Chief Technology Officer (CTO)', desc: 'Leads all technical operations, ensuring high-quality development, performance, and scalable digital solutions.', image: '/Anas.jpeg', social: { github: 'https://github.com/Blexedanas', portfolio: 'https://anasportfoliio.web.app/', linkedin: 'https://www.linkedin.com/in/anas-shaikh-a0ba1a2b1/' } },

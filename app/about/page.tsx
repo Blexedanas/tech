@@ -14,7 +14,21 @@ const values = [
     { icon: Shield, title: 'Quality', desc: 'We ship zero-compromise, production-ready code.' },
 ]
 
-const team = [
+type TeamMember = {
+    name: string;
+    role: string;
+    desc: string;
+    image: string;
+    color: string;
+    social: {
+        github?: string;
+        linkedin?: string;
+        portfolio?: string;
+        twitter?: string;
+    };
+};
+
+const team: TeamMember[] = [
     { name: 'Zarin Shaikh', role: 'Founder & CEO', desc: 'Visionary leader of Zerixa Tech, driving innovation and business growth with a focus on delivering smart digital solutions and client success.', image: '/Zarina.png', color: 'hsl(20, 70%, 55%)', social: {} },
     { name: 'Azim Sayyed', role: 'Co-Founder', desc: 'Co-founder of Zerixa Tech, contributing to business development, strategic planning, and operational excellence.', image: '', color: 'hsl(210, 70%, 50%)', social: {} },
     { name: 'Anas Shaikh', role: 'Chief Technology Officer (CTO)', desc: 'Leads all technical operations, ensuring high-quality development, performance, and scalable digital solutions.', image: '/Anas.jpeg', color: 'hsl(260, 70%, 65%)', social: {} },
