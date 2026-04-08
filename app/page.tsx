@@ -246,8 +246,8 @@ function ServicesCarousel({ services }: { services: any[] }) {
 
                             {/* Text Content */}
                             <div className="relative z-20">
-                                <h3 className="font-display font-black text-5xl text-white mb-4 leading-tight">{featured.title}</h3>
-                                <p className="text-white/70 text-lg mb-8 max-w-sm font-medium leading-relaxed">{featured.desc}</p>
+                                <h3 className="font-display font-black text-3xl md:text-5xl text-white mb-4 leading-tight break-words">{featured.title}</h3>
+                                <p className="text-white/70 text-sm md:text-lg mb-6 md:mb-8 max-w-sm font-medium leading-relaxed">{featured.desc}</p>
                                 <Link href={featured.href} className="btn-primary bg-white text-primary hover:bg-white hover:scale-105 border-none shadow-xl py-4 px-10 text-sm font-black uppercase tracking-widest inline-flex">
                                     View Details <ArrowRight className="w-4 h-4 ml-2" />
                                 </Link>
@@ -572,8 +572,8 @@ export default function Home() {
             <div className="py-12 bg-[#FAFAFA] relative z-10 overflow-hidden perspective-2000">
                 <div className="tilt-3d py-10 border-y border-black/5 bg-[#F4F4F5] relative scale-110">
                     {/* Edge Fades */}
-                    <div className="absolute inset-y-0 left-0 w-64 bg-gradient-to-r from-[#F4F4F5] via-[#F4F4F5]/80 to-transparent z-20 pointer-events-none" />
-                    <div className="absolute inset-y-0 right-0 w-64 bg-gradient-to-l from-[#F4F4F5] via-[#F4F4F5]/80 to-transparent z-20 pointer-events-none" />
+                    <div className="absolute inset-y-0 left-0 w-8 md:w-64 bg-gradient-to-r from-[#F4F4F5] via-[#F4F4F5]/80 to-transparent z-20 pointer-events-none" />
+                    <div className="absolute inset-y-0 right-0 w-8 md:w-64 bg-gradient-to-l from-[#F4F4F5] via-[#F4F4F5]/80 to-transparent z-20 pointer-events-none" />
 
                     {/* Row 1: Leftward */}
                     <div className="flex animate-marquee whitespace-nowrap mb-8 pb-4">
@@ -634,9 +634,9 @@ export default function Home() {
                 <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-[#E8712C]/5 to-transparent pointer-events-none" />
                 <div className="container-custom grid lg:grid-cols-2 gap-16 items-center">
                     {/* Left: Visual (Living Dashboard) */}
-                    <div className="relative group/dashboard perspective-2000">
+                    <div className="relative group/dashboard perspective-2000 w-full overflow-hidden md:overflow-visible">
                         <motion.div
-                            className="bg-white border border-black/5 rounded-[3rem] p-10 relative overflow-hidden shadow-2xl transition-all duration-700"
+                            className="bg-white border border-black/5 rounded-[2rem] md:rounded-[3rem] p-5 md:p-10 relative overflow-hidden shadow-2xl transition-all duration-700"
                             whileHover={{
                                 rotateX: -5,
                                 rotateY: 5,
@@ -678,7 +678,7 @@ export default function Home() {
                                 ))}
 
                                 {/* Code snippet with typing effect */}
-                                <div className="bg-[#0F172A] rounded-2xl p-6 font-mono text-sm border border-white/5 shadow-2xl relative overflow-hidden" style={{ transform: 'translateZ(50px)' }}>
+                                <div className="bg-[#0F172A] rounded-2xl p-4 md:p-6 font-mono text-[10px] md:text-sm border border-white/5 shadow-2xl relative overflow-hidden" style={{ transform: 'translateZ(50px)' }}>
                                     <div className="absolute top-0 right-0 p-3 opacity-20">
                                         <div className="w-2 h-2 rounded-full bg-red-400 mb-1" />
                                         <div className="w-2 h-2 rounded-full bg-yellow-400 mb-1" />
@@ -805,8 +805,8 @@ export default function Home() {
 
             {/* ═══════════════════ HOW WE WORK ═══════════════════ */}
             <section className="section-padding bg-black/[0.01] relative overflow-hidden" style={{ backgroundColor: 'var(--navy-mid)' }}>
-                <div className="hero-blob top-0 left-0 w-96 h-96 bg-primary/10" />
-                <div className="hero-blob bottom-0 right-0 w-[500px] h-[500px] bg-purple/10" />
+                <div className="hero-blob top-0 left-0 w-64 md:w-96 h-64 md:h-96 bg-primary/10" />
+                <div className="hero-blob bottom-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-purple/10" />
 
                 <div className="container-custom relative">
                     <div className="text-center mb-20 reveal">

@@ -144,9 +144,9 @@ export default function AboutPage() {
                             target="_blank"
                             className="bg-white border border-black/10 p-1.5 rounded-[2.2rem] relative z-10 transform-gpu transition-all duration-700 hover:rotate-y-3 hover:-rotate-x-3 block shadow-2xl"
                         >
-                            <img src="/Vibetech.png" alt="Team" className="w-full h-[300px] md:h-[540px] object-contain bg-slate-50 rounded-[1.8rem] transition-all duration-700 p-4" />
-                            <div className="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-md border border-black/10 p-6 rounded-2xl shadow-xl">
-                                <h4 className="text-slate-900 font-bold text-xl">Zerixa Tech Team</h4>
+                            <img src="/Vibetech.png" alt="Team" className="w-full h-[200px] sm:h-[300px] md:h-[540px] object-contain bg-white rounded-[1.8rem] transition-all duration-700" />
+                            <div className="absolute bottom-4 left-4 right-4 md:bottom-10 md:left-10 md:right-10 bg-white/90 backdrop-blur-md border border-black/10 p-4 md:p-6 rounded-2xl shadow-xl text-center">
+                                <h4 className="text-slate-900 font-bold text-lg md:text-xl">Zerixa Tech Team</h4>
                             </div>
                         </Link>
                     </div>
