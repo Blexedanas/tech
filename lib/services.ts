@@ -209,6 +209,129 @@ export const servicesData: Record<string, ServiceData> = {
     'packaging-design': { slug: 'packaging-design', badge: 'Branding', title: 'Unbox Quality', subtitle: 'Packaging Design', color: '#A020F0', iconName: 'palette', description: 'Custom structural and graphic packaging design that jumps off the physical and digital shelf.', features: ['Structural Design', 'Label Graphics', 'Eco-friendly Solutions', '3D Prototypes', 'Print-Ready Files', 'Supplier Sourcing Consult'], benefits: [{ title: 'The Wow Factor', desc: 'Create an unboxing experience that customers immediately want to share on social media.' }, { title: 'Shelf Presence', desc: 'Stand out from competitors in retail environments with striking silhouettes and colors.' }, { title: 'Brand Tactility', desc: 'Translate your digital brand values into physical materials and textures.' }], tech: ['Illustrator', 'Dimension', 'Blender', 'Pantone'], process: commonProcess },
     'graphic-design': { slug: 'graphic-design', badge: 'Branding', title: 'Visual Impact', subtitle: 'Graphic Design', color: '#A020F0', iconName: 'palette', description: 'Premium graphics, illustrations, and layouts for all your digital and physical marketing needs.', features: ['Social Media Kits', 'Ad Creative', 'Brochures & Print', 'Infographics', 'Custom Illustrations', 'Presentation Decks'], benefits: [{ title: 'Engaging Content', desc: 'Capture attention instantly in crowded feeds with stunning visuals.' }, { title: 'Professionalism', desc: 'High-quality graphics elevate the perceived value of your products immediately.' }, { title: 'Fast Turnaround', desc: 'We deliver pixel-perfect assets quickly so your marketing never slows down.' }], tech: ['Photoshop', 'Illustrator', 'InDesign', 'Figma'], process: commonProcess },
     'brand-guidelines': { slug: 'brand-guidelines', badge: 'Branding', title: 'Stay Consistent', subtitle: 'Brand Guidelines', color: '#A020F0', iconName: 'palette', description: 'Comprehensive rulebooks for your brand’s visual identity and verbal tone of voice.', features: ['Logo Usage Rules', 'Typography systems', 'Color Palettes', 'Tone of Voice Guide', 'Photography Moodboards', 'UI Asset Library'], benefits: [{ title: 'Total Consistency', desc: 'Ensure your brand looks cohesive whether produced by an agency or a new intern.' }, { title: 'Faster Onboarding', desc: 'Speed up new marketing hires and external partners with a clear source of truth.' }, { title: 'Brand Value', desc: 'Consistency over time builds deep brand equity and recognition.' }], tech: ['Figma', 'InDesign', 'Frontify'], process: commonProcess },
+    
+    // NEW MARKETING SERVICES
+    'digital-marketing': { 
+        slug: 'digital-marketing', 
+        badge: 'Marketing', 
+        title: 'Complete Digital', 
+        subtitle: 'Dominance', 
+        color: '#0A66FF', 
+        iconName: 'globe', 
+        description: 'Comprehensive digital marketing strategies that integrate SEO, PPC, and Social to build a unified growth engine for your brand.', 
+        features: ['Multichannel Strategy', 'Customer Data Analytics', 'Growth Hacking', 'Campaign Orchestration', 'ROI Modeling', 'Omnichannel Presence'], 
+        benefits: [{ title: 'Unified Growth', desc: 'Break down silos and ensure every marketing dollar works together across all platforms.' }, { title: 'Data Mastery', desc: 'Use advanced analytics to understand exactly where your customers come from and why they buy.' }, { title: 'Scalable ROI', desc: 'Identify winning patterns and scale them aggressively for massive commercial impact.' }], 
+        tech: ['Google Marketing Platform', 'HubSpot', 'Salesforce', 'GA4', 'Tableau'], 
+        process: commonProcess 
+    },
+    'content-marketing': { 
+        slug: 'content-marketing', 
+        badge: 'Marketing', 
+        title: 'Authority Through', 
+        subtitle: 'High-Value Content', 
+        color: '#0A66FF', 
+        iconName: 'zap', 
+        description: 'We don\'t just write articles; we create authoritative assets that educate your market, build trust, and drive passive organic traffic.', 
+        features: ['Editorial Strategy', 'Long-form Assets', 'Video Scripts', 'Whitepapers & Case Studies', 'Content Distribution', 'SEO Copywriting'], 
+        benefits: [{ title: 'Build Trust', desc: 'Position your brand as the definitive authority in your niche through expert-level educational content.' }, { title: 'Compound Traffic', desc: 'Great content is an asset that drives traffic and leads for years after it is published.' }, { title: 'Nurture Funnel', desc: 'Guide buyers through their journey with content that answers every objection and builds confidence.' }], 
+        tech: ['SurferSEO', 'Grammarly Business', 'WordPress', 'StoryChief'], 
+        process: commonProcess 
+    },
+    'influencer-marketing': { 
+        slug: 'influencer-marketing', 
+        badge: 'Marketing', 
+        title: 'Leverage Powerful', 
+        subtitle: 'Social Trust', 
+        color: '#0A66FF', 
+        iconName: 'smartphone', 
+        description: 'Tap into established audiences and borrow the trust of creators. We manage end-to-end influencer campaigns that feel authentic and drive sales.', 
+        features: ['Creator Sourcing', 'Campaign Management', 'Contract Negotiation', 'Creative Direction', 'Tracking & Attribution', 'Whitelisting Ads'], 
+        benefits: [{ title: 'Instant Trust', desc: 'Skip the "getting to know you" phase by appearing alongside creators your audience already loves.' }, { title: 'High Engagement', desc: 'Influencer content consistently out-performs brand-shot creative in terms of real human engagement.' }, { title: 'Creator Assets', desc: 'Get rights to high-quality, authentic content that you can reuse across your other marketing channels.' }], 
+        tech: ['Grin', 'Upfluence', 'Modash', 'Meta Business Suite'], 
+        process: commonProcess 
+    },
+    'performance-marketing': { 
+        slug: 'performance-marketing', 
+        badge: 'Marketing', 
+        title: 'Profit-First', 
+        subtitle: 'Growth Engine', 
+        color: '#0A66FF', 
+        iconName: 'zap', 
+        description: 'Pure focus on the metrics that matter. We optimize every touchpoint of the customer journey to drive the highest possible return on your ad spend.', 
+        features: ['Funnel Optimization', 'A/B Testing', 'Customer Lifetime Value (LTV)', 'CAC Reduction', 'Retargeting Architecture', 'Attribution Modeling'], 
+        benefits: [{ title: 'Guaranteed ROI', desc: 'Our performance campaigns are tracked to the penny, ensuring you see a clear return on every investment.' }, { title: 'Aggressive Scaling', desc: 'Once the math works, we scale your budget to capture as much market share as possible.' }, { title: 'Dynamic Learning', desc: 'Fast testing cycles mean we find what works in days, not months, keeping you ahead of the curve.' }], 
+        tech: ['Hyros', 'Triple Whale', 'Google Ads', 'Meta Ads', 'Optimize'], 
+        process: commonProcess 
+    },
+
+    // NEW DEVELOPMENT SERVICES
+    'software-development': { 
+        slug: 'software-development', 
+        badge: 'Development', 
+        title: 'Custom Engineering', 
+        subtitle: 'Enterprise Software', 
+        color: '#0A66FF', 
+        iconName: 'code', 
+        description: 'Bespoke software solutions architected for scalability, security, and complex business logic. We build the engines that power industry leaders.', 
+        features: ['Microservices Arch', 'Custom CRM/ERP', 'Legacy Migration', 'API First Design', 'Cloud Native App', 'DevOps Integration'], 
+        benefits: [{ title: 'Full Control', desc: 'Own your entire codebase with zero platform lock-in and a roadmap tailored 100% to your needs.' }, { title: 'Infinite Scale', desc: 'Our architecture is built to handle millions of transactions without compromising on speed or security.' }, { title: 'Operational Speed', desc: 'Automate complex manual processes into streamlined digital workflows that save thousands of hours.' }], 
+        tech: ['Java', 'Node.js', 'Go', 'Docker', 'Kubernetes', 'AWS/Azure'], 
+        process: commonProcess 
+    },
+    'app-web-maintenance': { 
+        slug: 'app-web-maintenance', 
+        badge: 'Development', 
+        title: 'Continuous Care', 
+        subtitle: 'Maintenance & Support', 
+        color: '#0A66FF', 
+        iconName: 'zap', 
+        description: 'Keep your digital assets running at peak performance. We provide ongoing support, security monitoring, and regular updates to ensure zero downtime.', 
+        features: ['24/7 Monitoring', 'Security Patching', 'Performance Tuning', 'Bug Fixing', 'Cloud Management', 'Version Upgrades'], 
+        benefits: [{ title: 'Zero Downtime', desc: 'Proactive monitoring means we catch and fix issues before your users even notice them.' }, { title: 'Staying Secure', desc: 'Continuous security audits and real-time patching protect your data from evolving cyber threats.' }, { title: 'Always Relevant', desc: 'Regular performance updates ensure your platform remains fast and compatible with the latest browsers and devices.' }], 
+        tech: ['New Relic', 'Datadog', 'Sentry', 'GitHub Actions', 'Terraform'], 
+        process: commonProcess 
+    },
+    'ai-ml-solutions': { 
+        slug: 'ai-ml-solutions', 
+        badge: 'Development', 
+        title: 'Intelligence First', 
+        subtitle: 'AI & ML Systems', 
+        color: '#0066FF', 
+        iconName: 'brain', 
+        description: 'Transform your data into a competitive advantage. We build custom AI models and machine learning pipelines that predict, automate, and innovate.', 
+        features: ['Predictive Analytics', 'NLP & LLM Tuning', 'Computer Vision', 'Generative AI', 'Data Engineering', 'Model Deployment'], 
+        benefits: [{ title: 'Predictive Edge', desc: 'Use your data to forecast market trends and customer behavior with uncanny accuracy.' }, { title: 'Extreme Automation', desc: 'Let smart algorithms handle complex decision-making tasks that were previously human-only.' }, { title: 'Product Innovation', desc: 'Bring unique, AI-powered features to your products that competitors simply cannot replicate.' }], 
+        tech: ['Python', 'PyTorch', 'TensorFlow', 'OpenAI API', 'Hugging Face', 'Pinecone'], 
+        process: commonProcess 
+    },
+    
+    // NEW ADVERTISING SERVICES
+    'google-ads': { 
+        slug: 'google-ads', 
+        badge: 'Paid Advertising', 
+        title: 'Master Search With', 
+        subtitle: 'Google Ads', 
+        color: '#E8712C', 
+        iconName: 'zap', 
+        description: 'Dominate the world\'s most powerful search engine. We build highly optimized Google Ads campaigns that capture high-intent traffic and convert it into revenue.', 
+        features: ['Search Network', 'Display Ads', 'YouTube Ads', 'Performance Max', 'Keyword Research', 'Conversion Tracking'], 
+        benefits: [{ title: 'Instant Visibility', desc: 'Appear at the very top of Google the moment your customers are searching for your services.' }, { title: 'High Intent', desc: 'Target users who are ready to buy right now, maximizing your immediate ROI.' }, { title: 'Global Reach', desc: 'Scale your business locally or globally with precision geo-targeting.' }], 
+        tech: ['Google Ads', 'Keyword Planner', 'GA4', 'Tag Manager'], 
+        process: commonProcess 
+    },
+    'facebook-ads': { 
+        slug: 'facebook-ads', 
+        badge: 'Paid Advertising', 
+        title: 'Social Dominance', 
+        subtitle: 'Facebook Ads', 
+        color: '#E8712C', 
+        iconName: 'smartphone', 
+        description: 'Harness the power of Facebook\'s massive user base. We create scroll-stopping ad creative and laser-focused targeting to grow your brand.', 
+        features: ['Interest Targeting', 'Lookalike Audiences', 'Dynamic Creative', 'Video Marketing', 'Pixel Mastery', 'Lead Generation'], 
+        benefits: [{ title: 'Deep Targeting', desc: 'Reach your ideal customers based on their specific lifestyle, interests, and behaviors.' }, { title: 'Brand Awareness', desc: 'Build massive brand recognition across the most used social network in the world.' }, { title: 'Scalable ROI', desc: 'Our data-driven approach allows us to scale winning campaigns while keeping costs low.' }], 
+        tech: ['Meta Business Suite', 'Ad Manager', 'CAPI', 'Canva'], 
+        process: commonProcess 
+    },
 }
 
 // Fallback for all other sub-services until individual data is added

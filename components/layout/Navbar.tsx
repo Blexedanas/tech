@@ -12,13 +12,12 @@ const serviceCategories = [
         title: 'MARKETING',
         href: '/services',
         links: [
-            { name: 'Best SEO Company', href: '/services/seo-services' },
+            { name: 'Digital Marketing', href: '/services/digital-marketing' },
+            { name: 'Content Marketing', href: '/services/content-marketing' },
+            { name: 'Influencer Marketing', href: '/services/influencer-marketing' },
+            { name: 'Performance Marketing', href: '/services/performance-marketing' },
             { name: 'SEO Services', href: '/services/seo-services' },
-            { name: 'Local SEO', href: '/services/local-seo' },
-            { name: 'Ecommerce SEO', href: '/services/ecommerce-seo' },
-            { name: 'Amazon SEO', href: '/services/amazon-seo' },
             { name: 'Apps Marketing', href: '/services/apps-marketing' },
-            { name: 'Organic Social', href: '/services/organic-social' },
         ]
     },
     {
@@ -27,10 +26,10 @@ const serviceCategories = [
         links: [
             { name: 'Web Development', href: '/services/web-development' },
             { name: 'App Development', href: '/services/app-development' },
+            { name: 'Software Development', href: '/services/software-development' },
+            { name: 'App & Web Maintenance', href: '/services/app-web-maintenance' },
+            { name: 'AI/ML Solutions', href: '/services/ai-ml-solutions' },
             { name: 'Automation', href: '/services/automation' },
-            { name: 'WordPress', href: '/services/wordpress' },
-            { name: 'Shopify', href: '/services/shopify' },
-            { name: 'Asp .Net', href: '/services/asp-net' },
         ]
     },
     {
@@ -38,23 +37,23 @@ const serviceCategories = [
         href: '/services',
         links: [
             { name: 'Brand Management', href: '/services/brand-management' },
+            { name: 'Brand Identity', href: '/services/brand-identity' },
+            { name: 'Brand Guidelines', href: '/services/brand-guidelines' },
+            { name: 'Graphic Design', href: '/services/graphic-design' },
             { name: 'Logo Design', href: '/services/logo-design' },
             { name: 'Packaging Design', href: '/services/packaging-design' },
-            { name: 'Brand Identity', href: '/services/brand-identity' },
-            { name: 'Graphic Design', href: '/services/graphic-design' },
-            { name: 'Brand Guidelines', href: '/services/brand-guidelines' },
         ]
     },
     {
         title: 'PAID ADVERTISING',
         href: '/services',
         links: [
-            { name: 'PPC Ads', href: '/services/ppc-ads' },
-            { name: 'Meta Ads', href: '/services/meta-ads' },
+            { name: 'Google Ads', href: '/services/google-ads' },
             { name: 'Instagram Ads', href: '/services/instagram-ads' },
-            { name: 'Ecommerce PPC', href: '/services/ecommerce-ppc' },
+            { name: 'Facebook Ads', href: '/services/facebook-ads' },
+            { name: 'Meta Ads', href: '/services/meta-ads' },
+            { name: 'PPC Ads', href: '/services/ppc-ads' },
             { name: 'Bing Ads', href: '/services/bing-ads' },
-            { name: 'Conversion Optimization', href: '/services/conversion-optimization' },
         ]
     }
 ]

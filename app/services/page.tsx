@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { 
     Globe, Smartphone, Code, Palette, Layers, ArrowRight, 
-    Search, Globe2, ShoppingCart, SmartphoneNfc, Share2,
+    Search, Globe2, ShoppingCart, SmartphoneNfc, Share2, Users, Brain,
     Layout, Database, PenTool, Box, Fingerprint, Image as ImageIcon, FileText, Zap, Laptop,
     Rocket, Shield, CheckCircle, Award, MapPin, ShoppingBag, TrendingUp, Cpu,
     MousePointerClick, Facebook, Instagram
@@ -14,40 +14,6 @@ import React, { useState, useEffect } from 'react'
 
 const serviceCategories = [
     {
-        id: 'advertising',
-        title: 'PAID ADVERTISING',
-        icon: Zap,
-        color: '#0F172A',
-        gradient: 'from-slate-900/20 to-slate-900/5',
-        tags: ['PPC', 'Meta Ads', 'Bing Ads'],
-        description: 'Maximize your ROI with precision-targeted ad campaigns across all major digital platforms.',
-        services: [
-            { name: 'PPC Ads', icon: MousePointerClick },
-            { name: 'Meta Ads', icon: Facebook },
-            { name: 'Instagram Ads', icon: Instagram },
-            { name: 'Ecommerce PPC', icon: ShoppingBag },
-            { name: 'Bing Ads', icon: Search },
-            { name: 'Conversion Optimization', icon: Zap }
-        ]
-    },
-    {
-        id: 'branding',
-        title: 'BRANDING',
-        icon: Palette,
-        color: '#9b59b6',
-        gradient: 'from-purple-600/20 to-purple-600/5',
-        tags: ['Identity', 'Graphics', 'Strategy'],
-        description: 'Compelling brand identities that resonate with your audience and define your vision.',
-        services: [
-            { name: 'Brand Management', icon: Rocket },
-            { name: 'Logo Design', icon: Fingerprint },
-            { name: 'Packaging Design', icon: Box },
-            { name: 'Brand Identity', icon: PenTool },
-            { name: 'Graphic Design', icon: ImageIcon },
-            { name: 'Brand Guidelines', icon: FileText }
-        ]
-    },
-    {
         id: 'marketing',
         title: 'MARKETING',
         icon: TrendingUp,
@@ -56,13 +22,12 @@ const serviceCategories = [
         tags: ['SEO', 'Google Ads', 'Organic Social'],
         description: 'Data-driven growth strategies (SEO, Ads, Social) to scale your brand presence and ROI.',
         services: [
-            { name: 'Best SEO Company', icon: Award },
+            { name: 'Digital Marketing', icon: Globe },
+            { name: 'Content Marketing', icon: FileText },
+            { name: 'Influencer Marketing', icon: Users },
+            { name: 'Performance Marketing', icon: TrendingUp },
             { name: 'SEO Services', icon: Search },
-            { name: 'Local SEO', icon: MapPin },
-            { name: 'Ecommerce SEO', icon: ShoppingBag },
-            { name: 'Amazon SEO', icon: ShoppingCart },
-            { name: 'Apps Marketing', icon: SmartphoneNfc },
-            { name: 'Organic Social', icon: Share2 }
+            { name: 'Apps Marketing', icon: SmartphoneNfc }
         ]
     },
     {
@@ -76,10 +41,44 @@ const serviceCategories = [
         services: [
             { name: 'Web Development', icon: Laptop },
             { name: 'App Development', icon: Smartphone },
-            { name: 'Automation', icon: Zap },
-            { name: 'WordPress', icon: Globe2 },
-            { name: 'Shopify', icon: ShoppingCart },
-            { name: 'Asp .Net', icon: Layers }
+            { name: 'Software Development', icon: Code },
+            { name: 'App & Web Maintenance', icon: Shield },
+            { name: 'AI/ML Solutions', icon: Brain },
+            { name: 'Automation', icon: Zap }
+        ]
+    },
+    {
+        id: 'branding',
+        title: 'BRANDING',
+        icon: Palette,
+        color: '#9b59b6',
+        gradient: 'from-purple-600/20 to-purple-600/5',
+        tags: ['Identity', 'Graphics', 'Strategy'],
+        description: 'Compelling brand identities that resonate with your audience and define your vision.',
+        services: [
+            { name: 'Brand Management', icon: Rocket },
+            { name: 'Brand Identity', icon: PenTool },
+            { name: 'Brand Guidelines', icon: FileText },
+            { name: 'Graphic Design', icon: ImageIcon },
+            { name: 'Logo Design', icon: Fingerprint },
+            { name: 'Packaging Design', icon: Box }
+        ]
+    },
+    {
+        id: 'advertising',
+        title: 'PAID ADVERTISING',
+        icon: Zap,
+        color: '#0F172A',
+        gradient: 'from-slate-900/20 to-slate-900/5',
+        tags: ['PPC', 'Meta Ads', 'Bing Ads'],
+        description: 'Maximize your ROI with precision-targeted ad campaigns across all major digital platforms.',
+        services: [
+            { name: 'Google Ads', icon: Zap },
+            { name: 'Instagram Ads', icon: Instagram },
+            { name: 'Facebook Ads', icon: Facebook },
+            { name: 'Meta Ads', icon: Layout },
+            { name: 'PPC Ads', icon: MousePointerClick },
+            { name: 'Bing Ads', icon: Search }
         ]
     }
 ]
