@@ -52,28 +52,38 @@ export default function PortfolioPage() {
                 <div className="container-custom relative z-10 text-center max-w-4xl mx-auto">
                     <div className="badge-orange mb-5 animate-breathe inline-block">⟹ Our Portfolio</div>
                     <h1 className="font-display font-extrabold text-5xl md:text-7xl text-slate-900 leading-tight mb-6 font-black">
-                        {"Work That Makes ".split("").map((char, i) => (
-                            <motion.span
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: i * 0.03 }}
-                                className="char-reveal"
-                            >
-                                {char === " " ? "\u00A0" : char}
-                            </motion.span>
+                        {"Work That Makes".split(" ").map((word, wordIdx, arr) => (
+                            <span key={wordIdx} className="inline-block whitespace-nowrap">
+                                {word.split("").map((char, i) => (
+                                    <motion.span
+                                        key={`${wordIdx}-${i}`}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: (wordIdx * 5 + i) * 0.03 }}
+                                        className="char-reveal"
+                                    >
+                                        {char}
+                                    </motion.span>
+                                ))}
+                                {wordIdx !== arr.length - 1 && "\u00A0"}
+                            </span>
                         ))}
                         <br />
-                        {"Us ".split("").map((char, i) => (
-                            <motion.span
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.5 + i * 0.03 }}
-                                className="char-reveal"
-                            >
-                                {char === " " ? "\u00A0" : char}
-                            </motion.span>
+                        {"Us".split(" ").map((word, wordIdx, arr) => (
+                            <span key={wordIdx} className="inline-block whitespace-nowrap mr-3">
+                                {word.split("").map((char, i) => (
+                                    <motion.span
+                                        key={`${wordIdx}-${i}`}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.5 + (wordIdx * 2 + i) * 0.03 }}
+                                        className="char-reveal"
+                                    >
+                                        {char}
+                                    </motion.span>
+                                ))}
+                                {wordIdx !== arr.length - 1 && "\u00A0"}
+                            </span>
                         ))}
                         <span className="gradient-text">Proud</span>
                     </h1>

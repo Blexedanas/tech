@@ -61,29 +61,40 @@ export default function AboutPage() {
                 <div className="container-custom relative z-10 text-center max-w-4xl mx-auto">
                     <div className="badge-orange mb-5 animate-breathe inline-block">⟹ About Zerixa Tech</div>
                     <h1 className="font-display font-black text-5xl md:text-7xl text-slate-900 leading-[1.1] mb-6 tracking-tight">
-                        {"We Build Digital ".split("").map((char, i) => (
-                            <motion.span
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: i * 0.03 }}
-                                className="char-reveal"
-                            >
-                                {char === " " ? "\u00A0" : char}
-                            </motion.span>
+                        {"We Build Digital".split(" ").map((word, wordIdx, arr) => (
+                            <span key={wordIdx} className="inline-block whitespace-nowrap">
+                                {word.split("").map((char, i) => (
+                                    <motion.span
+                                        key={`${wordIdx}-${i}`}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: (wordIdx * 7 + i) * 0.03 }}
+                                        className="char-reveal"
+                                    >
+                                        {char}
+                                    </motion.span>
+                                ))}
+                                {wordIdx !== arr.length - 1 && "\u00A0"}
+                            </span>
                         ))}
+                        {" "}
                         <span className="gradient-text">Experiences</span>
                         <br />
-                        {"That Matter".split("").map((char, i) => (
-                            <motion.span
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.5 + i * 0.03 }}
-                                className="char-reveal"
-                            >
-                                {char === " " ? "\u00A0" : char}
-                            </motion.span>
+                        {"That Matter".split(" ").map((word, wordIdx, arr) => (
+                            <span key={wordIdx} className="inline-block whitespace-nowrap">
+                                {word.split("").map((char, i) => (
+                                    <motion.span
+                                        key={`${wordIdx}-${i}`}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.5 + (wordIdx * 6 + i) * 0.03 }}
+                                        className="char-reveal"
+                                    >
+                                        {char}
+                                    </motion.span>
+                                ))}
+                                {wordIdx !== arr.length - 1 && "\u00A0"}
+                            </span>
                         ))}
                     </h1>
                     <p className="text-slate-600 text-xl leading-relaxed max-w-2xl mx-auto mb-10 reveal-up font-medium">
@@ -133,7 +144,7 @@ export default function AboutPage() {
                             target="_blank"
                             className="bg-white border border-black/10 p-1.5 rounded-[2.2rem] relative z-10 transform-gpu transition-all duration-700 hover:rotate-y-3 hover:-rotate-x-3 block shadow-2xl"
                         >
-                            <img src="/Vibetech.png" alt="Founder" className="w-full h-[540px] object-cover rounded-[1.8rem] transition-all duration-700" />
+                            <img src="/Vibetech.png" alt="Team" className="w-full h-[300px] md:h-[540px] object-contain bg-slate-50 rounded-[1.8rem] transition-all duration-700 p-4" />
                             <div className="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-md border border-black/10 p-6 rounded-2xl shadow-xl">
                                 <h4 className="text-slate-900 font-bold text-xl">Zerixa Tech Team</h4>
                             </div>

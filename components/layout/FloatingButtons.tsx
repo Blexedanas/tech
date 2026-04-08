@@ -15,7 +15,7 @@ export default function FloatingButtons() {
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
     return (
-        <div className="fixed bottom-6 left-6 z-50 flex flex-col gap-3">
+        <div className="fixed bottom-6 right-8 md:right-10 z-[60] flex flex-col gap-3 items-end">
             {/* Phone */}
             <a
                 href="tel:+919924360745"

@@ -66,16 +66,21 @@ export default function ServicePageTemplate({
                     <div>
                         <div className="badge-orange mb-5 animate-breathe inline-block">⟹ {badge}</div>
                         <h1 className="font-display font-extrabold text-5xl md:text-7xl text-slate-900 leading-[1.1] mb-6 tracking-tight" style={{ color: 'var(--text-1)' }}>
-                            {title.split("").map((char, i) => (
-                                <motion.span
-                                    key={i}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: i * 0.03 }}
-                                    className="char-reveal"
-                                >
-                                    {char === " " ? "\u00A0" : char}
-                                </motion.span>
+                            {title.split(" ").map((word, wordIdx, arr) => (
+                                <span key={wordIdx} className="inline-block whitespace-nowrap">
+                                    {word.split("").map((char, i) => (
+                                        <motion.span
+                                            key={`${wordIdx}-${i}`}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: (wordIdx * 5 + i) * 0.03 }}
+                                            className="char-reveal"
+                                        >
+                                            {char}
+                                        </motion.span>
+                                    ))}
+                                    {wordIdx !== arr.length - 1 && "\u00A0"}
+                                </span>
                             ))}
                             <br />
                             <span className="gradient-text">{subtitle}</span>

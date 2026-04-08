@@ -366,29 +366,40 @@ export default function Home() {
                             Premium Digital Agency
                         </div>
                         <h1 className="font-display font-extrabold text-5xl md:text-7xl text-slate-900 leading-[1.1] tracking-tight mb-6" style={{ color: 'var(--text-1)' }}>
-                            {"Scale Your ".split("").map((char, i) => (
-                                <motion.span
-                                    key={i}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: i * 0.03 }}
-                                    className="char-reveal"
-                                >
-                                    {char === " " ? "\u00A0" : char}
-                                </motion.span>
+                            {"Scale Your".split(" ").map((word, wordIdx, arr) => (
+                                <span key={wordIdx} className="inline-block whitespace-nowrap">
+                                    {word.split("").map((char, i) => (
+                                        <motion.span
+                                            key={`${wordIdx}-${i}`}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: (wordIdx * 5 + i) * 0.03 }}
+                                            className="char-reveal"
+                                        >
+                                            {char}
+                                        </motion.span>
+                                    ))}
+                                    {wordIdx !== arr.length - 1 && "\u00A0"}
+                                </span>
                             ))}
+                            {" "}
                             <span className="gradient-text">Vision</span>
                             <br />
-                            {"With Precision".split("").map((char, i) => (
-                                <motion.span
-                                    key={i}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.5 + i * 0.03 }}
-                                    className="char-reveal"
-                                >
-                                    {char === " " ? "\u00A0" : char}
-                                </motion.span>
+                            {"With Precision".split(" ").map((word, wordIdx, arr) => (
+                                <span key={wordIdx} className="inline-block whitespace-nowrap">
+                                    {word.split("").map((char, i) => (
+                                        <motion.span
+                                            key={`${wordIdx}-${i}`}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: 0.5 + (wordIdx * 5 + i) * 0.03 }}
+                                            className="char-reveal"
+                                        >
+                                            {char}
+                                        </motion.span>
+                                    ))}
+                                    {wordIdx !== arr.length - 1 && "\u00A0"}
+                                </span>
                             ))}
                         </h1>
                         <p className="text-slate-600 text-lg md:text-xl leading-relaxed max-w-lg mb-10" style={{ color: 'var(--text-2)' }}>
