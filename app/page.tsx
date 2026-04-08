@@ -8,7 +8,7 @@ import FloatingButtons from '@/components/layout/FloatingButtons'
 import {
     ArrowRight, Globe, Smartphone, Code, Palette, Brain, Cpu,
     ChevronRight, Star, Quote, CheckCircle, TrendingUp, Users, Award, Zap,
-    ChevronLeft, Play, MousePointer, Shield, PhoneCall
+    ChevronLeft, Play, MousePointer, Shield, PhoneCall, Target, Lightbulb
 } from 'lucide-react'
 
 import Magnetic from '@/components/ui/Magnetic'
@@ -764,6 +764,42 @@ export default function Home() {
                                 </motion.div>
                             ))}
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ═══════════════════ OUR PHILOSOPHY ═══════════════════ */}
+            <section className="section-padding relative overflow-hidden" style={{ backgroundColor: 'var(--navy-mid)' }}>
+                <div className="container-custom relative z-10">
+                    <div className="text-center mb-16 reveal">
+                        <div className="badge-orange mb-5 animate-breathe inline-block">⟹ Our Philosophy</div>
+                        <h2 className="font-display font-black text-4xl md:text-6xl text-slate-900 mb-6">
+                            The Foundations of <span className="gradient-text">Zerixa Tech</span>
+                        </h2>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {[
+                            { title: 'Visions', desc: 'To redefine the digital landscape by creating experiences that are not just highly functional, but profoundly impactful and scalable.', icon: Target },
+                            { title: 'Mission', desc: 'To empower businesses globally through cutting-edge technology, striking design, and strategic automation tailored for massive growth.', icon: Zap },
+                            { title: 'Value', desc: 'Transparency, relentless innovation, extreme ownership, and an absolute commitment to long-term client success.', icon: Shield },
+                            { title: 'Purpose Opinion', desc: 'We firmly believe ordinary is the enemy. Every line of code and pixel we craft is driven by an obsession with absolute excellence.', icon: Lightbulb },
+                        ].map((item, i) => (
+                            <motion.div 
+                                key={i}
+                                whileHover={{ y: -10 }}
+                                className="bg-white border border-black/5 rounded-[2rem] p-8 relative overflow-hidden group hover:shadow-2xl transition-all duration-500 shadow-lg"
+                            >
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700" />
+                                <div className="w-14 h-14 rounded-2xl bg-slate-50 shadow-sm flex items-center justify-center mb-6 relative z-10 border border-black/5 group-hover:border-primary/20 group-hover:bg-primary/5 transition-colors">
+                                    <item.icon className="w-7 h-7 text-primary group-hover:scale-110 transition-transform" />
+                                </div>
+                                <h3 className="font-display font-black text-2xl text-slate-900 mb-4 relative z-10">{item.title}</h3>
+                                <p className="text-slate-500 leading-relaxed relative z-10 font-medium">
+                                    {item.desc}
+                                </p>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
