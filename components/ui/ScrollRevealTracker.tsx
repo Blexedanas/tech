@@ -23,7 +23,7 @@ export default function ScrollRevealTracker() {
         // Add a small delay to ensure DOM is fully painted after navigation
         const timeoutId = setTimeout(() => {
             const elements = document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale')
-            elements.forEach(el => observer.observe(el)) 
+            elements.forEach(el => observer.observe(el))
         }, 100)
 
         return () => {

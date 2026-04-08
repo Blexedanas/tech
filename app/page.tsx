@@ -788,7 +788,7 @@ export default function Home() {
                             <motion.div 
                                 key={i}
                                 whileHover={{ y: -10 }}
-                                className="bg-white border border-black/5 rounded-[2rem] p-8 relative overflow-hidden group hover:shadow-2xl transition-all duration-500 shadow-lg"
+                                className="bg-zinc-50 border border-black/5 rounded-[2rem] p-8 relative overflow-hidden group hover:shadow-2xl transition-all duration-500 shadow-lg"
                             >
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700" />
                                 <div className="w-14 h-14 rounded-2xl bg-slate-50 shadow-sm flex items-center justify-center mb-6 relative z-10 border border-black/5 group-hover:border-primary/20 group-hover:bg-primary/5 transition-colors">

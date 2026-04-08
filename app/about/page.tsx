@@ -15,18 +15,17 @@ const values = [
 ]
 
 const team = [
-    { name: 'Zarin R Shaikh', role: 'Founder & CEO', image: '/Zarina.png', color: 'hsl(20, 70%, 55%)', social: {} },
-    { name: 'Anas Shaikh', role: 'CTO & Tech Head', image: '/Anas.jpeg', color: 'hsl(260, 70%, 65%)', social: { github: 'https://github.com/Blexedanas', portfolio: 'https://anasportfoliio.web.app/', linkedin: 'https://www.linkedin.com/in/anas-shaikh-a0ba1a2b1/' } },
-    { name: 'Dipen Vishwakarma', role: 'Full Stack Developer', image: '/Dipen.png', color: 'hsl(180, 70%, 45%)', social: { github: 'https://github.com/vishwakarmadipen85', portfolio: 'https://dipenvishportfolio.netlify.app/', linkedin: 'https://www.linkedin.com/in/dipen-vishwakarma-976705303/' } },
-    { name: 'Shaikh Amaan', role: 'UI/UX Head', image: '/Amaan.png', color: 'hsl(200, 70%, 55%)', social: {} },
-    { name: 'Rishi', role: 'Senior App / Backend Dev', image: 'https://i.pravatar.cc/300?u=rishi', color: 'hsl(150, 60%, 50%)', social: {} },
-    { name: 'Arjun Malhotra', role: 'Project Manager', image: 'https://i.pravatar.cc/300?u=arjun', color: 'hsl(45, 80%, 50%)', social: {} },
-    { name: 'Sohail Shaikh', role: 'Digital Marketing Head', image: '/Sohail.png', color: 'hsl(280, 70%, 60%)', social: {} },
-    { name: 'Priyanka Singh', role: 'Content Strategist', image: 'https://i.pravatar.cc/300?u=priyanka', color: 'hsl(330, 70%, 65%)', social: {} },
-    { name: 'Rahul Verma', role: 'Senior SEO Specialist', image: 'https://i.pravatar.cc/300?u=rahul', color: 'hsl(180, 70%, 45%)', social: {} },
-    { name: 'Sneha Kapoor', role: 'Creative Director', image: 'https://i.pravatar.cc/300?u=sneha', color: 'hsl(10, 70%, 60%)', social: {} },
-    { name: 'Vikram Rathod', role: 'Full Stack Developer', image: 'https://i.pravatar.cc/300?u=vikram', color: 'hsl(210, 70%, 50%)', social: {} },
-    { name: 'Arjun Mehra', role: 'QA Lead', image: 'https://i.pravatar.cc/300?u=amehra', color: 'hsl(120, 60%, 45%)', social: {} },
+    { name: 'Zarin Shaikh', role: 'Founder & CEO', desc: 'Visionary leader of Zerixa Tech, driving innovation and business growth with a focus on delivering smart digital solutions and client success.', image: '/Zarina.png', color: 'hsl(20, 70%, 55%)', social: {} },
+    { name: 'Azim Sayyed', role: 'Co-Founder', desc: 'Co-founder of Zerixa Tech, contributing to business development, strategic planning, and operational excellence.', image: '', color: 'hsl(210, 70%, 50%)', social: {} },
+    { name: 'Anas Shaikh', role: 'Chief Technology Officer (CTO)', desc: 'Leads all technical operations, ensuring high-quality development, performance, and scalable digital solutions.', image: '/Anas.jpeg', color: 'hsl(260, 70%, 65%)', social: {} },
+    { name: 'Dipen', role: 'Full Stack Developer', desc: 'Responsible for end-to-end web development, creating responsive, efficient, and user-friendly digital platforms.', image: '/Dipen.png', color: 'hsl(180, 70%, 45%)', social: {} },
+    { name: 'Amman Shaikh', role: 'Head of UI/UX Design', desc: 'Designs intuitive and visually engaging user experiences, enhancing customer interaction and brand identity.', image: '/Amaan.png', color: 'hsl(200, 70%, 55%)', social: {} },
+    { name: 'Sohail Shaikh', role: 'Head of SEO', desc: 'Expert in search engine optimization, driving organic growth and improving website rankings.', image: '/Sohail.png', color: 'hsl(280, 70%, 60%)', social: {} },
+    { name: 'Satyam Wada', role: 'Head of Social Media Marketing', desc: 'Leads social media strategies and campaigns to boost brand presence and engagement. Awarded "Miss Cultural India World".', image: '', color: 'hsl(330, 70%, 65%)', social: {} },
+    { name: 'Adv. Vikram Kapoor', role: 'Head Legal Advisor', desc: 'Provides expert legal guidance, ensuring compliance, contracts, and business protection.', image: '', color: 'hsl(150, 60%, 50%)', social: {} },
+    { name: 'CA Ravi Vishwakarma', role: 'Head of Accounts & Finance', desc: 'Manages financial planning, accounting, and ensures smooth financial operations.', image: '', color: 'hsl(45, 80%, 50%)', social: {} },
+    { name: 'Sujzzan', role: 'Head of Social Media Operations', desc: 'Manages platforms like Reels, Facebook, and content strategy to boost engagement and reach. Recognized as a Strong Contestant on Splitsvilla 2026.', image: '', color: 'hsl(10, 70%, 60%)', social: {} },
+    { name: 'Ibrahim Shaikh', role: 'Professional Photographer', desc: 'An experienced photographer who has worked on numerous films, advertisements, and web series, bringing high-quality visual storytelling to every project.', image: '', color: 'hsl(220, 70%, 40%)', social: {} },
 ]
 
 
@@ -235,7 +234,8 @@ export default function AboutPage() {
                                         )}
                                     </div>
                                     <h3 className="font-display font-black text-slate-900 text-xl mb-1">{member.name}</h3>
-                                    <p className="text-primary text-sm font-bold tracking-widest uppercase mb-4">{member.role}</p>
+                                    <p className="text-primary text-sm font-bold tracking-widest uppercase mb-3">{member.role}</p>
+                                    <p className="text-slate-500 text-sm font-medium leading-relaxed flex-grow">{member.desc}</p>
 
                                     {/* @ts-ignore */}
                                     {member.social && (
