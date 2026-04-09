@@ -51,7 +51,7 @@ export default function Preloader() {
                             initial={{ filter: 'blur(10px)', opacity: 0, scale: 0.95 }}
                             animate={{ filter: 'blur(0px)', opacity: 1, scale: 1 }}
                             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-                            className="font-display font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-white mb-12 flex items-center gap-1"
+                            className="font-display font-black text-4xl md:text-5xl lg:text-6xl tracking-tighter text-text-1 mb-12 flex items-center gap-1"
                         >
                             Zerixa<span className="text-primary"> Tech</span>
                         </motion.div>

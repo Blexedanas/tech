@@ -101,7 +101,7 @@ export default function Navbar() {
         <>
             <nav
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-                    ? 'bg-navy/80 backdrop-blur-xl border-b border-white/5 shadow-sm py-0'
+                    ? 'bg-white/90 backdrop-blur-xl border-b border-border shadow-sm py-0'
                     : 'bg-transparent py-2'
                     }`}
             >
@@ -150,7 +150,7 @@ export default function Navbar() {
 
                                     {link.hasDropdown && (
                                         <div
-                                            className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-screen max-w-6xl bg-navy-mid border border-border shadow-[0_30px_60px_-15px_rgba(0,0,0,0.4)] rounded-3xl overflow-hidden transition-all duration-300 origin-top ${servicesOpen
+                                            className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-screen max-w-6xl bg-white border border-border shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] rounded-3xl overflow-hidden transition-all duration-300 origin-top ${servicesOpen
                                                 ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto'
                                                 : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
                                                 }`}
@@ -227,7 +227,7 @@ export default function Navbar() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-[100] md:hidden bg-navy/98 backdrop-blur-2xl flex flex-col justify-center p-8"
+                        className="fixed inset-0 z-[100] md:hidden bg-white/98 backdrop-blur-2xl flex flex-col justify-center p-8"
                     >
                         <button
                             className="absolute top-6 right-6 p-3 rounded-full bg-navy-mid/50 border border-border text-text-1"

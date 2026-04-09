@@ -34,8 +34,8 @@ const team: TeamMember[] = [
 
 export default function TeamSection() {
     return (
-        <section className="py-24 relative bg-navy overflow-hidden border-t border-border" id="team">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(79,142,247,0.05)_0%,transparent_70%)] pointer-events-none" />
+        <section className="py-24 relative bg-navy overflow-hidden border-t border-white/[0.05]" id="team">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(59,130,246,0.05)_0%,transparent_70%)] pointer-events-none" />
 
             <div className="container-custom mx-auto relative z-10">
                 <div className="text-center mb-16 reveal">
@@ -43,8 +43,8 @@ export default function TeamSection() {
                         <span className="w-2 h-2 rounded-full bg-primary" />
                         Our Experts
                     </div>
-                    <h2 className="font-display font-black text-4xl md:text-5xl lg:text-6xl text-text-1 tracking-tight mb-6 leading-tight">
-                        Meet The <span className="gradient-text">Team.</span>
+                    <h2 className="font-display font-black text-4xl md:text-5xl lg:text-6xl text-text-1 tracking-tight mb-6 leading-tight uppercase italic">
+                        Meet The <span className="text-accent-blue italic">Team.</span>
                     </h2>
                     <p className="text-text-2 text-lg md:text-xl font-medium leading-relaxed max-w-2xl mx-auto">
                         The visionary minds and technical powerhouses behind Zerixa Tech's most successful digital ecosystems.
@@ -53,51 +53,53 @@ export default function TeamSection() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-up delay-200">
                     {team.map((member, i) => (
-                        <div key={i} className="group relative rounded-[2.5rem] overflow-hidden bg-navy-mid border border-border hover:border-primary/20 hover:bg-navy hover:shadow-2xl transition-all duration-500">
+                        <div key={i} className="group relative rounded-[20px] overflow-hidden card-blue-premium shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)] hover:-translate-y-[5px] transition-all duration-500">
                             {/* Image Container */}
-                            <div className="w-full aspect-[4/5] relative overflow-hidden bg-slate-200">
+                            <div className="w-full aspect-[4/5] relative overflow-hidden bg-white/5">
                                  <Image
                                     src={member.image}
                                     alt={member.name}
                                     fill
-                                    className={`object-cover ${member.objectPosition || 'object-center'} absolute inset-0 z-10 filter group-hover:scale-105 transition-all duration-700`}
+                                    className={`object-cover ${member.objectPosition || 'object-center'} absolute inset-0 z-10 filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700`}
                                 />
+                                {/* Glow effect on hover */}
+                                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700 z-0" />
                                 {/* Bottom Gradient Overlay */}
-                                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-navy via-navy/80 to-transparent z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#3B82F6] via-[#3B82F6]/80 to-transparent z-20 pointer-events-none" />
                             </div>
 
                             {/* Info */}
-                            <div className="p-8 relative z-30 group-hover:-translate-y-2 transition-transform duration-500">
-                                <h3 className="font-display font-black text-xl text-text-1 mb-1 group-hover:text-primary transition-colors">{member.name}</h3>
-                                <p className="text-text-4 text-xs font-black uppercase tracking-widest mb-3">{member.role}</p>
-                                <p className="text-text-3 text-sm leading-relaxed mb-6">{member.desc}</p>
+                            <div className="p-8 relative z-30 group-hover:-translate-y-1 transition-transform duration-500">
+                                <h3 className="font-display font-black text-xl text-white mb-1 group-hover:text-white transition-colors uppercase italic tracking-tight">{member.name}</h3>
+                                <p className="text-white/70 text-[10px] font-black uppercase tracking-widest mb-3">{member.role}</p>
+                                <p className="text-white/90 text-sm leading-relaxed mb-6 font-medium line-clamp-3 group-hover:text-white transition-colors">{member.desc}</p>
 
                                 {/* Socials */}
                                 <div className="flex items-center gap-3">
                                     {member.social.linkedin && (
-                                        <a href={member.social.linkedin} className="w-9 h-9 rounded-xl bg-navy border border-border flex items-center justify-center hover:bg-primary transition-all text-text-4 hover:text-white shadow-sm hover:shadow-lg hover:shadow-primary/20">
+                                        <a href={member.social.linkedin} className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white transition-all text-white hover:text-[#3B82F6] shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">
                                             <Linkedin className="w-4 h-4" />
                                         </a>
                                     )}
                                     {member.social.twitter && (
-                                        <a href={member.social.twitter} className="w-9 h-9 rounded-xl bg-navy border border-border flex items-center justify-center hover:bg-primary transition-all text-text-4 hover:text-white shadow-sm hover:shadow-lg hover:shadow-primary/20">
+                                        <a href={member.social.twitter} className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white transition-all text-white hover:text-[#3B82F6] shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">
                                             <Twitter className="w-4 h-4" />
                                         </a>
                                     )}
                                     {member.social.instagram && (
-                                        <a href={member.social.instagram} className="w-9 h-9 rounded-xl bg-navy border border-border flex items-center justify-center hover:bg-primary transition-all text-text-4 hover:text-white shadow-sm hover:shadow-lg hover:shadow-primary/20">
+                                        <a href={member.social.instagram} className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white transition-all text-white hover:text-[#3B82F6] shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">
                                             <Instagram className="w-4 h-4" />
                                         </a>
                                     )}
                                     {member.social.github && (
-                                        <a href={member.social.github} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-xl bg-navy border border-border flex items-center justify-center hover:bg-primary transition-all text-text-4 hover:text-white shadow-sm hover:shadow-lg hover:shadow-primary/20">
+                                        <a href={member.social.github} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white transition-all text-white hover:text-[#3B82F6] shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">
                                             <Github className="w-4 h-4" />
                                         </a>
                                     )}
                                     {/* @ts-ignore */}
                                     {member.social.portfolio && (
                                         /* @ts-ignore */
-                                        <a href={member.social.portfolio} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-xl bg-navy border border-border flex items-center justify-center hover:bg-primary transition-all text-text-4 hover:text-white shadow-sm hover:shadow-lg hover:shadow-primary/20" title="Portfolio">
+                                        <a href={member.social.portfolio} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white transition-all text-white hover:text-[#3B82F6] shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]" title="Portfolio">
                                             <Globe className="w-4 h-4" />
                                         </a>
                                     )}
@@ -110,3 +112,4 @@ export default function TeamSection() {
         </section>
     )
 }
+

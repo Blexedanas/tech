@@ -282,7 +282,7 @@ function ServicesCarousel({ services }: { services: any[] }) {
                             className={`relative rounded-[2.5rem] p-10 flex flex-col items-center justify-center gap-6 transition-all duration-500 group overflow-hidden border ${
                                 active === i 
                                 ? 'bg-primary border-primary shadow-2xl scale-105' 
-                                : 'bg-navy-mid border-border hover:border-primary/20 hover:shadow-xl'
+                                : 'card-blue-premium border-white/5 opacity-80 hover:opacity-100 hover:shadow-xl'
                             }`}
                         >
                             <div className={`w-20 h-20 rounded-3xl flex items-center justify-center transition-all duration-500 overflow-hidden relative ${
@@ -386,7 +386,7 @@ export default function Home() {
                                 </span>
                             ))}
                             {" "}
-                            <span className="gradient-text">Vision</span>
+                            <span className="text-accent-blue italic tracking-tight">Vision</span>
                             <br />
                             {"With Precision".split(" ").map((word, wordIdx, arr) => (
                                 <span key={wordIdx} className="inline-block whitespace-nowrap">
@@ -616,7 +616,7 @@ export default function Home() {
                         <div className="grid lg:grid-cols-2 gap-10 items-end">
                             <h2 className="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-tight" style={{ color: 'var(--text-1)' }}>
                                 One Stop Solution For <br />
-                                <span className="gradient-text">All Your Need</span>
+                                <span className="text-accent-blue italic tracking-tight uppercase">All Your Need</span>
                             </h2>
                             <p className="text-slate-600 text-lg leading-relaxed max-w-xl" style={{ color: 'var(--text-2)' }}>
                                 Looking for a complete tech partner? Zerixa Tech is an all-in-one IT provider — covering high-end web & app development, UI/UX, AI solutions, and IoT systems.
@@ -738,23 +738,23 @@ export default function Home() {
                     {/* Right: Interactive Feature Cards */}
                     <div>
                         <div className="badge-orange mb-5">⟹ Why Us</div>
-                        <h2 className="font-display font-extrabold text-4xl md:text-5xl text-white mb-8" style={{ color: 'var(--text-1)' }}>
+                        <h2 className="font-display font-black text-4xl md:text-5xl text-text-1 mb-8 uppercase italic tracking-tight" style={{ color: 'var(--text-1)' }}>
                             Software That <br />
-                            <span className="gradient-text">Actually Moves You</span>
+                            <span className="text-[#1e3a8a] italic">Actually Moves You</span>
                         </h2>
 
                         <div className="grid sm:grid-cols-2 gap-4">
                             {features.map((f, i) => (
                                 <motion.div
                                     key={i}
-                                    whileHover={{ y: -5 }}
-                                    className="bg-navy-mid border border-border rounded-3xl p-6 transition-all duration-300 hover:shadow-xl hover:border-primary/20 group cursor-default"
+                                    whileHover={{ y: -5, scale: 1.02 }}
+                                    className="card-blue-premium p-6 transition-all duration-300 shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_20px_50px_rgba(59,130,246,0.4)] group overflow-hidden"
                                 >
-                                    <div className="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:border-transparent group-hover:scale-110 transition-all duration-500">
-                                        <CheckCircle className="w-6 h-6 text-primary group-hover:text-white" />
+                                    <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-500">
+                                        <CheckCircle className="w-6 h-6 text-white" />
                                     </div>
-                                    <h4 className="text-text-1 font-bold mb-2 group-hover:text-primary transition-colors" style={{ color: 'var(--text-1)' }}>{f.title}</h4>
-                                    <p className="text-text-2 text-sm leading-relaxed" style={{ color: 'var(--text-2)' }}>{f.desc}</p>
+                                    <h4 className="text-white font-display font-black uppercase tracking-tight italic mb-2 group-hover:text-white transition-colors">{f.title}</h4>
+                                    <p className="text-white/90 text-sm leading-relaxed">{f.desc}</p>
 
                                     <div className="mt-4 flex opacity-0 group-hover:opacity-100 transition-opacity">
                                         <div className="h-1 w-12 rounded-full bg-gradient-to-r from-primary to-transparent" />
@@ -771,8 +771,8 @@ export default function Home() {
                 <div className="container-custom relative z-10">
                     <div className="text-center mb-16 reveal">
                         <div className="badge-orange mb-5 animate-breathe inline-block">⟹ Our Philosophy</div>
-                        <h2 className="font-display font-black text-4xl md:text-6xl text-white mb-6" style={{ color: 'var(--text-1)' }}>
-                            The Foundations of <span className="gradient-text">Zerixa Tech</span>
+                        <h2 className="font-display font-black text-4xl md:text-6xl text-text-1 mb-6 uppercase italic tracking-tight" style={{ color: 'var(--text-1)' }}>
+                            The Foundations of <span className="text-[#1e3a8a] italic">Zerixa Tech</span>
                         </h2>
                     </div>
 
@@ -785,15 +785,15 @@ export default function Home() {
                         ].map((item, i) => (
                             <motion.div 
                                 key={i}
-                                whileHover={{ y: -10 }}
-                                className="bg-navy border border-border rounded-[2rem] p-8 relative overflow-hidden group hover:shadow-2xl transition-all duration-500 shadow-lg"
+                                whileHover={{ y: -10, scale: 1.02 }}
+                                className="card-blue-premium p-8 relative overflow-hidden group shadow-[0_10px_30px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_rgba(59,130,246,0.3)] transition-all duration-500"
                             >
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700" />
-                                <div className="w-14 h-14 rounded-2xl bg-navy-mid shadow-sm flex items-center justify-center mb-6 relative z-10 border border-border group-hover:border-primary/20 group-hover:bg-primary/5 transition-colors">
-                                    <item.icon className="w-7 h-7 text-primary group-hover:scale-110 transition-transform" />
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700" />
+                                <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md shadow-sm flex items-center justify-center mb-6 relative z-10 border border-white/20 group-hover:bg-white/20 transition-colors">
+                                    <item.icon className="w-7 h-7 text-white group-hover:scale-110 transition-transform" />
                                 </div>
-                                <h3 className="font-display font-black text-2xl text-text-1 mb-4 relative z-10">{item.title}</h3>
-                                <p className="text-text-2 leading-relaxed relative z-10 font-medium">
+                                <h3 className="font-display font-black text-2xl text-white mb-4 relative z-10 uppercase tracking-tight italic">{item.title}</h3>
+                                <p className="text-white/90 leading-relaxed relative z-10 font-medium">
                                     {item.desc}
                                 </p>
                             </motion.div>
@@ -807,8 +807,8 @@ export default function Home() {
                 <div className="container-custom relative z-10">
                     <div className="text-center mb-16 reveal">
                         <div className="badge-orange mb-5">⟹ Performance First</div>
-                        <h2 className="font-display font-black text-4xl md:text-6xl text-text-1 mb-6" style={{ color: 'var(--text-1)' }}>
-                            Features That <span className="gradient-text">Drive Success</span>
+                        <h2 className="font-display font-black text-4xl md:text-6xl text-text-1 mb-6 uppercase italic tracking-tight" style={{ color: 'var(--text-1)' }}>
+                            Features That <span className="text-accent-blue italic">Drive Success</span>
                         </h2>
                     </div>
 
@@ -825,15 +825,19 @@ export default function Home() {
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
+                                whileHover={{ y: -5 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="bg-navy-mid p-8 rounded-[2.5rem] border border-border hover:border-primary/20 hover:shadow-2xl transition-all duration-500"
+                                className="relative card-blue-premium p-8 rounded-[2.5rem] shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_20px_50px_rgba(59,130,246,0.4)] transition-all duration-500 group overflow-hidden"
                             >
-                                <div className="w-14 h-14 rounded-2xl bg-navy border border-border flex items-center justify-center mb-6">
-                                    <item.icon className="w-7 h-7 text-primary" />
+                                {/* Hover Gradient Enhancement Layer */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                                <div className="relative z-10 w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-500">
+                                    <item.icon className="w-7 h-7 text-white" />
                                 </div>
-                                <h3 className="font-display font-bold text-xl text-text-1 mb-3">{item.title}</h3>
-                                <p className="text-text-2 text-sm leading-relaxed">{item.desc}</p>
+                                <h3 className="relative z-10 font-display font-black text-xl text-white mb-3 uppercase tracking-tight italic group-hover:text-white transition-colors">{item.title}</h3>
+                                <p className="relative z-10 text-white/90 text-sm leading-relaxed">{item.desc}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -848,8 +852,8 @@ export default function Home() {
                 <div className="container-custom relative">
                     <div className="text-center mb-20 reveal">
                         <div className="badge-orange mb-5">⟹ Our Process</div>
-                        <h2 className="font-display font-extrabold text-4xl md:text-6xl text-text-1 mb-6" style={{ color: 'var(--text-1)' }}>
-                            How Do We <span className="gradient-text">Work?</span>
+                        <h2 className="font-display font-extrabold text-4xl md:text-6xl text-text-1 mb-6 uppercase italic tracking-tight" style={{ color: 'var(--text-1)' }}>
+                            How Do We <span className="text-[#1e3a8a] italic">Work?</span>
                         </h2>
                         <p className="text-slate-600 max-w-2xl mx-auto text-lg" style={{ color: 'var(--text-2)' }}>A proven data-driven process honed over years to deliver exceptional outcomes.</p>
                     </div>
@@ -863,13 +867,13 @@ export default function Home() {
 
                         {steps.map((step, i) => (
                             <div key={step.num} className={`relative group z-10 reveal-up delay-${i * 100}`}>
-                                <div className="bg-navy-mid border border-border rounded-[2.5rem] p-8 relative overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 h-full">
+                                <div className="card-blue-premium p-8 relative overflow-hidden shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_20px_50px_rgba(59,130,246,0.4)] transition-all duration-500 h-full group-hover:-translate-y-2">
                                     <div className="relative z-10">
-                                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-all duration-500">
-                                            <span className="text-primary font-display font-extrabold text-xl">{step.num}</span>
+                                        <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-500">
+                                            <span className="text-white font-display font-extrabold text-xl">{step.num}</span>
                                         </div>
-                                        <h3 className="font-display font-bold text-2xl text-text-1 mb-4 group-hover:text-primary transition-colors" style={{ color: 'var(--text-1)' }}>{step.title}</h3>
-                                        <p className="text-text-2 text-base leading-relaxed" style={{ color: 'var(--text-2)' }}>{step.desc}</p>
+                                        <h3 className="font-display font-black text-2xl text-white mb-4 group-hover:text-white transition-colors uppercase tracking-tight italic">{step.title}</h3>
+                                        <p className="text-white/90 text-base leading-relaxed font-medium">{step.desc}</p>
                                     </div>
                                 </div>
                             </div>
@@ -891,8 +895,8 @@ export default function Home() {
                 <div className="container-custom relative">
                     <div className="text-center mb-16 reveal">
                         <div className="badge-orange mb-5">Industries We Serve</div>
-                        <h2 className="font-display font-extrabold text-4xl md:text-6xl text-text-1 mb-6" style={{ color: 'var(--text-1)' }}>
-                            Tailored Solutions For <span className="gradient-text">Every Industry</span>
+                        <h2 className="font-display font-extrabold text-4xl md:text-6xl text-text-1 mb-6 uppercase italic tracking-tight" style={{ color: 'var(--text-1)' }}>
+                            Tailored Solutions For <span className="text-[#1e3a8a] italic">Every Industry</span>
                         </h2>
                         <p className="text-text-2 max-w-2xl mx-auto text-lg" style={{ color: 'var(--text-2)' }}>
                             From startups to global enterprises, we bring deep domain expertise across multiple strategic sectors.
@@ -903,14 +907,14 @@ export default function Home() {
                         {industries.map((ind, i) => (
                             <div
                                 key={ind.title}
-                                className={`group bg-navy-mid border border-border rounded-3xl p-8 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 reveal-up delay-${(i % 4) * 100}`}
+                                className={`group card-blue-premium p-8 text-center shadow-[0_10px_30px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_50px_rgba(59,130,246,0.4)] hover:-translate-y-2 transition-all duration-500 reveal-up delay-${(i % 4) * 100}`}
                             >
                                 <div className="relative z-10">
-                                    <div className="w-16 h-16 rounded-2xl bg-navy border border-border flex items-center justify-center mx-auto mb-6 text-3xl group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-500">
+                                    <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mx-auto mb-6 text-3xl group-hover:scale-110 group-hover:bg-white/20 transition-all duration-500">
                                         {ind.icon}
                                     </div>
-                                    <h3 className="font-display font-bold text-text-1 text-xl mb-3 group-hover:text-primary transition-colors" style={{ color: 'var(--text-1)' }}>{ind.title}</h3>
-                                    <p className="text-text-3 text-sm leading-relaxed" style={{ color: 'var(--text-3)' }}>{ind.desc}</p>
+                                    <h3 className="font-display font-black text-white text-xl mb-3 uppercase tracking-tight italic">{ind.title}</h3>
+                                    <p className="text-white/80 text-sm leading-relaxed font-medium">{ind.desc}</p>
                                 </div>
                             </div>
                         ))}
@@ -943,19 +947,19 @@ export default function Home() {
                 <div className="container-custom max-w-4xl relative z-10">
                     <div className="text-center mb-16 reveal">
                         <div className="badge-orange mb-5">⟹ FAQ</div>
-                        <h2 className="font-display font-black text-4xl md:text-6xl text-text-1 mb-6 font-black tracking-tight" style={{ color: 'var(--text-1)' }}>
-                            Common <span className="gradient-text">Questions</span>
+                        <h2 className="font-display font-black text-4xl md:text-6xl text-text-1 mb-6 font-black uppercase italic tracking-tight" style={{ color: 'var(--text-1)' }}>
+                            Common <span className="text-[#1e3a8a] italic">Questions</span>
                         </h2>
                     </div>
 
                     <div className="space-y-4">
                         {faqs.map((faq, i) => (
-                            <details key={i} className="group bg-navy-mid border border-border rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-300">
-                                <summary className="flex items-center justify-between cursor-pointer list-none font-display font-bold text-xl text-text-1">
+                            <details key={i} className="group card-blue-premium p-8 shadow-[0_10px_30px_rgba(59,130,246,0.1)] hover:shadow-[0_20px_50px_rgba(59,130,246,0.3)] transition-all duration-300">
+                                <summary className="flex items-center justify-between cursor-pointer list-none font-display font-black text-xl text-white uppercase tracking-tight italic">
                                     {faq.q}
-                                    <ChevronRight className="w-6 h-6 text-primary group-open:rotate-90 transition-transform" />
+                                    <ChevronRight className="w-6 h-6 text-white group-open:rotate-90 transition-transform" />
                                 </summary>
-                                <div className="mt-6 text-text-2 leading-relaxed font-medium pt-6 border-t border-border animate-fade-in">
+                                <div className="mt-6 text-white/80 leading-relaxed font-medium pt-6 border-t border-white/20 animate-fade-in">
                                     {faq.a}
                                 </div>
                             </details>
@@ -970,8 +974,8 @@ export default function Home() {
                 <div className="container-custom relative">
                     <div className="text-center mb-16 reveal">
                         <div className="badge-orange mb-5">⟹ Testimonials</div>
-                        <h2 className="font-display font-extrabold text-4xl md:text-6xl text-text-1 mb-6" style={{ color: 'var(--text-1)' }}>
-                            What Our <span className="gradient-text">Clients Say</span>
+                        <h2 className="font-display font-extrabold text-4xl md:text-6xl text-text-1 mb-6 uppercase italic tracking-tight" style={{ color: 'var(--text-1)' }}>
+                            What Our <span className="text-[#1e3a8a] italic">Clients Say</span>
                         </h2>
                     </div>
 
@@ -980,24 +984,24 @@ export default function Home() {
                         <div className="flex animate-marquee space-x-8">
                             {[...expandedTestimonials, ...expandedTestimonials].map((t, i) => (
                                 <div key={i} className="w-[400px] shrink-0">
-                                    <div className="bg-navy border border-border rounded-[2.5rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 relative h-full">
-                                        <div className="absolute top-8 right-8 text-6xl text-primary/10 font-serif leading-none">&quot;</div>
+                                    <div className="card-blue-premium p-8 shadow-[0_10px_30px_rgba(59,130,246,0.15)] hover:shadow-[0_20px_50px_rgba(59,130,246,0.3)] transition-all duration-500 relative h-full group overflow-hidden">
+                                        <div className="absolute top-8 right-8 text-6xl text-white/10 font-serif leading-none">&quot;</div>
                                         <div className="relative z-10">
                                             <div className="flex gap-1 mb-6">
                                                 {[...Array(t.rating)].map((_, j) => (
-                                                    <Star key={j} className="w-4 h-4 fill-primary text-primary" />
+                                                    <Star key={j} className="w-4 h-4 fill-white text-white" />
                                                 ))}
                                             </div>
-                                            <p className="text-text-2 text-lg leading-relaxed mb-8 italic font-medium">
+                                            <p className="text-white/90 text-lg leading-relaxed mb-8 italic font-medium">
                                                 &quot;{t.text}&quot;
                                             </p>
-                                            <div className="flex items-center gap-4 pt-6 border-t border-border">
-                                                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-purple flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                                            <div className="flex items-center gap-4 pt-6 border-t border-white/20">
+                                                <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white font-bold text-xl shadow-lg">
                                                     {t.name[0]}
                                                 </div>
                                                 <div>
-                                                    <h4 className="text-text-1 font-bold text-lg leading-none mb-1">{t.name}</h4>
-                                                    <p className="text-text-4 text-xs font-semibold uppercase tracking-wider">{t.role}</p>
+                                                    <h4 className="text-white font-display font-black text-lg leading-none mb-1 uppercase italic tracking-tight">{t.name}</h4>
+                                                    <p className="text-white/60 text-[10px] font-bold uppercase tracking-widest">{t.role}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1010,28 +1014,27 @@ export default function Home() {
             </section>
 
             {/* ═══════════════════ CTA BANNER ═══════════════════ */}
-            <section className="py-16 relative overflow-hidden mx-4 md:mx-8 mb-12 rounded-[3.5rem] shadow-2xl reveal-up" style={{ background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #3498db 100%)' }}>
+            <section className="py-24 relative overflow-hidden mx-4 md:mx-8 mb-12 rounded-[3.5rem] shadow-2xl reveal-up card-blue-premium border-white/10">
                 <div className="absolute inset-0 overflow-hidden">
-                    <div className="absolute -top-24 -left-24 w-[400px] h-[400px] rounded-full border border-white/10 animate-spin-slow" />
+                    <div className="absolute -top-24 -left-24 w-[400px] h-[400px] rounded-full border border-white/5 animate-spin-slow" />
                     <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full border border-white/5 animate-spin-reverse" />
-                    <div className="absolute top-1/2 left-[10%] w-3 h-3 rounded-full bg-white/30 animate-float" />
-                    <div className="absolute bottom-1/4 right-[25%] w-4 h-4 rounded-full bg-white/20 animate-float-slow" />
                     <div className="absolute inset-0 grid-pattern opacity-10" />
                 </div>
 
                 <div className="container-custom relative z-10 text-center">
-                    <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/30 rounded-full px-5 py-2 text-white text-sm font-bold mb-8 animate-breathe">
-                        <span className="w-2.5 h-2.5 rounded-full bg-white ripple-dot relative" />
+                    <div className="badge-orange mb-8 inline-flex animate-breathe">
+                        <span className="w-2.5 h-2.5 rounded-full bg-white ripple-dot relative mr-2" />
                         Available for New Projects
                     </div>
-                    <h2 className="font-display font-extrabold text-4xl md:text-6xl lg:text-7xl text-white mb-8 leading-tight">
-                        Ready to Build Something <br /> Extraordinary?
+                    <h2 className="font-display font-black text-4xl md:text-6xl lg:text-7xl text-white mb-8 leading-tight uppercase italic tracking-tighter">
+                        Ready to Build Something <br /> 
+                        <span className="text-accent-blue italic">Extraordinary?</span>
                     </h2>
-                    <p className="text-white/80 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-white/80 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
                         Let&apos;s turn your vision into a reality. No commitment, just a conversation about what&apos;s possible.
                     </p>
                     <Magnetic>
-                        <Link href="/contact" className="btn-secondary py-5 px-12 text-lg shadow-2xl">
+                        <Link href="/contact" className="btn-primary py-5 px-12 text-lg shadow-2xl bg-white text-primary hover:bg-white/90">
                             Start Your Transformation <ArrowRight className="w-5 h-5 ml-2" />
                         </Link>
                     </Magnetic>

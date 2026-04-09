@@ -64,7 +64,7 @@ export default function Footer() {
                         <ul className="space-y-2">
                             <li className="flex items-center gap-2 text-text-2 text-sm">
                                 <Mail className="w-3.5 h-3.5 text-primary shrink-0" />
-                                <a href="mailto:hello@zerixatech.com" className="hover:text-primary transition-colors">hello@zerixatech.com</a>
+                                <a href="mailto:prime@zerixatech.com" className="hover:text-primary transition-colors">prime@zerixatech.com</a>
                             </li>
                             <li className="flex items-center gap-2 text-text-2 text-sm">
                                 <Phone className="w-3.5 h-3.5 text-primary shrink-0" />

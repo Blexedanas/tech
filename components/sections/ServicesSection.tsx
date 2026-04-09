@@ -86,7 +86,7 @@ function ServicesShowcase() {
             onMouseLeave={() => setIsPaused(false)}
         >
             {/* Featured Spotlight Card */}
-            <div className="w-full lg:w-5/12 bg-slate-50 border border-black/5 rounded-[2rem] p-8 md:p-10 flex flex-col justify-between relative overflow-hidden group">
+            <div className="w-full lg:w-5/12 card-blue-premium rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between relative overflow-hidden group shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)] transition-all duration-700">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[80px] group-hover:bg-primary/20 transition-colors duration-700" />
 
                 <div className="relative z-10 flex-1">
@@ -100,17 +100,17 @@ function ServicesShowcase() {
                             className="h-full flex flex-col justify-center"
                         >
                             {/* Agency Interactive Image Embed */}
-                            <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-10 border border-black/5 group">
+                            <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-10 border border-white/[0.05] group">
                                 <Image
                                     src={featured.image}
                                     alt={featured.title}
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
-                                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-500" />
+                                <div className="absolute inset-0 bg-navy/10 group-hover:bg-navy/5 transition-colors duration-500" />
                             </div>
 
-                            <div className="w-20 h-20 rounded-2xl bg-white border border-black/5 flex items-center justify-center mb-8 overflow-hidden shadow-sm relative group/icon">
+                            <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mb-8 overflow-hidden shadow-sm relative group/icon shadow-[0_0_15px_rgba(59,130,246,0.1)] group-hover:shadow-[0_0_25px_rgba(59,130,246,0.3)] transition-all duration-500">
                                 <Image
                                     src={featured.iconImage}
                                     alt={featured.title}
@@ -120,24 +120,24 @@ function ServicesShowcase() {
                                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover/icon:opacity-100 transition-opacity" />
                             </div>
 
-                            <h3 className="font-display font-bold text-3xl md:text-4xl text-slate-900 mb-4 tracking-tight">
+                            <h3 className="font-display font-black text-3xl md:text-4xl text-white mb-4 tracking-tight uppercase italic">
                                 {featured.title}
                             </h3>
-                            <p className="text-slate-600 text-base md:text-lg mb-10 leading-relaxed max-w-md font-medium">
+                            <p className="text-white/90 text-base md:text-lg mb-10 leading-relaxed max-w-md font-medium">
                                 {featured.desc}
                             </p>
 
                             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                                 {featured.features.map((feature: string) => (
-                                    <li key={feature} className="flex items-center gap-2 text-slate-500 text-sm font-medium">
-                                        <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                                    <li key={feature} className="flex items-center gap-2 text-white/90 text-sm font-medium">
+                                        <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
                                         {feature}
                                     </li>
                                 ))}
                             </ul>
 
-                            <div className="mt-auto pt-6 border-t border-black/5">
-                                <div className="h-1 w-full bg-slate-200 rounded-full overflow-hidden mb-6">
+                            <div className="mt-auto pt-6 border-t border-white/[0.05]">
+                                <div className="h-1 w-full bg-navy rounded-full overflow-hidden mb-6">
                                     <motion.div 
                                         className="h-full bg-primary"
                                         initial={{ width: 0 }}
@@ -145,9 +145,9 @@ function ServicesShowcase() {
                                         transition={{ ease: "linear", duration: 0.1 }}
                                     />
                                 </div>
-                                <Link href={`/services/${featured.id}`} className="inline-flex items-center gap-2 text-slate-900 font-bold group/link">
-                                    <span className="border-b-2 border-primary pb-0.5 group-hover/link:text-primary transition-colors">Explore Service</span>
-                                    <ArrowRight className="w-4 h-4 text-primary group-hover/link:translate-x-1 transition-transform" />
+                                <Link href={`/services/${featured.id}`} className="inline-flex items-center gap-2 text-white font-bold group/link uppercase text-xs tracking-widest">
+                                    <span className="border-b-2 border-white/50 pb-0.5 group-hover/link:text-white transition-colors">Explore Service</span>
+                                    <ArrowRight className="w-4 h-4 text-white group-hover/link:translate-x-1 transition-transform" />
                                 </Link>
                             </div>
                         </motion.div>
@@ -161,12 +161,12 @@ function ServicesShowcase() {
                     <button
                         key={s.title}
                          onClick={() => handleManualSelect(i)}
-                        className={`relative text-left rounded-2xl p-6 transition-all duration-300 border overflow-hidden group ${active === i
-                            ? 'bg-white border-primary/20 shadow-xl'
-                            : 'bg-white border-black/5 hover:border-primary/20 hover:shadow-lg'
+                        className={`relative text-left rounded-2xl p-6 transition-all duration-500 border overflow-hidden group hover:-translate-y-[5px] ${active === i
+                            ? 'card-blue-premium border-white/20 shadow-[0_15px_40px_rgba(59,130,246,0.3)]'
+                            : 'card-blue-premium opacity-70 hover:opacity-100 border-white/10 hover:border-white/20 hover:shadow-[0_15px_40px_rgba(59,130,246,0.3)]'
                             }`}
                     >
-                        <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+                        <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-10 transition-opacity duration-700">
                             <Image
                                 src={s.image}
                                 alt={s.title}
@@ -176,7 +176,7 @@ function ServicesShowcase() {
                         </div>
 
                         <div className="relative z-10 flex items-start gap-4">
-                            <div className={`mt-1 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-all overflow-hidden relative ${active === i ? 'bg-primary/10' : 'bg-slate-50'}`}>
+                            <div className={`mt-1 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-all duration-500 overflow-hidden relative shadow-[0_0_10px_rgba(59,130,246,0.1)] group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] ${active === i ? 'bg-primary/10' : 'bg-navy'}`}>
                                 <Image
                                     src={s.iconImage}
                                     alt={s.title}
@@ -188,10 +188,10 @@ function ServicesShowcase() {
                                 )}
                             </div>
                             <div>
-                                <h4 className={`font-display font-bold text-lg mb-2 transition-colors ${active === i ? 'text-slate-900' : 'text-slate-600'}`}>
+                                <h4 className={`font-display font-bold text-lg mb-2 transition-colors uppercase tracking-tight italic text-white`}>
                                     {s.title}
                                 </h4>
-                                <p className="text-slate-500 text-sm leading-relaxed line-clamp-2">
+                                <p className="text-white/80 text-xs leading-relaxed line-clamp-2 font-medium">
                                     {s.desc}
                                 </p>
                             </div>
@@ -205,21 +205,21 @@ function ServicesShowcase() {
 
 export default function ServicesSection() {
     return (
-        <section className="py-24 relative bg-white overflow-hidden" id="services">
-            <div className="absolute inset-0 dot-pattern opacity-[0.03]" />
+        <section className="py-24 relative bg-navy overflow-hidden" id="services">
+            <div className="absolute inset-0 dot-pattern opacity-[0.05]" />
             <div className="container-custom relative z-10">
                 <div className="max-w-3xl mb-16 reveal">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 text-slate-600 text-sm font-bold mb-6">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-mid text-primary text-sm font-bold mb-6">
                         <Zap className="w-3.5 h-3.5 text-primary" />
                         Our Expertise
                     </div>
 
-                    <h2 className="font-display font-black text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-[1.1] mb-6 tracking-tight">
+                    <h2 className="font-display font-black text-4xl md:text-5xl lg:text-6xl text-text-1 leading-[1.1] mb-6 tracking-tight uppercase italic">
                         Comprehensive Digital <br />
-                        <span className="gradient-text">Capabilities</span>
+                        <span className="gradient-text italic">Capabilities</span>
                     </h2>
 
-                    <p className="text-slate-600 text-lg md:text-xl leading-relaxed max-w-2xl font-medium">
+                    <p className="text-text-2 text-lg md:text-xl leading-relaxed max-w-2xl font-medium">
                         From enterprise platforms to intelligent AI integrations, we deliver end-to-end technology solutions designed for scale and market dominance.
                     </p>
                 </div>
@@ -231,3 +231,4 @@ export default function ServicesSection() {
         </section>
     )
 }
+

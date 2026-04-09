@@ -105,7 +105,7 @@ export default function TermsPage() {
                         <p className="text-white/50 text-sm mb-4">If you have any questions or concerns about these Terms of Service, please contact us before engaging our services.</p>
                         <div className="flex items-center gap-2 text-white/60 text-sm">
                             <Mail className="w-4 h-4 text-[#F47C35]" />
-                            <a href="mailto:hello@zerixatech.com" className="hover:text-white transition-colors">hello@zerixatech.com</a>
+                            <a href="mailto:prime@zerixatech.com" className="hover:text-white transition-colors">prime@zerixatech.com</a>
                         </div>
                     </div>
                 </div>

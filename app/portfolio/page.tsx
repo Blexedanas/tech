@@ -85,7 +85,7 @@ export default function PortfolioPage() {
                                 {wordIdx !== arr.length - 1 && "\u00A0"}
                             </span>
                         ))}
-                        <span className="gradient-text">Proud</span>
+                        <span className="text-accent-blue italic tracking-tight">Proud</span>
                     </h1>
                     <p className="text-text-2 text-xl leading-relaxed max-w-2xl mx-auto reveal-up font-medium">
                         Over 150 successful deployments across diverse industries. Each project is a testament to our commitment to excellence.
@@ -128,7 +128,7 @@ export default function PortfolioPage() {
                                     animate={{ opacity: 1, scale: 1 }}
                                     exit={{ opacity: 0, scale: 0.9 }}
                                     transition={{ duration: 0.4 }}
-                                    className="group relative bg-navy-mid border border-border rounded-[2rem] overflow-hidden hover:bg-navy hover:shadow-2xl transition-all duration-500"
+                                    className="group relative card-blue-premium overflow-hidden shadow-[0_10px_30px_rgba(59,130,246,0.1)] hover:shadow-[0_20px_50px_rgba(59,130,246,0.3)] hover:-translate-y-2 transition-all duration-500"
                                 >
                                     {/* Project Preview with Gradient */}
                                     <div
@@ -153,20 +153,20 @@ export default function PortfolioPage() {
                                         </div>
                                     </div>
 
-                                    <div className="p-8 relative z-10 bg-navy/40 backdrop-blur-sm border-t border-border">
-                                        <h3 className="font-display font-extrabold text-xl text-text-1 mb-3 group-hover:text-primary transition-all duration-300 tracking-tight">{p.title}</h3>
-                                        <p className="text-text-3 text-sm leading-relaxed mb-6 line-clamp-2 font-medium">{p.desc}</p>
+                                    <div className="p-8 relative z-10 bg-white/5 backdrop-blur-md border-t border-white/10">
+                                        <h3 className="font-display font-black text-xl text-white mb-3 group-hover:text-white transition-all duration-300 uppercase tracking-tight italic">{p.title}</h3>
+                                        <p className="text-white/80 text-sm leading-relaxed mb-6 line-clamp-2 font-medium">{p.desc}</p>
 
                                         <div className="flex flex-wrap gap-2 mb-8">
                                             {p.tags.map(t => (
-                                                <span key={t} className="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-lg bg-navy border border-border text-text-4">{t}</span>
+                                                <span key={t} className="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-lg bg-white/10 border border-white/20 text-white/90">{t}</span>
                                             ))}
                                         </div>
 
-                                         <Link
+                                          <Link
                                             href={p.link || `/portfolio/${p.title.toLowerCase().replace(/ /g, '-')}`}
                                             target={p.link ? "_blank" : "_self"}
-                                            className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.2em] text-text-4 group-hover:text-primary transition-colors"
+                                            className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.2em] text-white/60 hover:text-white transition-colors"
                                         >
                                             View Project <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
                                         </Link>
@@ -190,7 +190,7 @@ export default function PortfolioPage() {
                 <div className="container-custom text-center relative z-10">
                     <h2 className="font-display font-black text-4xl md:text-5xl text-text-1 mb-6 font-black">
                         Ready To Be Our Next <br />
-                        <span className="gradient-text">Success Story?</span>
+                        <span className="text-accent-blue italic tracking-tight">Success Story?</span>
                     </h2>
                     <p className="text-text-2 text-lg mb-10 max-w-2xl mx-auto leading-relaxed font-medium">
                         We don't just build products; we build partnerships. Let's discuss how we can help your business reach its full potential.

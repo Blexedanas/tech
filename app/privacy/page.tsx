@@ -97,7 +97,7 @@ export default function PrivacyPage() {
                         <div className="space-y-2">
                             <div className="flex items-center gap-2 text-white/60 text-sm">
                                 <Mail className="w-4 h-4 text-[#F47C35]" />
-                                <a href="mailto:hello@zerixatech.com" className="hover:text-white transition-colors">hello@zerixatech.com</a>
+                                <a href="mailto:prime@zerixatech.com" className="hover:text-white transition-colors">prime@zerixatech.com</a>
                             </div>
                             <div className="flex items-center gap-2 text-white/60 text-sm">
                                 <MapPin className="w-4 h-4 text-[#F47C35]" />

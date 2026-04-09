@@ -23,8 +23,8 @@ const config: Config = {
                 'text-4': 'var(--text-4)',
             },
             fontFamily: {
-                sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
-                display: ['var(--font-outfit)', 'Outfit', 'system-ui', 'sans-serif'],
+                sans: ['var(--font-body)', 'Inter', 'system-ui', 'sans-serif'],
+                display: ['var(--font-display)', 'Outfit', 'system-ui', 'sans-serif'],
             },
             animation: {
                 'fade-up': 'fadeUp 0.6s ease-out forwards',

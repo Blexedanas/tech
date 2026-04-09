@@ -38,7 +38,7 @@ export default function BlogPage() {
                 <div className="container-custom relative z-10 text-center max-w-4xl mx-auto">
                     <div className="badge-primary mb-5 animate-breathe inline-block">Insights</div>
                     <h1 className="font-display font-extrabold text-5xl md:text-7xl text-text-1 leading-tight mb-6 tracking-tight">
-                        Thought <span className="gradient-text">Leadership</span>
+                        Thought <span className="text-accent-blue italic tracking-tight">Leadership</span>
                     </h1>
                     <p className="text-text-2 text-xl max-w-xl mx-auto reveal-up">
                         Deep dives into the technologies and design patterns that are shaping the future of digital products.
@@ -54,7 +54,7 @@ export default function BlogPage() {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="group relative bg-navy-mid border border-slate-700/50 rounded-[3rem] overflow-hidden mb-12 shadow-2xl card-hover"
+                        className="group relative card-blue-premium overflow-hidden mb-12 shadow-2xl transition-all duration-500 hover:-translate-y-2"
                     >
                         <div className="grid lg:grid-cols-2">
                             <div className="h-64 lg:h-auto min-h-[450px] relative overflow-hidden bg-slate-800">
@@ -69,20 +69,20 @@ export default function BlogPage() {
                                     FEATURED ARTICLE
                                 </div>
                             </div>
-                            <div className="p-10 md:p-14 flex flex-col justify-center relative z-10 bg-navy-mid/90 backdrop-blur-md">
+                            <div className="p-10 md:p-14 flex flex-col justify-center relative z-10 bg-white/5 backdrop-blur-md">
                                 <div className="flex items-center gap-3 text-primary text-xs font-black uppercase tracking-widest mb-6">
                                     <Tag className="w-4 h-4" /> {posts[0].category}
                                 </div>
-                                <h2 className="font-display font-extrabold text-3xl md:text-4xl text-text-1 mb-6 group-hover:text-primary transition-all duration-300 leading-tight">
+                                <h2 className="font-display font-black text-3xl md:text-4xl text-white mb-6 group-hover:text-white transition-all duration-300 leading-tight uppercase italic tracking-tight">
                                     {posts[0].title}
                                 </h2>
-                                <p className="text-text-2 text-lg leading-relaxed mb-8">{posts[0].excerpt}</p>
-                                <div className="flex flex-wrap items-center gap-6 text-text-4 text-[10px] font-bold uppercase tracking-widest mb-10 border-b border-slate-800 pb-8">
+                                <p className="text-white/90 text-lg leading-relaxed mb-8">{posts[0].excerpt}</p>
+                                <div className="flex flex-wrap items-center gap-6 text-white/50 text-[10px] font-bold uppercase tracking-widest mb-10 border-b border-white/10 pb-8">
                                     <span className="flex items-center gap-2"><Calendar className="w-4 h-4" /> {posts[0].date}</span>
                                     <span className="flex items-center gap-2"><Clock className="w-4 h-4" /> {posts[0].readTime}</span>
                                     <span className="flex items-center gap-2"><User className="w-4 h-4" /> {posts[0].author}</span>
                                 </div>
-                                <Link href={`/blog/${posts[0].slug}`} className="group/link inline-flex items-center gap-3 text-text-1 font-black text-xs uppercase tracking-[0.2em] hover:text-primary transition-colors">
+                                <Link href={`/blog/${posts[0].slug}`} className="group/link inline-flex items-center gap-3 text-white font-black text-xs uppercase tracking-[0.2em] hover:text-white/80 transition-colors">
                                     Read Full Story <ArrowRight className="w-4 h-4 group-hover/link:translate-x-3 transition-transform" />
                                 </Link>
                             </div>
@@ -98,7 +98,7 @@ export default function BlogPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="group bg-navy-mid border border-slate-700/50 rounded-[2rem] overflow-hidden shadow-xl card-hover flex flex-col"
+                                className="group card-blue-premium overflow-hidden shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col"
                             >
                                 <div className="h-56 relative overflow-hidden bg-slate-800">
                                     <img 
@@ -111,16 +111,20 @@ export default function BlogPage() {
                                         {post.category}
                                     </div>
                                 </div>
-                                <div className="p-8 flex-1 flex flex-col">
-                                    <h3 className="font-display font-bold text-xl text-text-1 mb-4 group-hover:text-primary transition-all duration-300 leading-snug tracking-tight">{post.title}</h3>
-                                    <p className="text-text-2 text-sm leading-relaxed mb-8 flex-1">{post.excerpt}</p>
-                                    <div className="flex items-center justify-between text-text-4 text-[10px] font-black uppercase tracking-widest pt-6 border-t border-slate-800 mb-6">
-                                        <span className="flex items-center gap-2"><Calendar className="w-3.5 h-3.5" /> {post.date}</span>
-                                        <span className="flex items-center gap-2"><Clock className="w-3.5 h-3.5" /> {post.readTime}</span>
+                                 <div className="p-8 flex-1 flex flex-col justify-between">
+                                    <div>
+                                        <h3 className="font-display font-black text-xl text-white mb-4 group-hover:text-white transition-all duration-300 leading-snug tracking-tight uppercase italic">{post.title}</h3>
+                                        <p className="text-white/80 text-sm leading-relaxed mb-8 line-clamp-3 font-medium">{post.excerpt}</p>
                                     </div>
-                                    <Link href={`/blog/${post.slug}`} className="group/link inline-flex items-center gap-3 text-text-1 font-black text-xs uppercase tracking-[0.2em] hover:text-primary transition-colors">
-                                        Read Full Story <ArrowRight className="w-4 h-4 group-hover/link:translate-x-3 transition-transform" />
-                                    </Link>
+                                    <div>
+                                        <div className="flex items-center justify-between text-white/40 text-[10px] font-black uppercase tracking-widest pt-6 border-t border-white/10 mb-6">
+                                            <span className="flex items-center gap-2"><Calendar className="w-3.5 h-3.5" /> {post.date}</span>
+                                            <span className="flex items-center gap-2"><Clock className="w-3.5 h-3.5" /> {post.readTime}</span>
+                                        </div>
+                                        <Link href={`/blog/${post.slug}`} className="group/link inline-flex items-center gap-3 text-white font-black text-xs uppercase tracking-[0.2em] hover:text-white/80 transition-colors">
+                                            Read Full Story <ArrowRight className="w-4 h-4 group-hover/link:translate-x-3 transition-transform" />
+                                        </Link>
+                                    </div>
                                 </div>
                             </motion.article>
                         ))}

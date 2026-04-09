@@ -93,7 +93,7 @@ export default function AboutPage() {
                             </span>
                         ))}
                         {" "}
-                        <span className="gradient-text italic">Experiences</span>
+                        <span className="text-accent-blue italic tracking-tight">Experiences</span>
                         <br />
                         {"That Matter".split(" ").map((word, wordIdx, arr) => (
                             <span key={wordIdx} className="inline-block whitespace-nowrap">
@@ -168,7 +168,7 @@ export default function AboutPage() {
                     <div>
                         <div className="badge-orange mb-4">⟹ A Message From Zerixa Tech Team</div>
                         <h2 className="font-display font-black text-4xl md:text-5xl text-text-1 mb-6 leading-tight uppercase italic">
-                            Building Tools For <span className="gradient-text italic">Tomorrow</span>
+                            Building Tools For <span className="text-accent-blue italic tracking-tight">Tomorrow</span>
                         </h2>
                         <div className="space-y-6 text-text-2 text-lg leading-relaxed font-medium">
                             <p>
@@ -304,7 +304,7 @@ export default function AboutPage() {
                         {[
                             { city: 'India', address: 'Global Remote Delivery', phone: '+91 80797 67676' },
                             { city: 'WhatsApp', address: 'Available 24/7 for Inquiry', phone: '+91 80797 67676' },
-                            { city: 'Email', address: 'Official Correspondence', phone: 'hello@zerixatech.com' }
+                            { city: 'Email', address: 'Official Correspondence', phone: 'prime@zerixatech.com' }
                         ].map((loc, i) => (
                             <motion.div
                                 key={loc.city}
@@ -328,7 +328,7 @@ export default function AboutPage() {
             <section className="section-padding bg-navy-mid border-t border-border">
                 <div className="container-custom text-center max-w-3xl mx-auto">
                     <h2 className="font-display font-black text-4xl md:text-5xl text-text-1 mb-6 leading-tight uppercase italic">
-                        Ready To <span className="gradient-text italic">Build The Future?</span>
+                        Ready To <span className="text-accent-blue italic tracking-tight">Build The Future?</span>
                     </h2>
                     <p className="text-text-2 text-lg mb-10 leading-relaxed font-medium">
                         We're always looking for world-class talent to join our mission. Explore our open roles or just reach out.

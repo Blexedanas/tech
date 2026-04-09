@@ -44,7 +44,7 @@ export default function FoundersSection() {
                 <div className="badge-orange mb-5 animate-breathe inline-block">⟹ The Visionaries</div>
                     <h2 className="font-display font-black text-4xl md:text-5xl lg:text-7xl text-text-1 leading-[1.1] mb-8 tracking-tighter uppercase italic">
                         The Minds behind <br />
-                        <span className="gradient-text italic">the Machine</span>
+                        <span className="text-accent-blue italic">the Machine</span>
                     </h2>
                     <p className="text-text-2 text-lg md:text-xl font-medium leading-relaxed max-w-2xl">
                         A union of strategic vision and engineering excellence. We don't just build websites; we architect digital dominance.

@@ -13,17 +13,21 @@ const industries = [
 
 export default function IndustriesSection() {
     return (
-        <section className="section-padding relative overflow-hidden">
-            <div className="absolute inset-0 bg-slate-50" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-primary/5 opacity-40 rounded-full blur-[100px] pointer-events-none" />
+        <section className="section-padding relative overflow-hidden bg-navy" id="industries">
+            {/* Background elements */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="container-custom relative">
                 <div className="text-center mb-16 reveal">
-                    <div className="badge-orange mb-5">⟹ Industries We Serve</div>
-                    <h2 className="font-display font-extrabold text-4xl md:text-6xl text-slate-900 mb-6 font-black">
-                        Tailored Solutions For <span className="gradient-text">Every Industry</span>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-mid text-primary text-sm font-bold mb-6">
+                        <span className="w-2 h-2 rounded-full bg-primary" />
+                        Industries We Serve
+                    </div>
+                    <h2 className="font-display font-black text-4xl md:text-6xl text-text-1 mb-6 tracking-tight uppercase italic">
+                        Tailored Solutions For <span className="text-accent-blue italic">Every Industry</span>
                     </h2>
-                    <p className="text-slate-600 max-w-2xl mx-auto text-lg font-medium">
+                    <p className="text-text-2 max-w-2xl mx-auto text-lg font-medium leading-relaxed">
                         From startups to global enterprises, we bring deep domain expertise across multiple strategic sectors.
                     </p>
                 </div>
@@ -32,14 +36,14 @@ export default function IndustriesSection() {
                     {industries.map((ind, i) => (
                         <div
                             key={ind.title}
-                            className={`group bg-white border border-black/5 rounded-3xl p-8 text-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 reveal-up delay-${(i % 4) * 100}`}
+                            className={`group relative card-blue-premium rounded-[20px] p-8 text-center shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)] hover:-translate-y-[5px] transition-all duration-500 reveal-up delay-${(i % 4) * 100}`}
                         >
                             <div className="relative z-10">
-                                <div className="w-16 h-16 rounded-2xl bg-slate-50 border border-black/5 flex items-center justify-center mx-auto mb-6 text-3xl group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-500">
+                                <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mx-auto mb-6 text-3xl group-hover:scale-110 group-hover:bg-white/20 group-hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-500">
                                     {ind.icon}
                                 </div>
-                                <h3 className="font-display font-bold text-slate-900 text-xl mb-3 group-hover:text-primary transition-colors">{ind.title}</h3>
-                                <p className="text-slate-500 text-sm leading-relaxed">{ind.desc}</p>
+                                <h3 className="font-display font-bold text-white text-xl mb-3 group-hover:text-white transition-colors uppercase tracking-tight">{ind.title}</h3>
+                                <p className="text-white/90 text-sm leading-relaxed font-medium">{ind.desc}</p>
                             </div>
                         </div>
                     ))}
@@ -48,3 +52,4 @@ export default function IndustriesSection() {
         </section>
     )
 }
+

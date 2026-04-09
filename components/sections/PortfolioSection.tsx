@@ -64,7 +64,7 @@ export default function PortfolioSection() {
     const [activePortfolioTab, setActivePortfolioTab] = useState('All')
 
     return (
-        <section className="py-24 bg-navy relative border-t border-border">
+        <section className="py-24 bg-navy relative border-t border-white/[0.05]" id="portfolio">
             <div className="container-custom relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
                     <div>
@@ -72,9 +72,9 @@ export default function PortfolioSection() {
                             <span className="w-2 h-2 rounded-full bg-primary" />
                             Our Selected Work
                         </div>
-                        <h2 className="font-display font-black text-4xl md:text-5xl lg:text-5xl text-text-1 leading-tight tracking-tight">
+                        <h2 className="font-display font-black text-4xl md:text-5xl lg:text-5xl text-text-1 leading-tight tracking-tight uppercase italic">
                             Projects That <br />
-                            <span className="gradient-text">Define Excellence</span>
+                            <span className="gradient-text italic">Define Excellence</span>
                         </h2>
                     </div>
                     <Link href="/portfolio" className="inline-flex items-center gap-2 text-text-2 hover:text-primary mt-8 md:mt-0 group pb-1 border-b border-border hover:border-primary transition-all font-bold">
@@ -89,9 +89,9 @@ export default function PortfolioSection() {
                         <button
                             key={tab}
                             onClick={() => setActivePortfolioTab(tab)}
-                            className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border ${activePortfolioTab === tab
-                                ? 'bg-primary text-white border-primary shadow-xl shadow-primary/20 scale-105'
-                                : 'bg-navy-mid text-text-2 border-border hover:border-primary/20 hover:text-primary hover:shadow-lg'
+                            className={`px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest transition-all duration-300 border ${activePortfolioTab === tab
+                                ? 'bg-primary text-white border-primary shadow-[0_0_20px_rgba(59,130,246,0.3)] scale-105'
+                                : 'bg-navy-mid text-text-2 border-white/[0.05] hover:border-primary/20 hover:text-primary'
                                 }`}
                         >
                             {tab}
@@ -108,44 +108,44 @@ export default function PortfolioSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1, duration: 0.5 }}
-                            className="group relative bg-navy-mid rounded-[2rem] p-5 border border-border hover:border-primary/10 hover:bg-navy hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col"
+                            className="group relative card-blue-premium rounded-[20px] p-5 shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)] hover:-translate-y-[5px] transition-all duration-500 overflow-hidden flex flex-col"
                         >
                             {/* Subtle Hover Glow behind card */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                            <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                             {/* 3D Thumbnail Container - Shrunk for efficiency */}
-                            <div className="h-36 rounded-[1.5rem] mb-6 relative flex items-center justify-center transition-all duration-700 [perspective:1000px] group-hover:z-10 shadow-sm border border-border bg-navy">
+                            <div className="h-36 rounded-[1.25rem] mb-6 relative flex items-center justify-center transition-all duration-700 [perspective:1000px] group-hover:z-10 shadow-sm border border-white/20 bg-white/10 backdrop-blur-md overflow-hidden">
                                 <div
-                                    className="w-full h-full rounded-[1.5rem] relative overflow-hidden flex items-center justify-center transition-all duration-700 group-hover:[transform:rotateX(10deg)_rotateY(-10deg)_translateZ(20px)]"
-                                    style={{ backgroundColor: `${item.color}10` }}
+                                    className="w-full h-full rounded-[1.25rem] relative overflow-hidden flex items-center justify-center transition-all duration-700 group-hover:[transform:rotateX(10deg)_rotateY(-10deg)_translateZ(20px)]"
+                                    style={{ backgroundColor: `${item.color}05` }}
                                 >
-                                    <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.1),transparent)]" />
-                                    <h3 className="text-2xl font-display font-black opacity-40 uppercase tracking-widest" style={{ color: item.color === '#FFFFFF' ? '#000000' : item.color }}>{item.category}</h3>
+                                    <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.1),transparent)]" />
+                                    <h3 className="text-2xl font-display font-black opacity-30 uppercase tracking-widest italic text-white">{item.category}</h3>
                                     {/* 3D lighting reflection */}
-                                    <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                                 </div>
                             </div>
 
                             <div className="flex flex-wrap gap-2 mb-6">
                                 {item.tags.map(tag => (
-                                    <span key={tag} className="text-[10px] font-black uppercase tracking-widest px-3 py-1 bg-navy border border-border text-text-3 rounded-full shadow-sm">
+                                    <span key={tag} className="text-[10px] font-black uppercase tracking-widest px-3 py-1 bg-white/10 border border-white/20 text-white rounded-full">
                                         {tag}
                                     </span>
                                 ))}
                             </div>
 
-                            <h3 className="text-xl font-black text-text-1 mb-3 group-hover:text-primary transition-colors tracking-tight">
+                            <h3 className="text-xl font-black text-white mb-3 group-hover:text-white transition-colors tracking-tight uppercase italic">
                                 {item.title}
                             </h3>
 
-                            <p className="text-text-2 text-xs leading-relaxed mb-6 flex-1 font-medium line-clamp-3">
+                            <p className="text-white/90 text-xs leading-relaxed mb-6 flex-1 font-medium line-clamp-3">
                                 {item.desc}
                             </p>
 
-                            <div className="mt-auto pt-6 border-t border-border">
-                                <a href={item.link || "#"} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-black uppercase tracking-widest text-text-4 group-hover:text-primary transition-all">
+                            <div className="mt-auto pt-6 border-t border-white/10">
+                                <a href={item.link || "#"} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[10px] font-black uppercase tracking-widest text-white/70 group-hover:text-white transition-all">
                                     <span>View Project</span>
-                                    <ArrowUpRight className="w-5 h-5 ml-2 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                                    <ArrowUpRight className="w-4 h-4 ml-2 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                                 </a>
                             </div>
                         </motion.div>
@@ -155,3 +155,4 @@ export default function PortfolioSection() {
         </section>
     )
 }
+

@@ -102,7 +102,7 @@ export default function ServicesPage() {
                     </motion.div>
                     <h1 className="font-display font-black text-5xl md:text-7xl text-text-1 leading-tight tracking-tighter mb-6 uppercase italic">
                         Limitless <br />
-                        <span className="gradient-text italic">Capabilities</span>
+                        <span className="text-accent-blue italic">Capabilities</span>
                     </h1>
                     <p className="text-text-2 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto font-medium">
                         We don't just offer services; we engineer digital dominance across every vertical of the modern digital landscape.
@@ -180,9 +180,9 @@ export default function ServicesPage() {
                                     <button
                                         key={category.id}
                                         onClick={() => setActiveTab(idx)}
-                                        className={`group relative text-left p-8 rounded-[2.5rem] border transition-all duration-500 overflow-hidden ${activeTab === idx 
-                                            ? 'bg-navy border-primary shadow-2xl scale-[1.02]' 
-                                            : 'bg-navy-mid border-border hover:bg-navy hover:border-primary/20'
+                                        className={`group relative text-left p-8 transition-all duration-500 overflow-hidden card-blue-premium ${activeTab === idx 
+                                            ? 'shadow-2xl scale-[1.02]' 
+                                            : 'opacity-80 hover:opacity-100'
                                         }`}
                                     >
                                         <div className="flex items-center gap-5 relative z-10">
@@ -214,8 +214,8 @@ export default function ServicesPage() {
                                 className="bg-slate-50/50 rounded-[3rem] p-10 border border-black/5"
                             >
                                 <div className="flex items-center justify-between mb-8">
-                                    <h4 className="font-display font-black text-2xl text-slate-900 tracking-tight uppercase">
-                                        Included <span className="text-primary">Services</span>
+                                    <h4 className="font-display font-black text-2xl text-slate-900 tracking-tight uppercase italic">
+                                        Included <span className="text-accent-blue italic">Services</span>
                                     </h4>
                                     <div className="flex gap-2">
                                         <div className="w-2 h-2 rounded-full bg-primary/20" />
@@ -228,7 +228,7 @@ export default function ServicesPage() {
                                     {activeService.services.map((service, sIdx) => {
                                         const slug = service.name.toLowerCase().replace(/ & /g, '-').replace(/\s+/g, '-')
                                         return (
-                                            <Link
+                                             <Link
                                                 key={service.name}
                                                 href={`/services/${slug}`}
                                             >
@@ -236,12 +236,12 @@ export default function ServicesPage() {
                                                     initial={{ opacity: 0, x: -10 }}
                                                     animate={{ opacity: 1, x: 0 }}
                                                     transition={{ delay: sIdx * 0.05 }}
-                                                    className="flex items-center gap-4 p-4 rounded-2xl bg-navy border border-border hover:border-primary/20 hover:shadow-lg transition-all duration-300 group/item"
+                                                    className="flex items-center gap-4 p-4 rounded-2xl card-blue-premium shadow-md hover:shadow-xl transition-all duration-300 group/item"
                                                 >
-                                                    <div className="w-10 h-10 rounded-xl bg-navy-mid flex items-center justify-center group-hover/item:bg-primary/10 transition-colors">
-                                                        <service.icon className="w-5 h-5 text-text-4 group-hover/item:text-primary transition-colors" />
+                                                    <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center group-hover/item:rotate-3 transition-all">
+                                                        <service.icon className="w-5 h-5 text-white" />
                                                     </div>
-                                                    <span className="font-bold text-text-2 tracking-tight group-hover/item:text-primary transition-colors">
+                                                    <span className="font-bold text-white tracking-tight">
                                                         {service.name}
                                                     </span>
                                                 </motion.div>
@@ -283,14 +283,14 @@ export default function ServicesPage() {
                         <div className="absolute inset-0 grid-pattern opacity-10" />
                         
                         <div className="relative z-10">
-                            <motion.h2 
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                className="font-display font-black text-5xl md:text-7xl text-white mb-8 leading-[0.9] tracking-tighter uppercase italic"
-                            >
-                                Let&apos;s engineer <br />
-                                <span className="gradient-text italic">your ascent</span>
-                            </motion.h2>
+                                 <motion.h2 
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    className="font-display font-black text-5xl md:text-7xl text-white mb-8 leading-[0.9] tracking-tighter uppercase italic"
+                                >
+                                    Let&apos;s engineer <br />
+                                    <span className="text-accent-blue italic">your ascent</span>
+                                </motion.h2>
                             <p className="text-white/60 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-medium">
                                 Ready to deploy world-class digital strategy? Our experts are standing by to architect your next breakthrough.
                             </p>
