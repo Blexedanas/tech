@@ -20,8 +20,8 @@ export default function FloatingButtons() {
             <a
                 href="tel:+918079767676"
                 aria-label="Call us"
-                className="w-12 h-12 rounded-full bg-[#0070f3] flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300"
-                style={{ boxShadow: '0 4px 20px rgba(0,112,243,0.4)' }}
+                className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300"
+                style={{ boxShadow: '0 4px 20px rgba(79,142,247,0.4)' }}
             >
                 <Phone className="w-5 h-5 text-white" />
             </a>
@@ -46,7 +46,7 @@ export default function FloatingButtons() {
                     }`}
                 style={{
                     background: 'linear-gradient(135deg, var(--primary), var(--primary-dark))',
-                    boxShadow: '0 4px 20px rgba(115, 188, 243, 0.4)',
+                    boxShadow: '0 4px 20px rgba(79, 142, 247, 0.4)',
                 }}
             >
                 <ArrowUp className="w-5 h-5 text-white" />

@@ -134,10 +134,10 @@ export default function ServicePageTemplate({
             <section className="section-padding bg-black/[0.02] border-y border-black/5" style={{ backgroundColor: 'var(--navy-mid)' }}>
                 <div className="container-custom">
                     <div className="text-center mb-16">
-                        <h2 className="font-display font-extrabold text-4xl md:text-5xl text-slate-900 mb-4" style={{ color: 'var(--text-1)' }}>
+                        <h2 className="font-display font-extrabold text-4xl md:text-5xl text-text-1 mb-4" style={{ color: 'var(--text-1)' }}>
                             What's <span className="gradient-text">Included</span>
                         </h2>
-                        <p className="text-slate-500 max-w-xl mx-auto" style={{ color: 'var(--text-3)' }}>A comprehensive toolset engineered for your commercial success.</p>
+                        <p className="text-text-4 max-w-xl mx-auto" style={{ color: 'var(--text-3)' }}>A comprehensive toolset engineered for your commercial success.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
                         {features.map((f, i) => (
@@ -163,7 +163,7 @@ export default function ServicePageTemplate({
             <section className="section-padding relative">
                 <div className="container-custom">
                     <div className="text-center mb-16">
-                        <h2 className="font-display font-extrabold text-4xl md:text-5xl text-slate-900 mb-4" style={{ color: 'var(--text-1)' }}>
+                        <h2 className="font-display font-extrabold text-4xl md:text-5xl text-text-1 mb-4" style={{ color: 'var(--text-1)' }}>
                             Elite <span className="gradient-text">Advantages</span>
                         </h2>
                     </div>
@@ -183,8 +183,8 @@ export default function ServicePageTemplate({
                                 >
                                     <span className="font-display font-black text-lg" style={{ color }}>{i + 1}</span>
                                 </div>
-                                <h3 className="font-display font-bold text-xl text-slate-900 mb-3 tracking-tight" style={{ color: 'var(--text-1)' }}>{b.title}</h3>
-                                <p className="text-slate-500 text-sm leading-relaxed" style={{ color: 'var(--text-3)' }}>{b.desc}</p>
+                                <h3 className="font-display font-bold text-xl text-text-1 mb-3 tracking-tight" style={{ color: 'var(--text-1)' }}>{b.title}</h3>
+                                <p className="text-text-3 text-sm leading-relaxed" style={{ color: 'var(--text-3)' }}>{b.desc}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -194,7 +194,7 @@ export default function ServicePageTemplate({
             {/* Tech Stack */}
             <section className="section-padding bg-black/[0.01] relative" style={{ backgroundColor: 'var(--navy-light)' }}>
                 <div className="container-custom text-center">
-                    <h2 className="font-display font-extrabold text-4xl md:text-5xl text-slate-900 mb-10" style={{ color: 'var(--text-1)' }}>
+                    <h2 className="font-display font-extrabold text-4xl md:text-5xl text-text-1 mb-10" style={{ color: 'var(--text-1)' }}>
                         Modern <span className="gradient-text">Stack</span>
                     </h2>
                     <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
@@ -221,11 +221,11 @@ export default function ServicePageTemplate({
                     <div className="relative bg-white/5 border border-white/10 rounded-[3rem] p-16 text-center overflow-hidden shadow-xl">
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-50" />
                         <div className="relative z-10">
-                            <h2 className="font-display font-extrabold text-4xl md:text-5xl text-slate-900 mb-6 tracking-tight" style={{ color: 'var(--text-1)' }}>
+                            <h2 className="font-display font-extrabold text-4xl md:text-5xl text-text-1 mb-6 tracking-tight" style={{ color: 'var(--text-1)' }}>
                                 Ready to Redefine Your <br />
                                 <span className="gradient-text">Digital Presence?</span>
                             </h2>
-                            <p className="text-slate-500 text-lg mb-12 max-w-xl mx-auto leading-relaxed" style={{ color: 'var(--text-2)' }}>Let's discuss how we can leverage our tech stack and process to deliver exceptional results for your business.</p>
+                            <p className="text-text-2 text-lg mb-12 max-w-xl mx-auto leading-relaxed" style={{ color: 'var(--text-2)' }}>Let's discuss how we can leverage our tech stack and process to deliver exceptional results for your business.</p>
                             <Magnetic>
                                 <Link href="/contact" className="btn-primary py-5 px-12 text-lg shadow-[0_20px_40px_rgba(232,113,44,0.15)]">
                                     Start Your Transformation <ArrowRight className="w-5 h-5 ml-2" />

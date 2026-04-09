@@ -16,6 +16,11 @@ const config: Config = {
                 'navy-mid': 'var(--navy-mid)',
                 'navy-light': 'var(--navy-light)',
                 'navy-card': 'var(--navy-card)',
+                border: 'var(--border)',
+                'text-1': 'var(--text-1)',
+                'text-2': 'var(--text-2)',
+                'text-3': 'var(--text-3)',
+                'text-4': 'var(--text-4)',
             },
             fontFamily: {
                 sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
@@ -42,13 +47,13 @@ const config: Config = {
                     '50%': { transform: 'translateY(-20px)' },
                 },
                 pulseGlow: {
-                    '0%, 100%': { boxShadow: '0 0 20px rgba(232, 113, 44, 0.3)' },
-                    '50%': { boxShadow: '0 0 40px rgba(232, 113, 44, 0.6)' },
+                    '0%, 100%': { boxShadow: '0 0 20px rgba(79, 142, 247, 0.3)' },
+                    '50%': { boxShadow: '0 0 40px rgba(79, 142, 247, 0.6)' },
                 },
             },
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                'hero-gradient': 'linear-gradient(135deg, #0A0F1E 0%, #111827 50%, #0A0F1E 100%)',
+                'hero-gradient': 'linear-gradient(135deg, #1e2433 0%, #252d40 50%, #1e2433 100%)',
             },
         },
     },

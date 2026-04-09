@@ -25,7 +25,7 @@ const socials = [
 
 export default function Footer() {
     return (
-        <footer className="bg-slate-50 border-t border-black/5 relative overflow-hidden">
+        <footer className="bg-navy border-t border-border relative overflow-hidden">
             {/* Background glow */}
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-purple/3 rounded-full blur-3xl pointer-events-none" />
@@ -43,7 +43,7 @@ export default function Footer() {
                                 Zerixa<span className="gradient-text shimmer-text"> Tech</span>
                             </span>
                         </Link>
-                        <p className="text-slate-600 text-sm leading-relaxed mb-5 max-w-xs">
+                        <p className="text-text-2 text-sm leading-relaxed mb-5 max-w-xs">
                             Delivering A Smart Future — websites, apps, and AI solutions that drive real growth.
                         </p>
                         <div className="flex gap-3 mb-6">
@@ -54,7 +54,7 @@ export default function Footer() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={label}
-                                    className="w-9 h-9 rounded-lg bg-white border border-black/5 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/20 transition-all duration-200 shadow-sm"
+                                    className="w-9 h-9 rounded-lg bg-navy-mid border border-border flex items-center justify-center text-text-4 hover:text-primary hover:border-primary/20 transition-all duration-200 shadow-sm"
                                 >
                                     <Icon className="w-4 h-4" />
                                 </a>
@@ -62,15 +62,15 @@ export default function Footer() {
                         </div>
                         {/* Mini contact */}
                         <ul className="space-y-2">
-                            <li className="flex items-center gap-2 text-slate-600 text-sm">
+                            <li className="flex items-center gap-2 text-text-2 text-sm">
                                 <Mail className="w-3.5 h-3.5 text-primary shrink-0" />
                                 <a href="mailto:hello@zerixatech.com" className="hover:text-primary transition-colors">hello@zerixatech.com</a>
                             </li>
-                            <li className="flex items-center gap-2 text-slate-600 text-sm">
+                            <li className="flex items-center gap-2 text-text-2 text-sm">
                                 <Phone className="w-3.5 h-3.5 text-primary shrink-0" />
                                 <a href="tel:+918079767676" className="hover:text-primary transition-colors">+91 80797 67676</a>
                             </li>
-                            <li className="flex items-start gap-2 text-slate-600 text-sm">
+                            <li className="flex items-start gap-2 text-text-2 text-sm">
                                 <MapPin className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
                                 <span>India (Global Remote Delivery)</span>
                             </li>
@@ -80,13 +80,13 @@ export default function Footer() {
                     {/* Links columns */}
                     {Object.entries(footerLinks).map(([title, links]) => (
                         <div key={title}>
-                            <h4 className="text-slate-900 font-bold text-xs mb-5 uppercase tracking-widest">{title}</h4>
+                            <h4 className="text-text-1 font-bold text-xs mb-5 uppercase tracking-widest">{title}</h4>
                             <ul className="space-y-3">
                                 {links.map((l) => (
                                     <li key={l.name}>
                                         <Link
                                             href={l.href}
-                                            className="text-slate-500 hover:text-primary text-sm transition-colors duration-200 flex items-center gap-1 group"
+                                            className="text-text-2 hover:text-primary text-sm transition-colors duration-200 flex items-center gap-1 group"
                                         >
                                             <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-primary" />
                                             {l.name}
@@ -99,8 +99,8 @@ export default function Footer() {
 
                     {/* Subscribe Form column */}
                     <div>
-                        <h4 className="text-slate-900 font-bold text-xs mb-5 uppercase tracking-widest">Subscribe</h4>
-                        <p className="text-slate-500 text-sm leading-relaxed mb-4">
+                        <h4 className="text-text-1 font-bold text-xs mb-5 uppercase tracking-widest">Subscribe</h4>
+                        <p className="text-text-2 text-sm leading-relaxed mb-4">
                             Get the latest insights on digital growth and technology trends.
                         </p>
                         <form className="flex flex-col gap-2" onSubmit={(e) => e.preventDefault()}>
@@ -108,7 +108,7 @@ export default function Footer() {
                                 <input
                                     type="email"
                                     placeholder="Your email address"
-                                    className="w-full bg-white border border-black/10 rounded-lg px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-primary transition-colors"
+                                    className="w-full bg-navy border border-border rounded-lg px-4 py-2.5 text-sm text-text-1 placeholder:text-text-4 focus:outline-none focus:border-primary transition-colors"
                                     required
                                 />
                             </div>
@@ -120,9 +120,9 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom bar */}
-                <div className="h-px bg-slate-200 my-10" />
-                <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 text-sm text-slate-500">
-                    <span>© 2026 Zerixa Tech. All rights reserved. <br className="block sm:hidden" />Made with ❤️ by <a href="https://zerixatech.com" target="_blank" rel="noopener noreferrer" className="font-bold text-slate-800 hover:text-primary transition-colors underline decoration-primary/30 underline-offset-2 whitespace-nowrap">Zerixa Tech</a></span>
+                <div className="h-px bg-border my-10" />
+                <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 text-sm text-text-3">
+                    <span>© 2026 Zerixa Tech. All rights reserved. <br className="block sm:hidden" />Made with ❤️ by <a href="https://zerixatech.com" target="_blank" rel="noopener noreferrer" className="font-bold text-text-1 hover:text-primary transition-colors underline decoration-primary/30 underline-offset-2 whitespace-nowrap">Zerixa Tech</a></span>
                     <div className="flex gap-6">
                         <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
                         <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>

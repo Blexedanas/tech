@@ -10,8 +10,8 @@ export default function HomeHero() {
     const { scrollY } = useScroll()
 
     return (
-        <section className="relative flex items-center overflow-hidden pt-32 pb-20 bg-white">
-            <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_0%,rgba(10,102,255,0.03),rgba(255,255,255,1))]" />
+        <section className="relative flex items-center overflow-hidden pt-32 pb-20 bg-navy">
+            <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_0%,rgba(79,142,247,0.1),var(--navy))]" />
             <div className="absolute inset-0 grid-pattern opacity-[0.03]" />
             <Background3D />
 
@@ -29,13 +29,13 @@ export default function HomeHero() {
                         initial={{ opacity: 1, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.2, duration: 0.5 }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 text-slate-600 text-sm font-bold mb-8 shadow-sm"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-mid text-primary text-sm font-bold mb-8 shadow-sm"
                     >
                         <Zap className="w-3.5 h-3.5 text-primary" />
                         Premium Digital Agency
                     </motion.div>
 
-                    <h1 className="text-6xl md:text-7xl lg:text-8xl font-display font-black text-slate-900 leading-[0.9] tracking-tighter mb-8 max-w-4xl uppercase relative z-10 italic">
+                    <h1 className="text-6xl md:text-7xl lg:text-8xl font-display font-black text-text-1 leading-[0.9] tracking-tighter mb-8 max-w-4xl uppercase relative z-10 italic">
                         <motion.span
                             initial={{ opacity: 1, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export default function HomeHero() {
                             initial={{ opacity: 1, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5, duration: 0.7 }}
-                            className="block text-slate-900"
+                            className="block text-text-1"
                         >
                             That Convert
                         </motion.span>
@@ -66,7 +66,7 @@ export default function HomeHero() {
                         initial={{ opacity: 1, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.7 }}
-                        className="text-slate-600 text-lg md:text-xl leading-relaxed max-w-md mb-10 font-medium border-l-4 border-primary pl-8"
+                        className="text-text-2 text-lg md:text-xl leading-relaxed max-w-md mb-10 font-medium border-l-4 border-primary pl-8"
                     >
                         The architects of digital strategy, crafting websites, apps, and intelligent AI solutions that captivate and drive real results.
                     </motion.p>
@@ -85,7 +85,7 @@ export default function HomeHero() {
                                 </Link>
                             </Magnetic>
                             <Magnetic>
-                                <Link href="/services" className="px-12 py-5 rounded-full border-2 border-black/5 hover:border-primary/20 transition-all duration-300 text-lg font-black uppercase tracking-widest bg-white text-slate-900 shadow-sm hover:shadow-xl">
+                                <Link href="/services" className="px-12 py-5 rounded-full border-2 border-border hover:border-primary/20 transition-all duration-300 text-lg font-black uppercase tracking-widest bg-navy-mid text-text-1 shadow-sm hover:shadow-xl">
                                     Our Services
                                 </Link>
                             </Magnetic>
@@ -108,9 +108,9 @@ export default function HomeHero() {
                         </div>
                         <div>
                             <div className="flex gap-0.5 mb-1.5">
-                                {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />)}
+                                {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />)}
                             </div>
-                            <p className="text-slate-500 text-sm font-bold uppercase tracking-widest">Trusted for <span className="text-slate-900">20+ Premium Projects</span></p>
+                            <p className="text-text-4 text-sm font-bold uppercase tracking-widest">Trusted for <span className="text-text-1">20+ Premium Projects</span></p>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -125,26 +125,26 @@ export default function HomeHero() {
                     style={{ y: useTransform(scrollY, [0, 1000], [0, -50]) }}
                 >
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-[85%] h-[85%] rounded-[3rem] border border-black/5 bg-white/80 backdrop-blur-3xl overflow-hidden relative shadow-2xl flex flex-col">
+                        <div className="w-[85%] h-[85%] rounded-[3rem] border border-border bg-navy-mid/80 backdrop-blur-3xl overflow-hidden relative shadow-2xl flex flex-col">
                             {/* Inner abstract geometric glow */}
                             <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[50%] bg-primary/10 rounded-full blur-[80px] pointer-events-none" />
                             <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[80px] pointer-events-none" />
 
                             {/* Mac OS Style Window Bar */}
-                            <div className="h-12 w-full border-b border-black/5 flex items-center px-6 gap-2 bg-slate-50">
+                            <div className="h-12 w-full border-b border-border flex items-center px-6 gap-2 bg-navy">
                                 <div className="w-3 h-3 rounded-full bg-red-400/80" />
                                 <div className="w-3 h-3 rounded-full bg-yellow-400/80" />
                                 <div className="w-3 h-3 rounded-full bg-green-400/80" />
-                                <div className="ml-auto text-[10px] text-slate-400 font-black uppercase tracking-widest">dashboard.vibe</div>
+                                <div className="ml-auto text-[10px] text-text-4 font-black uppercase tracking-widest">dashboard.vibe</div>
                             </div>
 
                             {/* Content grid */}
                             <div className="flex-1 p-8 grid grid-cols-2 gap-6 relative z-10">
                                 {/* Top Left: Main Metric */}
-                                <div className="col-span-2 bg-slate-50 border border-black/5 rounded-2xl p-6 flex items-center justify-between shadow-sm">
+                                <div className="col-span-2 bg-navy border border-border rounded-2xl p-6 flex items-center justify-between shadow-sm">
                                     <div>
-                                        <p className="text-slate-400 text-[10px] uppercase font-black tracking-[0.2em] mb-2">Project ROI</p>
-                                        <div className="text-3xl font-black text-slate-900 flex items-baseline gap-2 tracking-tighter">
+                                        <p className="text-text-4 text-[10px] uppercase font-black tracking-[0.2em] mb-2">Project ROI</p>
+                                        <div className="text-3xl font-black text-text-1 flex items-baseline gap-2 tracking-tighter">
                                             +240.5%
                                             <span className="text-primary text-[10px] font-black leading-none px-2 py-1 rounded-lg bg-primary/5 border border-primary/20">BOOST</span>
                                         </div>
@@ -167,19 +167,19 @@ export default function HomeHero() {
                                 </div>
 
                                 {/* Bottom Left: Activity Bar */}
-                                <div className="bg-slate-50 border border-black/5 rounded-2xl p-6 flex flex-col justify-between shadow-sm">
-                                    <p className="text-slate-400 text-[10px] uppercase font-black tracking-[0.2em] mb-4">System Load</p>
+                                <div className="bg-navy border border-border rounded-2xl p-6 flex flex-col justify-between shadow-sm">
+                                    <p className="text-text-4 text-[10px] uppercase font-black tracking-[0.2em] mb-4">System Load</p>
                                     <div className="space-y-4">
                                         {[
-                                            { label: "CPU", val: "42%", color: "#0A66FF" },
-                                            { label: "RAM", val: "78%", color: "#000000" },
+                                            { label: "CPU", val: "42%", color: "#4f8ef7" },
+                                            { label: "RAM", val: "78%", color: "#e8edf5" },
                                         ].map((stat, i) => (
                                             <div key={i}>
                                                 <div className="flex justify-between text-[10px] mb-2">
-                                                    <span className="text-slate-500 font-black">{stat.label}</span>
-                                                    <span className="text-slate-900 font-black">{stat.val}</span>
+                                                    <span className="text-text-3 font-black">{stat.label}</span>
+                                                    <span className="text-text-1 font-black">{stat.val}</span>
                                                 </div>
-                                                <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
+                                                <div className="h-2 bg-navy-mid rounded-full overflow-hidden">
                                                     <motion.div
                                                         className="h-full rounded-full"
                                                         style={{ backgroundColor: stat.color }}
@@ -225,9 +225,9 @@ export default function HomeHero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.6 }}
                 transition={{ delay: 1.5, duration: 1 }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-400 text-xs font-black uppercase tracking-widest"
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-4 text-xs font-black uppercase tracking-widest"
             >
-                <div className="w-6 h-10 border-2 border-slate-200 rounded-full relative">
+                <div className="w-6 h-10 border-2 border-border rounded-full relative">
                     <motion.div
                         animate={{ y: [0, 16, 0] }}
                         transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

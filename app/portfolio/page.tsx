@@ -39,7 +39,7 @@ export default function PortfolioPage() {
     const filtered = active === 'All' ? projects : projects.filter(p => p.category === active)
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="bg-navy min-h-screen">
             {/* Hero */}
             <section className="pt-32 pb-16 relative overflow-hidden">
                 <motion.div
@@ -51,7 +51,7 @@ export default function PortfolioPage() {
                 />
                 <div className="container-custom relative z-10 text-center max-w-4xl mx-auto">
                     <div className="badge-orange mb-5 animate-breathe inline-block">⟹ Our Portfolio</div>
-                    <h1 className="font-display font-extrabold text-5xl md:text-7xl text-slate-900 leading-tight mb-6 font-black">
+                    <h1 className="font-display font-extrabold text-5xl md:text-7xl text-text-1 leading-tight mb-6 font-black">
                         {"Work That Makes".split(" ").map((word, wordIdx, arr) => (
                             <span key={wordIdx} className="inline-block whitespace-nowrap">
                                 {word.split("").map((char, i) => (
@@ -87,7 +87,7 @@ export default function PortfolioPage() {
                         ))}
                         <span className="gradient-text">Proud</span>
                     </h1>
-                    <p className="text-slate-600 text-xl leading-relaxed max-w-2xl mx-auto reveal-up font-medium">
+                    <p className="text-text-2 text-xl leading-relaxed max-w-2xl mx-auto reveal-up font-medium">
                         Over 150 successful deployments across diverse industries. Each project is a testament to our commitment to excellence.
                     </p>
                 </div>
@@ -103,7 +103,7 @@ export default function PortfolioPage() {
                                     onClick={() => setActive(f)}
                                     className={`px-6 py-2.5 rounded-full text-sm font-bold tracking-wide transition-all duration-300 border ${active === f
                                         ? 'bg-primary text-white border-primary shadow-xl shadow-primary/20 scale-105'
-                                        : 'bg-white text-slate-500 border border-black/5 hover:border-primary/40 hover:text-primary transition-all'
+                                        : 'bg-navy-mid text-text-2 border border-border hover:border-primary/40 hover:text-primary transition-all'
                                         }`}
                                 >
                                     {f}
@@ -128,7 +128,7 @@ export default function PortfolioPage() {
                                     animate={{ opacity: 1, scale: 1 }}
                                     exit={{ opacity: 0, scale: 0.9 }}
                                     transition={{ duration: 0.4 }}
-                                    className="group relative bg-slate-50 border border-black/5 rounded-[2rem] overflow-hidden hover:bg-white hover:shadow-2xl transition-all duration-500"
+                                    className="group relative bg-navy-mid border border-border rounded-[2rem] overflow-hidden hover:bg-navy hover:shadow-2xl transition-all duration-500"
                                 >
                                     {/* Project Preview with Gradient */}
                                     <div
@@ -153,20 +153,20 @@ export default function PortfolioPage() {
                                         </div>
                                     </div>
 
-                                    <div className="p-8 relative z-10 bg-white/40 backdrop-blur-sm border-t border-black/5">
-                                        <h3 className="font-display font-extrabold text-xl text-slate-900 mb-3 group-hover:text-primary transition-all duration-300 tracking-tight">{p.title}</h3>
-                                        <p className="text-slate-500 text-sm leading-relaxed mb-6 line-clamp-2 font-medium">{p.desc}</p>
+                                    <div className="p-8 relative z-10 bg-navy/40 backdrop-blur-sm border-t border-border">
+                                        <h3 className="font-display font-extrabold text-xl text-text-1 mb-3 group-hover:text-primary transition-all duration-300 tracking-tight">{p.title}</h3>
+                                        <p className="text-text-3 text-sm leading-relaxed mb-6 line-clamp-2 font-medium">{p.desc}</p>
 
                                         <div className="flex flex-wrap gap-2 mb-8">
                                             {p.tags.map(t => (
-                                                <span key={t} className="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-lg bg-white border border-black/5 text-slate-400">{t}</span>
+                                                <span key={t} className="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-lg bg-navy border border-border text-text-4">{t}</span>
                                             ))}
                                         </div>
 
-                                        <Link
+                                         <Link
                                             href={p.link || `/portfolio/${p.title.toLowerCase().replace(/ /g, '-')}`}
                                             target={p.link ? "_blank" : "_self"}
-                                            className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-primary transition-colors"
+                                            className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.2em] text-text-4 group-hover:text-primary transition-colors"
                                         >
                                             View Project <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
                                         </Link>
@@ -185,14 +185,14 @@ export default function PortfolioPage() {
             </section>
 
             {/* CTA */}
-            <section className="py-24 bg-white border-t border-black/5 relative overflow-hidden">
+            <section className="py-24 bg-navy border-t border-border relative overflow-hidden">
                 <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple/5 blur-[120px] rounded-full" />
                 <div className="container-custom text-center relative z-10">
-                    <h2 className="font-display font-black text-4xl md:text-5xl text-slate-900 mb-6 font-black">
+                    <h2 className="font-display font-black text-4xl md:text-5xl text-text-1 mb-6 font-black">
                         Ready To Be Our Next <br />
                         <span className="gradient-text">Success Story?</span>
                     </h2>
-                    <p className="text-slate-600 text-lg mb-10 max-w-2xl mx-auto leading-relaxed font-medium">
+                    <p className="text-text-2 text-lg mb-10 max-w-2xl mx-auto leading-relaxed font-medium">
                         We don't just build products; we build partnerships. Let's discuss how we can help your business reach its full potential.
                     </p>
                     <Magnetic>

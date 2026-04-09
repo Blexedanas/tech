@@ -32,7 +32,7 @@ const founders = [
 
 export default function FoundersSection() {
     return (
-        <section className="py-24 relative bg-slate-50 overflow-hidden border-t border-black/5">
+        <section className="py-24 relative bg-navy overflow-hidden border-t border-border">
             {/* Background Accents */}
             <div className="absolute top-0 left-0 w-full h-full">
                 <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/5 rounded-full blur-[120px]" />
@@ -42,11 +42,11 @@ export default function FoundersSection() {
             <div className="container-custom relative z-10">
                 <div className="max-w-3xl mb-20 reveal">
                 <div className="badge-orange mb-5 animate-breathe inline-block">⟹ The Visionaries</div>
-                    <h2 className="font-display font-black text-4xl md:text-5xl lg:text-7xl text-slate-900 leading-[1.1] mb-8 tracking-tighter uppercase italic">
+                    <h2 className="font-display font-black text-4xl md:text-5xl lg:text-7xl text-text-1 leading-[1.1] mb-8 tracking-tighter uppercase italic">
                         The Minds behind <br />
                         <span className="gradient-text italic">the Machine</span>
                     </h2>
-                    <p className="text-slate-600 text-lg md:text-xl font-medium leading-relaxed max-w-2xl">
+                    <p className="text-text-2 text-lg md:text-xl font-medium leading-relaxed max-w-2xl">
                         A union of strategic vision and engineering excellence. We don't just build websites; we architect digital dominance.
                     </p>
                 </div>
@@ -62,18 +62,18 @@ export default function FoundersSection() {
                             className="group relative"
                         >
                             {/* Magazine-style Card */}
-                            <div className="relative aspect-[4/5] mb-10 overflow-hidden rounded-[2.5rem] border border-black/5 transition-all duration-700 max-w-[450px] mx-auto shadow-2xl bg-white">
+                            <div className="relative aspect-[4/5] mb-10 overflow-hidden rounded-[2.5rem] border border-border transition-all duration-700 max-w-[450px] mx-auto shadow-2xl bg-navy-mid">
                                 <Image
                                     src={founder.image}
                                     alt={founder.name}
                                     fill
                                     className="object-cover object-top scale-110 group-hover:scale-100 transition-transform duration-1000"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-700" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/20 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-700" />
 
                                 {/* Floating Role Badge */}
                                 <div className="absolute bottom-10 left-10 right-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                    <h3 className="font-display font-black text-4xl text-slate-900 uppercase tracking-tighter mb-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <h3 className="font-display font-black text-4xl text-text-1 uppercase tracking-tighter mb-2 opacity-0 group-hover:opacity-100 transition-opacity">
                                         {founder.name}
                                     </h3>
                                     <div className="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -85,20 +85,20 @@ export default function FoundersSection() {
 
                             {/* Content */}
                             <div className="space-y-8 px-4 sm:px-10">
-                                <p className="text-slate-600 text-lg md:text-xl leading-relaxed italic border-l-4 border-primary/20 pl-8 font-medium">
+                                <p className="text-text-2 text-lg md:text-xl leading-relaxed italic border-l-4 border-primary/20 pl-8 font-medium">
                                     "{founder.bio}"
                                 </p>
 
                                 <div className="flex flex-wrap gap-3">
                                     {founder.skills.map(skill => (
-                                        <span key={skill} className="px-4 py-1.5 bg-white border border-black/5 rounded-full text-[10px] text-slate-500 font-black uppercase tracking-widest shadow-sm">
+                                        <span key={skill} className="px-4 py-1.5 bg-navy border border-border rounded-full text-[10px] text-text-3 font-black uppercase tracking-widest shadow-sm">
                                             {skill}
                                         </span>
                                     ))}
                                 </div>
 
-                                <div className="flex items-center gap-8 pt-6 border-t border-black/5">
-                                    <a href={founder.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-all flex items-center gap-2 font-black uppercase tracking-widest text-[10px]">
+                                <div className="flex items-center gap-8 pt-6 border-t border-border">
+                                    <a href={founder.linkedin} target="_blank" rel="noopener noreferrer" className="text-text-4 hover:text-primary transition-all flex items-center gap-2 font-black uppercase tracking-widest text-[10px]">
                                         <Linkedin className="w-4 h-4" />
                                         LinkedIn
                                     </a>
@@ -115,11 +115,11 @@ export default function FoundersSection() {
                                         </>
                                     ) : (
                                         <>
-                                            <a href={founder.portfolio} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-all flex items-center gap-2 font-black uppercase tracking-widest text-[10px]">
+                                            <a href={founder.portfolio} target="_blank" rel="noopener noreferrer" className="text-text-4 hover:text-primary transition-all flex items-center gap-2 font-black uppercase tracking-widest text-[10px]">
                                                 <ExternalLink className="w-4 h-4" />
                                                 Portfolio
                                             </a>
-                                            <a href={founder.github} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-all flex items-center gap-2 font-black uppercase tracking-widest text-[10px]">
+                                            <a href={founder.github} target="_blank" rel="noopener noreferrer" className="text-text-4 hover:text-primary transition-all flex items-center gap-2 font-black uppercase tracking-widest text-[10px]">
                                                 <Github className="w-4 h-4" />
                                                 GitHub
                                             </a>

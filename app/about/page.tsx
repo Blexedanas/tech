@@ -63,9 +63,9 @@ export default function AboutPage() {
     }, [])
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="bg-navy min-h-screen">
             {/* Hero */}
-            <section className="pt-32 pb-20 relative overflow-hidden bg-slate-50">
+            <section className="pt-32 pb-20 relative overflow-hidden bg-navy">
                 <motion.div
                     className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px]"
                     animate={{
@@ -75,7 +75,7 @@ export default function AboutPage() {
                 />
                 <div className="container-custom relative z-10 text-center max-w-4xl mx-auto">
                     <div className="badge-orange mb-5 animate-breathe inline-block">⟹ About Zerixa Tech</div>
-                    <h1 className="font-display font-black text-5xl md:text-7xl text-slate-900 leading-[1.1] mb-6 tracking-tight">
+                    <h1 className="font-display font-black text-5xl md:text-7xl text-text-1 leading-[1.3] mb-6 tracking-tight">
                         {"We Build Digital".split(" ").map((word, wordIdx, arr) => (
                             <span key={wordIdx} className="inline-block whitespace-nowrap">
                                 {word.split("").map((char, i) => (
@@ -84,7 +84,7 @@ export default function AboutPage() {
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: (wordIdx * 7 + i) * 0.03 }}
-                                        className="char-reveal"
+                                        className="char-reveal font-display italic"
                                     >
                                         {char}
                                     </motion.span>
@@ -93,7 +93,7 @@ export default function AboutPage() {
                             </span>
                         ))}
                         {" "}
-                        <span className="gradient-text">Experiences</span>
+                        <span className="gradient-text italic">Experiences</span>
                         <br />
                         {"That Matter".split(" ").map((word, wordIdx, arr) => (
                             <span key={wordIdx} className="inline-block whitespace-nowrap">
@@ -103,7 +103,7 @@ export default function AboutPage() {
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: 0.5 + (wordIdx * 6 + i) * 0.03 }}
-                                        className="char-reveal"
+                                        className="char-reveal font-display italic"
                                     >
                                         {char}
                                     </motion.span>
@@ -112,7 +112,7 @@ export default function AboutPage() {
                             </span>
                         ))}
                     </h1>
-                    <p className="text-slate-600 text-xl leading-relaxed max-w-2xl mx-auto mb-10 reveal-up font-medium">
+                    <p className="text-text-2 text-xl leading-relaxed max-w-2xl mx-auto mb-10 reveal-up font-medium">
                         Zerixa Tech is a premium digital agency founded on the belief that great technology should be accessible to every ambitious business. We combine design thinking with engineering excellence.
                     </p>
                     <Magnetic>
@@ -124,7 +124,7 @@ export default function AboutPage() {
             </section>
 
             {/* Stats */}
-            <section className="py-20 bg-white border-y border-black/5 relative z-20">
+            <section className="py-20 bg-navy border-y border-border relative z-20">
                 <div className="container-custom grid grid-cols-2 lg:grid-cols-4 gap-8 text-center relative z-10">
                     {[
                         { n: '20+', l: 'Projects', i: CheckCircle },
@@ -143,34 +143,34 @@ export default function AboutPage() {
                                 <Icon className="w-7 h-7 text-primary" />
                             </div>
                             <div className="font-display font-extrabold text-4xl gradient-text mb-1">{n}</div>
-                            <p className="text-slate-500 text-sm font-bold tracking-wide uppercase">{l}</p>
+                            <p className="text-text-4 text-sm font-bold tracking-wide uppercase">{l}</p>
                         </motion.div>
                     ))}
                 </div>
             </section>
 
             {/* Founder Message */}
-            <section className="section-padding bg-slate-50 relative border-y border-black/5">
+            <section className="section-padding bg-navy-mid relative border-y border-border">
                 <div className="container-custom grid lg:grid-cols-2 gap-16 items-center">
                     <div className="relative group perspective-1000">
                         <div className="absolute inset-0 bg-primary/10 blur-3xl rounded-full opacity-50" />
                         <Link
                             href="https://viibetechnexus.web.app/"
                             target="_blank"
-                            className="bg-white border border-black/10 p-1.5 rounded-[2.2rem] relative z-10 transform-gpu transition-all duration-700 hover:rotate-y-3 hover:-rotate-x-3 block shadow-2xl"
+                            className="bg-navy border border-border p-1.5 rounded-[2.2rem] relative z-10 transform-gpu transition-all duration-700 hover:rotate-y-3 hover:-rotate-x-3 block shadow-2xl"
                         >
-                            <img src="/Vibetech.png" alt="Team" className="w-full h-[200px] sm:h-[300px] md:h-[540px] object-contain bg-white rounded-[1.8rem] transition-all duration-700" />
-                            <div className="absolute bottom-4 left-4 right-4 md:bottom-10 md:left-10 md:right-10 bg-white/90 backdrop-blur-md border border-black/10 p-4 md:p-6 rounded-2xl shadow-xl text-center">
-                                <h4 className="text-slate-900 font-bold text-lg md:text-xl">Zerixa Tech Team</h4>
+                            <img src="/Vibetech.png" alt="Team" className="w-full h-[200px] sm:h-[300px] md:h-[540px] object-contain bg-navy-mid rounded-[1.8rem] transition-all duration-700" />
+                            <div className="absolute bottom-4 left-4 right-4 md:bottom-10 md:left-10 md:right-10 bg-navy/90 backdrop-blur-md border border-border p-4 md:p-6 rounded-2xl shadow-xl text-center">
+                                <h4 className="text-text-1 font-bold text-lg md:text-xl">Zerixa Tech Team</h4>
                             </div>
                         </Link>
                     </div>
                     <div>
                         <div className="badge-orange mb-4">⟹ A Message From Zerixa Tech Team</div>
-                        <h2 className="font-display font-black text-4xl md:text-5xl text-slate-900 mb-6 leading-tight">
-                            Building Tools For <span className="gradient-text">Tomorrow</span>
+                        <h2 className="font-display font-black text-4xl md:text-5xl text-text-1 mb-6 leading-tight uppercase italic">
+                            Building Tools For <span className="gradient-text italic">Tomorrow</span>
                         </h2>
-                        <div className="space-y-6 text-slate-600 text-lg leading-relaxed font-medium">
+                        <div className="space-y-6 text-text-2 text-lg leading-relaxed font-medium">
                             <p>
                                 When We started Zerixa Tech in 2025, the digital landscape was already crowded. But We noticed a gap: bridging the gap between world-class, breathtaking design and robust, scalable engineering.
                             </p>
@@ -186,12 +186,12 @@ export default function AboutPage() {
             </section>
 
             {/* Values */}
-            <section className="section-padding relative bg-white">
+            <section className="section-padding relative bg-navy">
                 <div className="container-custom">
                     <div className="text-center mb-16">
                         <div className="badge-orange mb-4">⟹ Our Core Pillars</div>
-                        <h2 className="font-display font-black text-4xl md:text-5xl text-slate-900">
-                            What We <span className="gradient-text">Stand For</span>
+                        <h2 className="font-display font-black text-4xl md:text-5xl text-text-1 uppercase italic">
+                            What We <span className="gradient-text italic">Stand For</span>
                         </h2>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -202,13 +202,13 @@ export default function AboutPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="bg-white border border-black/5 rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 group text-center"
+                                className="bg-navy-mid border border-border rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 group text-center"
                             >
                                 <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-all duration-300">
                                     <v.icon className="w-8 h-8 text-primary" />
                                 </div>
-                                <h3 className="font-display font-bold text-xl text-slate-900 mb-3 tracking-tight font-black">{v.title}</h3>
-                                <p className="text-slate-500 text-sm leading-relaxed font-medium">{v.desc}</p>
+                                <h3 className="font-display font-bold text-xl text-text-1 mb-3 tracking-tight font-black uppercase">{v.title}</h3>
+                                <p className="text-text-2 text-sm leading-relaxed font-medium">{v.desc}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -217,12 +217,12 @@ export default function AboutPage() {
 
 
             {/* Team */}
-            <section className="section-padding relative bg-slate-50">
+            <section className="section-padding relative bg-navy-mid">
                 <div className="container-custom">
                     <div className="text-center mb-16">
                         <div className="badge-orange mb-4">⟹ Brains Behind Zerixa Tech</div>
-                        <h2 className="font-display font-black text-4xl md:text-5xl text-slate-900">
-                            The <span className="gradient-text">Experts</span>
+                        <h2 className="font-display font-black text-4xl md:text-5xl text-text-1 uppercase italic">
+                            The <span className="gradient-text italic">Experts</span>
                         </h2>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
@@ -236,9 +236,9 @@ export default function AboutPage() {
                                 className="group relative h-full"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                <div className="relative h-full flex flex-col bg-white border border-black/5 rounded-3xl p-8 text-center hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                                <div className="relative h-full flex flex-col bg-navy border border-border rounded-3xl p-8 text-center hover:shadow-2xl transition-all duration-500 overflow-hidden">
                                     <div
-                                        className="w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center text-white font-display font-black text-3xl border-4 border-white group-hover:scale-110 transition-transform duration-500 shadow-xl overflow-hidden"
+                                        className="w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center text-white font-display font-black text-3xl border-4 border-navy group-hover:scale-110 transition-transform duration-500 shadow-xl overflow-hidden"
                                         style={{ background: `linear-gradient(135deg, ${member.color}, ${member.color}99)` }}
                                     >
                                         {/* @ts-ignore */}
@@ -249,9 +249,9 @@ export default function AboutPage() {
                                             member.name[0]
                                         )}
                                     </div>
-                                    <h3 className="font-display font-black text-slate-900 text-xl mb-1">{member.name}</h3>
-                                    <p className="text-primary text-sm font-bold tracking-widest uppercase mb-3">{member.role}</p>
-                                    <p className="text-slate-500 text-sm font-medium leading-relaxed flex-grow">{member.desc}</p>
+                                    <h3 className="font-display font-black text-text-1 text-xl mb-1 uppercase tracking-tight">{member.name}</h3>
+                                    <p className="text-primary text-[10px] font-black tracking-[0.2em] uppercase mb-3">{member.role}</p>
+                                    <p className="text-text-2 text-sm font-medium leading-relaxed flex-grow">{member.desc}</p>
 
                                     {/* @ts-ignore */}
                                     {member.social && (
@@ -294,11 +294,11 @@ export default function AboutPage() {
             </section>
 
             {/* Global Presence */}
-            <section className="section-padding relative bg-white">
+            <section className="section-padding relative bg-navy">
                 <div className="container-custom text-center">
                     <div className="badge-orange mb-4">⟹ Global Reach</div>
-                    <h2 className="font-display font-black text-4xl md:text-5xl text-slate-900 mb-16">
-                        Operating <span className="gradient-text">Worldwide</span>
+                    <h2 className="font-display font-black text-4xl md:text-5xl text-text-1 mb-16 uppercase italic">
+                        Operating <span className="gradient-text italic">Worldwide</span>
                     </h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
@@ -312,11 +312,11 @@ export default function AboutPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="bg-slate-50 border border-black/5 rounded-3xl p-8 hover:shadow-xl hover:bg-white transition-all duration-300"
+                                className="bg-navy-mid border border-border rounded-3xl p-8 hover:shadow-xl hover:bg-navy transition-all duration-300"
                             >
                                 <div className="text-4xl mb-4">📍</div>
-                                <h3 className="font-display font-black text-2xl text-slate-900 mb-2">{loc.city}</h3>
-                                <p className="text-slate-500 text-sm mb-4 font-medium">{loc.address}</p>
+                                <h3 className="font-display font-black text-2xl text-text-1 mb-2 uppercase">{loc.city}</h3>
+                                <p className="text-text-2 text-sm mb-4 font-medium">{loc.address}</p>
                                 <a href={`tel:${loc.phone}`} className="text-primary font-black hover:underline">{loc.phone}</a>
                             </motion.div>
                         ))}
@@ -325,12 +325,12 @@ export default function AboutPage() {
             </section>
 
             {/* Careers CTA */}
-            <section className="section-padding bg-slate-50 border-t border-black/5">
+            <section className="section-padding bg-navy-mid border-t border-border">
                 <div className="container-custom text-center max-w-3xl mx-auto">
-                    <h2 className="font-display font-black text-4xl md:text-5xl text-slate-900 mb-6 leading-tight">
-                        Ready To <span className="gradient-text">Build The Future?</span>
+                    <h2 className="font-display font-black text-4xl md:text-5xl text-text-1 mb-6 leading-tight uppercase italic">
+                        Ready To <span className="gradient-text italic">Build The Future?</span>
                     </h2>
-                    <p className="text-slate-500 text-lg mb-10 leading-relaxed font-medium">
+                    <p className="text-text-2 text-lg mb-10 leading-relaxed font-medium">
                         We're always looking for world-class talent to join our mission. Explore our open roles or just reach out.
                     </p>
                     <div className="flex flex-wrap justify-center gap-6">
@@ -340,7 +340,7 @@ export default function AboutPage() {
                             </Link>
                         </Magnetic>
                         <Magnetic>
-                            <Link href="/services" className="btn-outline border-black/10 text-slate-900 hover:bg-slate-100">
+                            <Link href="/services" className="btn-outline border-border text-text-1 hover:bg-navy">
                                 View Our Services
                             </Link>
                         </Magnetic>

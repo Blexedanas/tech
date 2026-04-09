@@ -88,9 +88,9 @@ export default function ServicesPage() {
     const activeService = serviceCategories[activeTab]
 
     return (
-        <div className="bg-white min-h-screen selection:bg-primary/20">
+        <div className="bg-navy min-h-screen selection:bg-primary/20">
             {/* Hero Section */}
-            <section className="pt-32 pb-16 relative overflow-hidden bg-slate-50/50">
+            <section className="pt-32 pb-16 relative overflow-hidden bg-navy">
                 <div className="absolute inset-0 grid-pattern opacity-5" />
                 <div className="container-custom relative z-10 text-center">
                     <motion.div 
@@ -100,18 +100,18 @@ export default function ServicesPage() {
                     >
                         ⟹ Premium Expertise
                     </motion.div>
-                    <h1 className="font-display font-black text-5xl md:text-7xl text-slate-900 leading-tight tracking-tighter mb-6 uppercase italic">
+                    <h1 className="font-display font-black text-5xl md:text-7xl text-text-1 leading-tight tracking-tighter mb-6 uppercase italic">
                         Limitless <br />
                         <span className="gradient-text italic">Capabilities</span>
                     </h1>
-                    <p className="text-slate-600 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto font-medium">
+                    <p className="text-text-2 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto font-medium">
                         We don't just offer services; we engineer digital dominance across every vertical of the modern digital landscape.
                     </p>
                 </div>
             </section>
 
             {/* Showcase Section */}
-            <section className="py-20 bg-white relative z-20">
+            <section className="py-20 bg-navy relative z-20">
                 <div className="container-custom">
                     <div className="flex flex-col lg:flex-row gap-12 items-start">
                         
@@ -124,35 +124,35 @@ export default function ServicesPage() {
                                     animate={{ opacity: 1, x: 0 }}
                                     exit={{ opacity: 0, x: 20 }}
                                     transition={{ duration: 0.5, ease: "circOut" }}
-                                    className={`relative rounded-[3.5rem] p-10 md:p-14 overflow-hidden shadow-2xl border border-black/5 bg-gradient-to-br ${activeService.gradient} min-h-[600px] flex flex-col justify-between group`}
+                                    className={`relative rounded-[3.5rem] p-10 md:p-14 overflow-hidden shadow-2xl border border-border bg-gradient-to-br ${activeService.gradient} min-h-[600px] flex flex-col justify-between group`}
                                 >
                                     {/* Dotted Orbital Path with Icon */}
                                     <div className="relative mb-12 flex justify-center">
                                         <div className="absolute inset-0 flex items-center justify-center">
-                                            <div className="w-64 h-64 border-2 border-dashed border-black/10 rounded-full animate-[spin_20s_linear_infinite] pointer-events-none" />
-                                            <div className="absolute w-[80%] h-[80%] border border-dashed border-black/5 rounded-full animate-[spin_15s_linear_infinite_reverse] pointer-events-none" />
+                                            <div className="w-64 h-64 border-2 border-dashed border-white/10 rounded-full animate-[spin_20s_linear_infinite] pointer-events-none" />
+                                            <div className="absolute w-[80%] h-[80%] border border-dashed border-white/5 rounded-full animate-[spin_15s_linear_infinite_reverse] pointer-events-none" />
                                         </div>
                                         
-                                        <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full bg-white shadow-2xl flex items-center justify-center z-10 transition-transform duration-700 group-hover:scale-110">
+                                        <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full bg-navy flex items-center justify-center z-10 transition-transform duration-700 group-hover:scale-110">
                                             <activeService.icon className="w-16 h-16 md:w-20 md:h-20" style={{ color: activeService.color }} />
                                             {/* Pulse effect */}
-                                            <div className="absolute inset-0 rounded-full bg-white/20 animate-ping -z-10" />
+                                            <div className="absolute inset-0 rounded-full bg-primary/20 animate-ping -z-10" />
                                         </div>
                                     </div>
 
                                     <div>
                                         <div className="flex flex-wrap gap-2 mb-6 justify-center">
                                             {activeService.tags.map(tag => (
-                                                <span key={tag} className="px-4 py-1.5 rounded-full bg-white/50 backdrop-blur-md border border-black/5 text-[10px] font-black uppercase tracking-widest text-slate-500 shadow-sm">
+                                                <span key={tag} className="px-4 py-1.5 rounded-full bg-navy/50 backdrop-blur-md border border-border text-[10px] font-black uppercase tracking-widest text-text-3 shadow-sm">
                                                     {tag}
                                                 </span>
                                             ))}
                                         </div>
 
-                                        <h2 className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-slate-900 mb-6 text-center tracking-tighter uppercase break-words leading-tight">
+                                        <h2 className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-text-1 mb-6 text-center tracking-tighter uppercase break-words leading-tight">
                                             {activeService.title}
                                         </h2>
-                                        <p className="text-slate-600 text-center font-medium leading-relaxed max-w-md mx-auto mb-10 opacity-80">
+                                        <p className="text-text-2 text-center font-medium leading-relaxed max-w-md mx-auto mb-10 opacity-80">
                                             {activeService.description}
                                         </p>
 
@@ -181,16 +181,16 @@ export default function ServicesPage() {
                                         key={category.id}
                                         onClick={() => setActiveTab(idx)}
                                         className={`group relative text-left p-8 rounded-[2.5rem] border transition-all duration-500 overflow-hidden ${activeTab === idx 
-                                            ? 'bg-white border-primary shadow-2xl scale-[1.02]' 
-                                            : 'bg-slate-50 border-black/5 hover:bg-white hover:border-black/10'
+                                            ? 'bg-navy border-primary shadow-2xl scale-[1.02]' 
+                                            : 'bg-navy-mid border-border hover:bg-navy hover:border-primary/20'
                                         }`}
                                     >
                                         <div className="flex items-center gap-5 relative z-10">
-                                            <div className={`p-4 rounded-2xl transition-all duration-500 ${activeTab === idx ? 'bg-primary text-white' : 'bg-white text-slate-400 group-hover:scale-110 shadow-lg'}`}>
+                                            <div className={`p-4 rounded-2xl transition-all duration-500 ${activeTab === idx ? 'bg-primary text-white' : 'bg-navy text-text-4 group-hover:scale-110 shadow-lg'}`}>
                                                 <category.icon className="w-6 h-6" />
                                             </div>
                                             <div>
-                                                <h3 className={`font-display font-black text-lg transition-colors ${activeTab === idx ? 'text-slate-900' : 'text-slate-600'}`}>
+                                                <h3 className={`font-display font-black text-lg transition-colors ${activeTab === idx ? 'text-text-1' : 'text-text-2'}`}>
                                                     {category.title}
                                                 </h3>
                                                 <p className="text-[10px] font-black uppercase tracking-widest opacity-40 mt-1">Category 0{idx + 1}</p>
@@ -236,16 +236,17 @@ export default function ServicesPage() {
                                                     initial={{ opacity: 0, x: -10 }}
                                                     animate={{ opacity: 1, x: 0 }}
                                                     transition={{ delay: sIdx * 0.05 }}
-                                                    className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-black/5 hover:border-primary/20 hover:shadow-lg transition-all duration-300 group/item"
+                                                    className="flex items-center gap-4 p-4 rounded-2xl bg-navy border border-border hover:border-primary/20 hover:shadow-lg transition-all duration-300 group/item"
                                                 >
-                                                    <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center group-hover/item:bg-primary/10 transition-colors">
-                                                        <service.icon className="w-5 h-5 text-slate-400 group-hover/item:text-primary transition-colors" />
+                                                    <div className="w-10 h-10 rounded-xl bg-navy-mid flex items-center justify-center group-hover/item:bg-primary/10 transition-colors">
+                                                        <service.icon className="w-5 h-5 text-text-4 group-hover/item:text-primary transition-colors" />
                                                     </div>
-                                                    <span className="font-bold text-slate-700 tracking-tight group-hover/item:text-primary transition-colors">
+                                                    <span className="font-bold text-text-2 tracking-tight group-hover/item:text-primary transition-colors">
                                                         {service.name}
                                                     </span>
                                                 </motion.div>
                                             </Link>
+
                                         )
                                     })}
                                 </div>
@@ -255,8 +256,8 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            {/* Trusted stats banner */}
-            <section className="py-20 border-y border-black/5 bg-slate-50 overflow-hidden relative selection:bg-primary/20">
+             {/* Trusted stats banner */}
+            <section className="py-20 border-y border-border bg-navy-mid overflow-hidden relative selection:bg-primary/20">
                  <div className="container-custom">
                     <div className="grid md:grid-cols-4 gap-12 text-center">
                         {[
@@ -266,8 +267,8 @@ export default function ServicesPage() {
                             { label: 'Security Grade', val: 'A+' }
                         ].map((stat, i) => (
                             <div key={i}>
-                                <div className="text-4xl font-display font-black text-slate-900 mb-2">{stat.val}</div>
-                                <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">{stat.label}</div>
+                                <div className="text-4xl font-display font-black text-text-1 mb-2">{stat.val}</div>
+                                <div className="text-[10px] font-black uppercase tracking-[0.2em] text-text-4">{stat.label}</div>
                             </div>
                         ))}
                     </div>
@@ -275,7 +276,7 @@ export default function ServicesPage() {
             </section>
 
             {/* Bottom CTA */}
-            <section className="section-padding bg-white relative">
+            <section className="section-padding bg-navy relative">
                 <div className="container-custom max-w-5xl mx-auto">
                     <div className="relative rounded-[4rem] p-16 md:p-24 text-center overflow-hidden shadow-2xl bg-[#0F172A]">
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple/20 opacity-30" />

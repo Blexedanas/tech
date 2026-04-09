@@ -111,7 +111,7 @@ export default function Navbar() {
                             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
                                 <Zap className="w-5 h-5 text-white" />
                             </div>
-                            <span className="font-display font-extrabold text-2xl tracking-tight text-slate-900">
+                            <span className="font-display font-extrabold text-2xl tracking-tight text-text-1">
                                 Zerixa<span className="gradient-text shimmer-text"> Tech</span>
                             </span>
                         </Link>
@@ -124,7 +124,7 @@ export default function Navbar() {
                                             onClick={() => setServicesOpen(!servicesOpen)}
                                             className={`flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors duration-200 ${isActive(link.href)
                                                 ? 'text-primary'
-                                                : 'text-slate-600 hover:text-primary'
+                                                : 'text-text-2 hover:text-primary'
                                                 }`}
                                         >
                                             {link.name}
@@ -138,7 +138,7 @@ export default function Navbar() {
                                             href={link.href}
                                             className={`relative px-4 py-2 text-sm font-medium transition-colors duration-200 ${isActive(link.href)
                                                 ? 'text-primary'
-                                                : 'text-slate-600 hover:text-primary'
+                                                : 'text-text-2 hover:text-primary'
                                                 }`}
                                         >
                                             {link.name}
@@ -150,20 +150,20 @@ export default function Navbar() {
 
                                     {link.hasDropdown && (
                                         <div
-                                            className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-screen max-w-6xl bg-white border border-black/5 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] rounded-3xl overflow-hidden transition-all duration-300 origin-top ${servicesOpen
+                                            className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-screen max-w-6xl bg-navy-mid border border-border shadow-[0_30px_60px_-15px_rgba(0,0,0,0.4)] rounded-3xl overflow-hidden transition-all duration-300 origin-top ${servicesOpen
                                                 ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto'
                                                 : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
                                                 }`}
                                         >
-                                            <div className="p-12 grid grid-cols-4 gap-0 bg-white relative z-50">
+                                            <div className="p-12 grid grid-cols-4 gap-0 bg-navy-mid relative z-50">
                                                 {serviceCategories.map((category, idx) => (
                                                     <div 
                                                         key={category.title} 
-                                                        className={`px-10 ${idx < serviceCategories.length - 1 ? 'border-r border-slate-100' : ''}`}
+                                                        className={`px-10 ${idx < serviceCategories.length - 1 ? 'border-r border-border' : ''}`}
                                                     >
                                                         <Link 
                                                             href={category.href}
-                                                            className="block font-display font-black text-[13px] text-[#0A66FF] tracking-widest uppercase mb-10 hover:opacity-70 transition-opacity"
+                                                            className="block font-display font-black text-[13px] text-primary tracking-widest uppercase mb-10 hover:opacity-70 transition-opacity"
                                                         >
                                                             {category.title}
                                                         </Link>
@@ -173,7 +173,7 @@ export default function Navbar() {
                                                                     <Link
                                                                         href={s.href}
                                                                         onClick={() => setServicesOpen(false)}
-                                                                        className="block text-[14px] font-medium text-slate-500 hover:text-primary transition-colors duration-150"
+                                                                        className="block text-[14px] font-medium text-text-3 hover:text-primary transition-colors duration-150"
                                                                     >
                                                                         {s.name}
                                                                     </Link>
@@ -184,8 +184,8 @@ export default function Navbar() {
                                                 ))}
                                             </div>
                                             
-                                            <div className="bg-slate-50 p-6 border-t border-black/5 flex justify-center">
-                                                <Link href="/services" className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">
+                                            <div className="bg-navy p-6 border-t border-border flex justify-center">
+                                                <Link href="/services" className="text-[10px] font-black uppercase tracking-[0.2em] text-text-4 hover:text-primary transition-colors">
                                                     View All Capabilities ⟹
                                                 </Link>
                                             </div>
@@ -198,7 +198,7 @@ export default function Navbar() {
                         <div className="hidden md:flex items-center gap-4">
                             <a
                                 href="tel:+918079767676"
-                                className="flex items-center gap-1.5 text-slate-500 hover:text-primary text-sm transition-colors"
+                                className="flex items-center gap-1.5 text-text-2 hover:text-primary text-sm transition-colors"
                             >
                                 <Phone className="w-3.5 h-3.5 text-primary" />
                                 +91 80797 67676
@@ -211,7 +211,7 @@ export default function Navbar() {
                         </div>
 
                         <button
-                            className="md:hidden p-2 rounded-xl bg-slate-100 text-slate-900"
+                            className="md:hidden p-2 rounded-xl bg-navy-mid text-text-1"
                             onClick={() => setMobileOpen(!mobileOpen)}
                             aria-label="Toggle menu"
                         >
@@ -227,10 +227,10 @@ export default function Navbar() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-[100] md:hidden bg-white/98 backdrop-blur-2xl flex flex-col justify-center p-8"
+                        className="fixed inset-0 z-[100] md:hidden bg-navy/98 backdrop-blur-2xl flex flex-col justify-center p-8"
                     >
                         <button
-                            className="absolute top-6 right-6 p-3 rounded-full bg-slate-100/50 border border-black/5 text-slate-900"
+                            className="absolute top-6 right-6 p-3 rounded-full bg-navy-mid/50 border border-border text-text-1"
                             onClick={() => setMobileOpen(false)}
                         >
                             <X className="w-6 h-6" />
@@ -246,7 +246,7 @@ export default function Navbar() {
                                 >
                                     {link.hasDropdown ? (
                                         <div className="space-y-4">
-                                            <p className={`text-sm font-black uppercase tracking-widest text-slate-400 mb-2`}>
+                                            <p className={`text-sm font-black uppercase tracking-widest text-text-4 mb-2`}>
                                                 <Link href={link.href} onClick={() => setMobileOpen(false)} className="hover:text-primary transition-colors">{link.name}</Link>
                                             </p>
                                             <div className="grid grid-cols-2 gap-x-4 gap-y-2 pl-4">
@@ -258,7 +258,7 @@ export default function Navbar() {
                                                                 key={s.name} 
                                                                 href={s.href}
                                                                 onClick={() => setMobileOpen(false)}
-                                                                className="block text-xs text-slate-600 font-medium whitespace-nowrap overflow-hidden text-ellipsis"
+                                                                className="block text-xs text-text-3 font-medium whitespace-nowrap overflow-hidden text-ellipsis"
                                                             >
                                                                 {s.name}
                                                             </Link>
@@ -273,7 +273,7 @@ export default function Navbar() {
                                             onClick={() => setMobileOpen(false)}
                                             className={`text-4xl font-display font-extrabold transition-all ${isActive(link.href)
                                                 ? 'gradient-text'
-                                                : 'text-slate-400 hover:text-primary'
+                                                : 'text-text-3 hover:text-primary'
                                                 }`}
                                         >
                                             {link.name}
@@ -287,11 +287,11 @@ export default function Navbar() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5 }}
-                            className="mt-16 pt-10 border-t border-black/5"
+                            className="mt-16 pt-10 border-t border-border"
                         >
-                            <p className="text-slate-400 text-xs uppercase tracking-widest mb-6">Connect With Us</p>
+                            <p className="text-text-4 text-xs uppercase tracking-widest mb-6">Connect With Us</p>
                             <div className="flex flex-col gap-4">
-                                <a href="tel:+918079767676" className="flex items-center gap-3 text-slate-600 hover:text-primary transition-colors text-lg">
+                                <a href="tel:+918079767676" className="flex items-center gap-3 text-text-3 hover:text-primary transition-colors text-lg">
                                     <Phone className="w-5 h-5 text-primary" /> +91 80797 67676
                                 </a>
                                 <Link

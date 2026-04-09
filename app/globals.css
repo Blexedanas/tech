@@ -3,23 +3,23 @@
 @tailwind utilities;
 
 :root {
-    --primary: #0A66FF;
-    --primary-dark: #004BCB;
-    --primary-light: #4D94FF;
-    --primary-glow: rgba(10, 102, 255, 0.15);
+    --primary: #4f8ef7;
+    --primary-dark: #3a7ae6;
+    --primary-light: #77a8f9;
+    --primary-glow: rgba(79, 142, 247, 0.15);
     --red-glow: rgba(163, 9, 39, 0.08);
-    --blue: #0A66FF;
+    --blue: #4f8ef7;
     --green: #10B981;
-    --navy: #FAFAFA;
-    --navy-mid: #F4F4F5;
-    --navy-light: #E4E4E7;
-    --navy-card: rgba(250, 250, 250, 0.8);
-    --text-1: #0F172A;
-    --text-2: #334155;
-    --text-3: #64748B;
-    --text-4: #94A3B8;
-    --border: rgba(15, 23, 42, 0.08);
-    --border-light: rgba(15, 23, 42, 0.04);
+    --navy: #1e2433;
+    --navy-mid: #252d40;
+    --navy-light: #252d40;
+    --navy-card: #252d40;
+    --text-1: #e8edf5;
+    --text-2: #8a9bb8;
+    --text-3: #8a9bb8;
+    --text-4: #8a9bb8;
+    --border: #3a4560;
+    --border-light: rgba(58, 69, 96, 0.5);
     --font-body: 'Inter', system-ui, sans-serif;
     --font-display: 'Outfit', system-ui, sans-serif;
 }
@@ -272,7 +272,7 @@ html, body {
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #5E0314 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #e8edf5 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -315,7 +315,7 @@ html, body {
 
 /* ═══════════ SELECTION ═══════════ */
 ::selection {
-    background: rgba(163, 9, 39, 0.3);
+    background: rgba(79, 142, 247, 0.3);
     color: var(--text-1);
 }
 
@@ -324,8 +324,8 @@ html, body {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    background: rgba(163, 9, 39, 0.08);
-    border: 1px solid rgba(163, 9, 39, 0.25);
+    background: rgba(79, 142, 247, 0.1);
+    border: 1px solid rgba(79, 142, 247, 0.25);
     color: var(--primary);
     padding: 0.3rem 0.9rem;
     border-radius: 100px;
@@ -356,7 +356,7 @@ html, body {
 
 .btn-primary:hover {
     transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 12px 40px rgba(10, 102, 255, 0.35);
+    box-shadow: 0 12px 40px rgba(79, 142, 247, 0.35);
 }
 
 .btn-secondary {
@@ -364,8 +364,8 @@ html, body {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    background: white;
-    color: var(--primary);
+    background: var(--primary);
+    color: white;
     font-weight: 700;
     padding: 1rem 2.8rem;
     border-radius: 9999px;
@@ -390,13 +390,13 @@ html, body {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: rgba(15, 23, 42, 0.03);
-    color: var(--text-1);
+    background: transparent;
+    color: var(--text-2);
     font-weight: 600;
     padding: 0.78rem 1.8rem;
     border-radius: 100px;
     transition: all 0.3s ease;
-    border: 1px solid rgba(15, 23, 42, 0.12);
+    border: 1px solid var(--border);
     font-size: 0.95rem;
     text-decoration: none;
     backdrop-filter: blur(8px);
@@ -405,7 +405,7 @@ html, body {
 .btn-outline:hover {
     border-color: var(--primary);
     color: var(--primary);
-    background: rgba(163, 9, 39, 0.08);
+    background: rgba(79, 142, 247, 0.08);
     transform: translateY(-2px);
 }
 
@@ -416,7 +416,7 @@ html, body {
 
 .card-hover:hover {
     transform: translateY(-8px);
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(163, 9, 39, 0.15);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--border);
 }
 
 /* ═══════════ MISC ═══════════ */
@@ -452,7 +452,6 @@ html, body {
 
 .char-reveal {
     display: inline-block;
-    overflow: hidden;
     vertical-align: bottom;
 }
 
@@ -553,7 +552,8 @@ html, body {
 }
 
 .floating-tech-badge {
-    @apply bg-white/80 backdrop-blur-xl border border-black/5 shadow-lg rounded-2xl p-3 flex items-center gap-3 animate-float;
+    background-color: rgba(37, 45, 64, 0.8);
+    @apply backdrop-blur-xl border border-border shadow-lg rounded-2xl p-3 flex items-center gap-3 animate-float;
 }
 
 .grid-line-gradient {

@@ -36,7 +36,7 @@ export default function Preloader() {
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0, y: '100%' }} // Drop down like a terminal screen dismissing
                     transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
-                    className="fixed inset-0 z-[99999] bg-[#0A0F1A] flex flex-col items-center justify-center overflow-hidden font-mono"
+                    className="fixed inset-0 z-[99999] bg-navy flex flex-col items-center justify-center overflow-hidden font-mono"
                 >
                     {/* Background Noise & Fine Grid */}
                     <div className="absolute inset-0 opacity-[0.15] pointer-events-none noisemix mix-blend-overlay" />
@@ -81,7 +81,7 @@ export default function Preloader() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.8, duration: 0.5 }}
-                            className="text-slate-500 text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase"
+                            className="text-text-4 text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase"
                         >
                             ARCHITECTING THE FUTURE <motion.span animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 0.8 }}>_</motion.span>
                         </motion.div>
