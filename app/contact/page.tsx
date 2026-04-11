@@ -77,8 +77,22 @@ export default function ContactPage() {
                 />
                 <div className="container-custom relative z-10 text-center max-w-3xl mx-auto">
                     <div className="badge-orange mb-5 animate-breathe inline-block">⟹ Get In Touch</div>
-                                {char === " " ? "\u00A0" : char}
-                            </motion.span>
+                    <h1 className="font-display font-black text-5xl md:text-7xl text-text-1 leading-tight mb-6 uppercase italic">
+                        {"Let's Create".split(" ").map((word, wordIdx, arr) => (
+                            <span key={wordIdx} className="inline-block whitespace-nowrap">
+                                {word.split("").map((char, i) => (
+                                    <motion.span
+                                        key={`${wordIdx}-${i}`}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: (wordIdx * 5 + i) * 0.03 }}
+                                        className="char-reveal"
+                                    >
+                                        {char === " " ? "\u00A0" : char}
+                                    </motion.span>
+                                ))}
+                                {wordIdx !== arr.length - 1 && "\u00A0"}
+                            </span>
                         ))}
                         <br />
                         <span className="gradient-text italic">Something Great</span>
