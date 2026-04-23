@@ -62,7 +62,7 @@ export default function FoundersSection() {
                             className="group relative"
                         >
                             {/* Magazine-style Card */}
-                            <div className="relative aspect-[4/5] mb-10 overflow-hidden rounded-[2.5rem] border border-border transition-all duration-700 max-w-[450px] mx-auto shadow-2xl bg-navy-mid">
+                            <div className="relative aspect-[4/5] mb-10 overflow-hidden rounded-[var(--card-radius)] border border-border transition-all duration-700 max-w-[450px] mx-auto shadow-2xl bg-navy-mid">
                                 <Image
                                     src={founder.image}
                                     alt={founder.name}

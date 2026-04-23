@@ -86,7 +86,7 @@ function ServicesShowcase() {
             onMouseLeave={() => setIsPaused(false)}
         >
             {/* Featured Spotlight Card */}
-            <div className="w-full lg:w-5/12 card-blue-premium rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between relative overflow-hidden group shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)] transition-all duration-700">
+            <div className="w-full lg:w-5/12 card-blue-premium rounded-[var(--card-radius)] p-8 md:p-10 flex flex-col justify-between relative overflow-hidden group shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)] transition-all duration-700">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[80px] group-hover:bg-primary/20 transition-colors duration-700" />
 
                 <div className="relative z-10 flex-1">
@@ -100,7 +100,7 @@ function ServicesShowcase() {
                             className="h-full flex flex-col justify-center"
                         >
                             {/* Agency Interactive Image Embed */}
-                            <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-10 border border-white/[0.05] group">
+                            <div className="relative w-full h-64 md:h-80 rounded-[var(--inner-radius)] overflow-hidden mb-10 border border-white/[0.05] group">
                                 <Image
                                     src={featured.image}
                                     alt={featured.title}
@@ -110,7 +110,7 @@ function ServicesShowcase() {
                                 <div className="absolute inset-0 bg-navy/10 group-hover:bg-navy/5 transition-colors duration-500" />
                             </div>
 
-                            <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mb-8 overflow-hidden shadow-sm relative group/icon shadow-[0_0_15px_rgba(59,130,246,0.1)] group-hover:shadow-[0_0_25px_rgba(59,130,246,0.3)] transition-all duration-500">
+                            <div className="w-20 h-20 rounded-[var(--inner-radius)] bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mb-8 overflow-hidden shadow-sm relative group/icon shadow-[0_0_15px_rgba(59,130,246,0.1)] group-hover:shadow-[0_0_25px_rgba(59,130,246,0.3)] transition-all duration-500">
                                 <Image
                                     src={featured.iconImage}
                                     alt={featured.title}
@@ -161,7 +161,7 @@ function ServicesShowcase() {
                     <button
                         key={s.title}
                          onClick={() => handleManualSelect(i)}
-                        className={`relative text-left rounded-2xl p-6 transition-all duration-500 border overflow-hidden group hover:-translate-y-[5px] ${active === i
+                        className={`relative text-left rounded-[var(--card-radius)] p-6 transition-all duration-500 border overflow-hidden group hover:-translate-y-[5px] ${active === i
                             ? 'card-blue-premium border-white/20 shadow-[0_15px_40px_rgba(59,130,246,0.3)]'
                             : 'card-blue-premium opacity-70 hover:opacity-100 border-white/10 hover:border-white/20 hover:shadow-[0_15px_40px_rgba(59,130,246,0.3)]'
                             }`}
@@ -176,7 +176,7 @@ function ServicesShowcase() {
                         </div>
 
                         <div className="relative z-10 flex items-start gap-4">
-                            <div className={`mt-1 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-all duration-500 overflow-hidden relative shadow-[0_0_10px_rgba(59,130,246,0.1)] group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] ${active === i ? 'bg-primary/10' : 'bg-navy'}`}>
+                            <div className={`mt-1 w-12 h-12 rounded-[var(--inner-radius)] flex items-center justify-center shrink-0 transition-all duration-500 overflow-hidden relative shadow-[0_0_10px_rgba(59,130,246,0.1)] group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] ${active === i ? 'bg-primary/10' : 'bg-navy'}`}>
                                 <Image
                                     src={s.iconImage}
                                     alt={s.title}

@@ -41,7 +41,7 @@ export default function TestimonialsSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {testimonials.map((t, i) => (
                         <div key={i} className="reveal-up" style={{ transitionDelay: `${i * 150}ms` }}>
-                            <div className="bg-slate-50 border border-black/5 text-slate-900 rounded-[2rem] p-8 md:p-10 hover:bg-white hover:shadow-2xl transition-all duration-500 relative h-full flex flex-col group">
+                            <div className="bg-slate-50 border border-black/5 text-slate-900 rounded-[var(--card-radius)] p-8 md:p-10 hover:bg-white hover:shadow-2xl transition-all duration-500 relative h-full flex flex-col group">
                                 <Quote className="absolute top-8 right-8 w-12 h-12 text-slate-100 group-hover:text-primary/10 transition-colors" />
 
                                 <div className="relative z-10 flex-1 flex flex-col">

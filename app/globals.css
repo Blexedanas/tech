@@ -23,6 +23,8 @@
     --accent-blue: #1e3a8a;
     --font-body: 'Inter', system-ui, sans-serif;
     --font-display: 'Outfit', system-ui, sans-serif;
+    --card-radius: 3.5rem;
+    --inner-radius: 2.5rem;
 }
 
 .text-accent-blue {
@@ -413,6 +415,7 @@ html, body {
 .card-blue-premium {
     background: linear-gradient(145deg, #60A5FA, #3B82F6) !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: var(--card-radius) !important;
 }
 
 .card-blue-premium h1,

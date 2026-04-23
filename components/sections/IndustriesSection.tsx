@@ -36,10 +36,10 @@ export default function IndustriesSection() {
                     {industries.map((ind, i) => (
                         <div
                             key={ind.title}
-                            className={`group relative card-blue-premium rounded-[20px] p-8 text-center shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)] hover:-translate-y-[5px] transition-all duration-500 reveal-up delay-${(i % 4) * 100}`}
+                            className={`group relative card-blue-premium rounded-[var(--card-radius)] p-8 text-center shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)] hover:-translate-y-[5px] transition-all duration-500 reveal-up delay-${(i % 4) * 100}`}
                         >
                             <div className="relative z-10">
-                                <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mx-auto mb-6 text-3xl group-hover:scale-110 group-hover:bg-white/20 group-hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-500">
+                                <div className="w-16 h-16 rounded-[var(--inner-radius)] bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mx-auto mb-6 text-3xl group-hover:scale-110 group-hover:bg-white/20 group-hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-500">
                                     {ind.icon}
                                 </div>
                                 <h3 className="font-display font-bold text-white text-xl mb-3 group-hover:text-white transition-colors uppercase tracking-tight">{ind.title}</h3>

@@ -65,11 +65,11 @@ export default function WhyUsSection() {
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
                             key={card.id}
-                            className="group relative card-blue-premium p-8 md:p-12 flex flex-col justify-between overflow-hidden shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)] hover:-translate-y-[5px] transition-all duration-500"
+                            className="group relative card-blue-premium p-8 md:p-12 flex flex-col justify-between overflow-hidden shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)] hover:-translate-y-[5px] transition-all duration-500 rounded-[var(--card-radius)]"
                         >
                             <div className="flex justify-between items-start mb-12 relative z-10">
                                 <div
-                                    className="w-16 h-16 rounded-2xl flex items-center justify-center border transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-[0_0_15px_rgba(59,130,246,0.1)] group-hover:shadow-[0_0_25px_rgba(59,130,246,0.3)] bg-white/10 backdrop-blur-md"
+                                    className="w-16 h-16 rounded-[var(--inner-radius)] flex items-center justify-center border transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-[0_0_15px_rgba(59,130,246,0.1)] group-hover:shadow-[0_0_25px_rgba(59,130,246,0.3)] bg-white/10 backdrop-blur-md"
                                     style={{ borderColor: `rgba(255,255,255,0.2)` }}
                                 >
                                     <card.icon className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />

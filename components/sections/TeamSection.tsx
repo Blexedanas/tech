@@ -27,7 +27,7 @@ const team: TeamMember[] = [
     { name: 'Suzzane', role: 'Head of Social Media Operations', desc: 'Manages platforms like Reels, Facebook, and content strategy to boost engagement and reach. Recognized as a Strong Contestant on Splitsvilla 2026.', image: 'https://i.pravatar.cc/300?u=Sujzzan', social: { instagram: 'https://www.instagram.com/zerixa.tech/' } },
     { name: 'Sohail Shaikh', role: 'Head of SEO', desc: 'Expert in search engine optimization, driving organic growth and improving website rankings.', image: '/Sohail.png', objectPosition: 'object-top', social: { instagram: 'https://www.instagram.com/zerixa.tech/' } },
     { name: 'Ibrahim Shaikh', role: 'Professional Photographer', desc: 'An experienced photographer who has worked on numerous films, advertisements, and web series, bringing high-quality visual storytelling to every project.', image: 'https://i.pravatar.cc/300?u=Ibrahim', social: { instagram: 'https://www.instagram.com/zerixa.tech/' } },
-    { name: 'Amman Shaikh', role: 'Head of UI/UX Design', desc: 'Designs intuitive and visually engaging user experiences, enhancing customer interaction and brand identity.', image: '/Amaan.png', objectPosition: 'object-top', social: { linkedin: 'https://www.linkedin.com/in/amaan-shaikh-781358326/', github: 'https://github.com/amaanshaiikh', instagram: 'https://www.instagram.com/amaan.__24/' } },
+    { name: 'Akash Saw', role: 'Frontend Developer', desc: 'Expert in crafting high-performance, accessible, and visually stunning web interfaces using modern frontend technologies.', image: '/Akash.png', objectPosition: 'object-top', social: { instagram: 'https://www.instagram.com/zerixa.tech/' } },
     { name: 'CA Ravi Vishwakarma', role: 'Head of Accounts & Finance', desc: 'Manages financial planning, accounting, and ensures smooth financial operations.', image: 'https://i.pravatar.cc/300?u=Ravi', social: { instagram: 'https://www.instagram.com/zerixa.tech/' } },
     { name: 'Adv. Vikram Kapoor', role: 'Head Legal Advisor', desc: 'Provides expert legal guidance, ensuring compliance, contracts, and business protection.', image: '/Vikramkapoor.jpeg', objectPosition: 'object-top', social: { instagram: 'https://www.instagram.com/zerixa.tech/' } },
 ]
@@ -53,7 +53,7 @@ export default function TeamSection() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-up delay-200">
                     {team.map((member, i) => (
-                        <div key={i} className="group relative rounded-[20px] overflow-hidden card-blue-premium shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)] hover:-translate-y-[5px] transition-all duration-500">
+                        <div key={i} className="group relative rounded-[var(--card-radius)] overflow-hidden card-blue-premium shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)] hover:-translate-y-[5px] transition-all duration-500">
                             {/* Image Container */}
                             <div className="w-full aspect-[4/5] relative overflow-hidden bg-white/5">
                                  <Image
@@ -77,29 +77,29 @@ export default function TeamSection() {
                                 {/* Socials */}
                                 <div className="flex items-center gap-3">
                                     {member.social.linkedin && (
-                                        <a href={member.social.linkedin} className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white transition-all text-white hover:text-[#3B82F6] shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">
+                                        <a href={member.social.linkedin} className="w-9 h-9 rounded-[var(--inner-radius)] bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white transition-all text-white hover:text-[#3B82F6] shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">
                                             <Linkedin className="w-4 h-4" />
                                         </a>
                                     )}
                                     {member.social.twitter && (
-                                        <a href={member.social.twitter} className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white transition-all text-white hover:text-[#3B82F6] shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">
+                                        <a href={member.social.twitter} className="w-9 h-9 rounded-[var(--inner-radius)] bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white transition-all text-white hover:text-[#3B82F6] shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">
                                             <Twitter className="w-4 h-4" />
                                         </a>
                                     )}
                                     {member.social.instagram && (
-                                        <a href={member.social.instagram} className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white transition-all text-white hover:text-[#3B82F6] shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">
+                                        <a href={member.social.instagram} className="w-9 h-9 rounded-[var(--inner-radius)] bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white transition-all text-white hover:text-[#3B82F6] shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">
                                             <Instagram className="w-4 h-4" />
                                         </a>
                                     )}
                                     {member.social.github && (
-                                        <a href={member.social.github} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white transition-all text-white hover:text-[#3B82F6] shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">
+                                        <a href={member.social.github} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-[var(--inner-radius)] bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white transition-all text-white hover:text-[#3B82F6] shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">
                                             <Github className="w-4 h-4" />
                                         </a>
                                     )}
                                     {/* @ts-ignore */}
                                     {member.social.portfolio && (
                                         /* @ts-ignore */
-                                        <a href={member.social.portfolio} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white transition-all text-white hover:text-[#3B82F6] shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]" title="Portfolio">
+                                        <a href={member.social.portfolio} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-[var(--inner-radius)] bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white transition-all text-white hover:text-[#3B82F6] shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]" title="Portfolio">
                                             <Globe className="w-4 h-4" />
                                         </a>
                                     )}

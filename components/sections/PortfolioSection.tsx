@@ -108,15 +108,15 @@ export default function PortfolioSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1, duration: 0.5 }}
-                            className="group relative card-blue-premium rounded-[20px] p-5 shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)] hover:-translate-y-[5px] transition-all duration-500 overflow-hidden flex flex-col"
+                            className="group relative card-blue-premium rounded-[var(--card-radius)] p-5 shadow-[0_10px_30px_rgba(59,130,246,0.3)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.4)] hover:-translate-y-[5px] transition-all duration-500 overflow-hidden flex flex-col"
                         >
                             {/* Subtle Hover Glow behind card */}
                             <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                             {/* 3D Thumbnail Container - Shrunk for efficiency */}
-                            <div className="h-36 rounded-[1.25rem] mb-6 relative flex items-center justify-center transition-all duration-700 [perspective:1000px] group-hover:z-10 shadow-sm border border-white/20 bg-white/10 backdrop-blur-md overflow-hidden">
+                            <div className="h-36 rounded-[var(--inner-radius)] mb-6 relative flex items-center justify-center transition-all duration-700 [perspective:1000px] group-hover:z-10 shadow-sm border border-white/20 bg-white/10 backdrop-blur-md overflow-hidden">
                                 <div
-                                    className="w-full h-full rounded-[1.25rem] relative overflow-hidden flex items-center justify-center transition-all duration-700 group-hover:[transform:rotateX(10deg)_rotateY(-10deg)_translateZ(20px)]"
+                                    className="w-full h-full rounded-[var(--inner-radius)] relative overflow-hidden flex items-center justify-center transition-all duration-700 group-hover:[transform:rotateX(10deg)_rotateY(-10deg)_translateZ(20px)]"
                                     style={{ backgroundColor: `${item.color}05` }}
                                 >
                                     <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.1),transparent)]" />

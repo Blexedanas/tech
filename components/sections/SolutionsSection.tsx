@@ -27,7 +27,7 @@ export default function SolutionsSection() {
                 {/* Center: Visual (Clean Dashboard) */}
                 <div className="w-full max-w-4xl relative">
                     <motion.div
-                        className="bg-slate-50 border border-black/5 rounded-[2rem] p-8 md:p-10 relative overflow-hidden shadow-2xl w-full"
+                        className="bg-slate-50 border border-black/5 rounded-[var(--card-radius)] p-8 md:p-10 relative overflow-hidden shadow-2xl w-full"
                         initial={{ opacity: 1, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
@@ -45,7 +45,7 @@ export default function SolutionsSection() {
                                     { label: 'User Engagement', w: '85%', color: '#000000', val: '+42%' },
                                     { label: 'Application Uptime', w: '99%', color: 'var(--primary)', val: '99.9%' },
                                 ].map((item, i) => (
-                                    <div key={i} className="bg-white rounded-2xl p-5 border border-black/5 shadow-sm transition-all hover:shadow-md">
+                                    <div key={i} className="bg-white rounded-[var(--inner-radius)] p-5 border border-black/5 shadow-sm transition-all hover:shadow-md">
                                         <div className="flex justify-between items-center mb-3">
                                             <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">{item.label}</span>
                                             <span className="text-sm font-bold text-slate-900">
@@ -66,7 +66,7 @@ export default function SolutionsSection() {
                             </div>
 
                             {/* Right Side: Code snippet with typing effect */}
-                            <div className="bg-slate-900 rounded-2xl p-6 font-mono text-sm border border-white/5 shadow-xl relative overflow-hidden">
+                            <div className="bg-slate-900 rounded-[var(--inner-radius)] p-6 font-mono text-sm border border-white/5 shadow-xl relative overflow-hidden">
                                 {/* Mac OS style window dots */}
                                 <div className="flex gap-2 mb-6">
                                     <div className="w-3 h-3 rounded-full bg-red-500/80" />
@@ -127,11 +127,11 @@ export default function SolutionsSection() {
 
                     {/* High-End Floating Badge */}
                     <motion.div
-                        className="absolute -top-6 -right-4 md:-right-6 w-24 h-24 rounded-2xl bg-gradient-to-br from-primary to-primary-dark p-[1px] shadow-2xl z-20"
+                        className="absolute -top-6 -right-4 md:-right-6 w-24 h-24 rounded-[var(--inner-radius)] bg-gradient-to-br from-primary to-primary-dark p-[1px] shadow-2xl z-20"
                         animate={{ y: [0, -10, 0] }}
                         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                     >
-                        <div className="w-full h-full rounded-2xl bg-white flex flex-col items-center justify-center relative overflow-hidden">
+                        <div className="w-full h-full rounded-[var(--inner-radius)] bg-white flex flex-col items-center justify-center relative overflow-hidden">
                             <div className="absolute inset-0 bg-primary/10" />
                             <div className="relative z-10 text-center flex flex-col items-center justify-center">
                                 <div className="text-primary font-black text-3xl leading-none">99%</div>

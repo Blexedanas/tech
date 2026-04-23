@@ -163,7 +163,7 @@ export default function PricingSection() {
                         {activeData?.tiers.map((tier, idx) => (
                             <div
                                 key={idx}
-                                className={`relative rounded-[2.5rem] p-8 transition-all duration-500 hover:-translate-y-2 border shadow-sm hover:shadow-2xl ${tier.popular
+                                className={`relative rounded-[var(--card-radius)] p-8 transition-all duration-500 hover:-translate-y-2 border shadow-sm hover:shadow-2xl ${tier.popular
                                     ? 'bg-white border-primary/20'
                                     : 'bg-white border-black/5'
                                     }`}
@@ -197,7 +197,7 @@ export default function PricingSection() {
 
                                 <a
                                     href="/contact"
-                                    className={`w-full py-4 rounded-2xl text-center text-sm font-bold transition-all flex items-center justify-center ${tier.popular
+                                    className={`w-full py-4 rounded-[var(--inner-radius)] text-center text-sm font-bold transition-all flex items-center justify-center ${tier.popular
                                         ? 'bg-primary text-white hover:bg-primary-dark shadow-xl shadow-primary/20'
                                         : 'bg-slate-50 text-slate-900 hover:bg-slate-100 border border-black/5'
                                         }`}
